@@ -1,0 +1,4 @@
+Info (10281): Verilog HDL Declaration information at uart_tx.v(10): object "start" differs only in case from object "START" in the same scope File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_tx.v Line: 10
+Info (10281): Verilog HDL Declaration information at fifo.v(10): object "empty" differs only in case from object "EMPTY" in the same scope File: C:/Users/user1111/Documents/DigitalDesign/UART/fifo.v Line: 10
+Info (10281): Verilog HDL Declaration information at fifo.v(10): object "full" differs only in case from object "FULL" in the same scope File: C:/Users/user1111/Documents/DigitalDesign/UART/fifo.v Line: 10
+Info (10281): Verilog HDL Declaration information at fall_edge_detector.v(4): object "tick" differs only in case from object "TICK" in the same scope File: C:/Users/user1111/Documents/DigitalDesign/UART/fall_edge_detector.v Line: 4

@@ -1,0 +1,59 @@
+`ifndef UART_TOP
+`define UART_TOP
+`include "uart.v"
+`include "fall_edge_detector.v"
+module uart_top 
+	#(
+		parameter WIDTH=8,
+				SB_TICK=16,
+					
+				SAMP=16,
+				BAUND_RATE=9600,
+
+				FIFO_DEPTH=8
+	)
+	(
+		output tx, input rx,
+		output [WIDTH-1:0] leds, 
+		input [WIDTH-1:0] sw,
+		input clk, reset, write, read //write, get active-low buttons
+);
+	wire do_write, do_read;
+	fall_edge_detector writer(
+		.tick(do_write),
+		.clk(clk),
+		.reset(reset),
+		.in(write)
+	);
+	fall_edge_detector reader(
+		.tick(do_read),
+		.clk(clk),
+		.reset(reset),
+		.in(read)
+	);
+	
+	wire rx_full, rx_empty;	
+	uart #(
+		.SB_TICK(SB_TICK),
+		.FIFO_DEPTH(FIFO_DEPTH),
+		.BAUND_RATE(BAUND_RATE),
+		.SAMP(SAMP),
+		.WIDTH(WIDTH)
+	)
+	uart_inst(
+		.clk(clk),
+		.reset(reset),
+		.data_out(leds),
+		.rx_full(rx_full),
+		.rx_empty(rx_empty),
+		.tx(tx),
+		.data_in(sw),
+		.rx(rx),
+		.wr_data(do_write),
+		.rd_data(do_read)
+	);	
+
+	
+endmodule
+
+`endif

@@ -1,0 +1,40 @@
+
+State Machine - |uart_top|uart:uart_inst|uart_tx:tx_inst|state
+Name state.STOP state.DATA state.START state.00 
+state.00 0 0 0 0 
+state.START 0 0 1 1 
+state.DATA 0 1 0 1 
+state.STOP 1 0 0 1 
+
+State Machine - |uart_top|uart:uart_inst|uart_rx:rx_inst|state
+Name state.STOP state.DATA state.START state.00 
+state.00 0 0 0 0 
+state.START 0 0 1 1 
+state.DATA 0 1 0 1 
+state.STOP 1 0 0 1 
+
+State Machine - |uart_top|uart:uart_inst|fifo:rx_fifo|state
+Name state.EMPTY state.FULL state.PROC 
+state.EMPTY 0 0 0 
+state.PROC 1 0 1 
+state.FULL 1 1 0 
+
+State Machine - |uart_top|uart:uart_inst|fifo:tx_fifo|state
+Name state.EMPTY state.FULL state.PROC 
+state.EMPTY 0 0 0 
+state.PROC 1 0 1 
+state.FULL 1 1 0 
+
+State Machine - |uart_top|fall_edge_detector:reader|state
+Name state.HIGH state.TICK state.LOW state.00 
+state.00 0 0 0 0 
+state.LOW 0 0 1 1 
+state.TICK 0 1 0 1 
+state.HIGH 1 0 0 1 
+
+State Machine - |uart_top|fall_edge_detector:writer|state
+Name state.HIGH state.TICK state.LOW state.00 
+state.00 0 0 0 0 
+state.LOW 0 0 1 1 
+state.TICK 0 1 0 1 
+state.HIGH 1 0 0 1 

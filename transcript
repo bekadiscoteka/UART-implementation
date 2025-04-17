@@ -1,0 +1,48 @@
+# do work.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 07:24:44 on Apr 17,2025
+# vlog -reportprogress 300 -work work uart_func_tb.v 
+# -- Compiling module uart_rx
+# -- Compiling module uart_tx
+# -- Compiling module m_counter
+# -- Compiling module fifo
+# -- Compiling module uart
+# -- Compiling module fall_edge_detector
+# -- Compiling module uart_top
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	uart_top
+# 	stimulus
+# End time: 07:24:44 on Apr 17,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.stimulus 
+# Start time: 07:24:44 on Apr 17,2025
+# Loading work.stimulus
+# Loading work.uart
+# Loading work.m_counter
+# Loading work.fifo
+# Loading work.uart_rx
+# Loading work.uart_tx
+# ** Warning: (vsim-3017) uart_func_tb.v(12): [TFMPC] - Too few port connections. Expected 12, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/ut File: uart.v
+# ** Warning: (vsim-3722) uart_func_tb.v(12): [TFMPC] - Missing connection for port 'tx_full'.
+# ** Warning: (vsim-3722) uart_func_tb.v(12): [TFMPC] - Missing connection for port 'rx_full'.
+# ** Warning: (vsim-3017) uart.v(29): [TFMPC] - Too few port connections. Expected 4, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/ut/m File: m_counter.v
+# ** Warning: (vsim-3722) uart.v(29): [TFMPC] - Missing connection for port 'counter'.
+# write:   3
+# write:   4
+# write:   5
+# read:   3
+# read:   3
+# read:   4
+# read:   5
+# last:   0
+# ** Note: $finish    : uart_func_tb.v(45)
+#    Time: 1564865 ps  Iteration: 1  Instance: /stimulus
+# 1
+# Break in Module stimulus at uart_func_tb.v line 45
+# End time: 07:29:22 on Apr 17,2025, Elapsed time: 0:04:38
+# Errors: 0, Warnings: 5

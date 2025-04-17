@@ -1,0 +1,199 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/user1111/Documents/DigitalDesign/UART
+vclk_generate
+!s110 1744851345
+!i10b 1
+!s100 ?WYV`=Q@UU4BnI?EMJb5Q3
+I0;PWI0B=6gm`Ff1Mb[IQm3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1744851303
+8uart_tb.v
+Fuart_tb.v
+L0 3
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1744851345.000000
+!s107 fall_edge_detector.v|fifo.v|m_counter.v|uart_tx.v|uart_rx.v|uart.v|uart_top.v|uart_tb.v|
+!s90 -reportprogress|300|-work|work|uart_tb.v|
+!i113 1
+Z3 o-work work
+Z4 tCvgOpt 0
+vfall_edge_detector
+Z5 !s110 1744853084
+!i10b 1
+!s100 d:?:CBaHg6mXQdn1@Gfa[0
+InMLbKFCEVGaRe93iHl=CM3
+R1
+R0
+Z6 w1744847381
+8fall_edge_detector.v
+Ffall_edge_detector.v
+L0 3
+R2
+r1
+!s85 0
+31
+Z7 !s108 1744853084.000000
+Z8 !s107 fall_edge_detector.v|fifo.v|m_counter.v|uart_tx.v|uart_rx.v|uart.v|uart_top.v|uart_func_tb.v|
+Z9 !s90 -reportprogress|300|-work|work|uart_func_tb.v|
+!i113 1
+R3
+R4
+vfifo
+R5
+!i10b 1
+!s100 liRUn8l>1i:zbVbE5]jL>0
+I>2FRz[:97KAi>JWa>LP^z0
+R1
+R0
+R6
+8fifo.v
+Ffifo.v
+L0 4
+R2
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R3
+R4
+vm_counter
+R5
+!i10b 1
+!s100 RnDYYh`XDfV`BIKS@6EOR1
+I91AeXbL5mhMRJUaL@ZF:50
+R1
+R0
+w1744852450
+8m_counter.v
+Fm_counter.v
+L0 3
+R2
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R3
+R4
+vstimulus
+R5
+!i10b 1
+!s100 NH[bH:K_OL`=T0XZQhXdD2
+Id_k721F:fJd98UFPOBY?c3
+R1
+R0
+w1744852441
+8uart_func_tb.v
+Fuart_func_tb.v
+L0 3
+R2
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R3
+R4
+vuart
+R5
+!i10b 1
+!s100 Z[[TiL;oX0fY1HhcbC;>a2
+INo1;7D`45X1mdN<JQ^4H`2
+R1
+R0
+w1744851330
+8uart.v
+Fuart.v
+L0 7
+R2
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R3
+R4
+vuart_rx
+R5
+!i10b 1
+!s100 leo85B7mN`:7DGjJ=^2fX2
+IP?cRD8S=oln>VURHE<K6l1
+R1
+R0
+R6
+8uart_rx.v
+Fuart_rx.v
+L0 3
+R2
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R3
+R4
+vuart_top
+R5
+!i10b 1
+!s100 fJz9f6?CPGmZ]loh??e>L1
+IM7XjdKPPZhFBjZLBz7TX;3
+R1
+R0
+w1744850294
+8uart_top.v
+Fuart_top.v
+L0 5
+R2
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R3
+R4
+vuart_tx
+R5
+!i10b 1
+!s100 kD?^ad6XTPSohN<^X=Z0M1
+Id8lZU7Uc[_hQhDTK@]j070
+R1
+R0
+R6
+8uart_tx.v
+Fuart_tx.v
+L0 3
+R2
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R3
+R4
