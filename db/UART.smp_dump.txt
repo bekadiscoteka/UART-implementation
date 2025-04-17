@@ -1,4 +1,11 @@
 
+State Machine - |uart_top|bin2bcd:get_bcd|state
+Name state.LAST state.FINISH state.PROC state.00 
+state.00 0 0 0 0 
+state.PROC 0 0 1 1 
+state.FINISH 0 1 0 1 
+state.LAST 1 0 0 1 
+
 State Machine - |uart_top|uart:uart_inst|uart_tx:tx_inst|state
 Name state.STOP state.DATA state.START state.00 
 state.00 0 0 0 0 

@@ -8,35 +8,63 @@
 					"strict" : false
 				},
 				{
-					"name" : "leds[0]",
+					"name" : "read_value[0]",
 					"strict" : false
 				},
 				{
-					"name" : "leds[1]",
+					"name" : "read_value[1]",
 					"strict" : false
 				},
 				{
-					"name" : "leds[2]",
+					"name" : "read_value[2]",
 					"strict" : false
 				},
 				{
-					"name" : "leds[3]",
+					"name" : "read_value[3]",
 					"strict" : false
 				},
 				{
-					"name" : "leds[4]",
+					"name" : "read_value[4]",
 					"strict" : false
 				},
 				{
-					"name" : "leds[5]",
+					"name" : "read_value[5]",
 					"strict" : false
 				},
 				{
-					"name" : "leds[6]",
+					"name" : "read_value[6]",
 					"strict" : false
 				},
 				{
-					"name" : "leds[7]",
+					"name" : "read_value[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg[6]",
 					"strict" : false
 				},
 				{

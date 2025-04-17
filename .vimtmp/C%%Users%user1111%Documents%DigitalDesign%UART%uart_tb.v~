@@ -24,7 +24,7 @@ module stimulus;
 		.rx(rx),
 		.tx(tx),
 		.sw(sw),
-		.leds(leds)
+		.read_value(read_value)
 	);
 
 	assign rx = tx;

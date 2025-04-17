@@ -11,7 +11,7 @@ module bin2bcd
     input [WIDTH-1:0] bin
 );
 	localparam READY = 0, PROC = 1, FINISH = 2, LAST=3;
-    
+   	// abcd 
     reg [1:0] state;
     reg [WIDTH-1:0] bin_reg;
     reg [log(WIDTH+1)-1:0] counter;

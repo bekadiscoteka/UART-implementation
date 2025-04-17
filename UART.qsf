@@ -84,14 +84,14 @@ set_location_assignment PIN_B8 -to write
 set_location_assignment PIN_A7 -to read
 
 
-set_location_assignment PIN_A8 -to leds[0]
-set_location_assignment PIN_A9 -to leds[1]
-set_location_assignment PIN_A10 -to leds[2]
-set_location_assignment PIN_B10 -to leds[3]
-set_location_assignment PIN_D13 -to leds[4]
-set_location_assignment PIN_C13 -to leds[5]
-set_location_assignment PIN_E14 -to leds[6]
-set_location_assignment PIN_D14 -to leds[7]
+set_location_assignment PIN_A8 -to read_value[0]
+set_location_assignment PIN_A9 -to read_value[1]
+set_location_assignment PIN_A10 -to read_value[2]
+set_location_assignment PIN_B10 -to read_value[3]
+set_location_assignment PIN_D13 -to read_value[4]
+set_location_assignment PIN_C13 -to read_value[5]
+set_location_assignment PIN_E14 -to read_value[6]
+set_location_assignment PIN_D14 -to read_value[7]
 
 set_location_assignment PIN_V10 -to tx
 set_location_assignment PIN_V9 -to rx
@@ -99,6 +99,17 @@ set_location_assignment PIN_V9 -to rx
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to tx
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rx
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk
+
+
+set_location_assignment PIN_C14 -to sseg[0]
+set_location_assignment PIN_E15 -to sseg[1]
+set_location_assignment PIN_C15 -to sseg[2]
+set_location_assignment PIN_C16 -to sseg[3]
+set_location_assignment PIN_E16 -to sseg[4]
+set_location_assignment PIN_D17 -to sseg[5]
+set_location_assignment PIN_C17 -to sseg[6]
+set_location_assignment PIN_D15 -to sseg[7]
+
 
 
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

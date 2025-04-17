@@ -1,5 +1,5 @@
 Analysis & Synthesis report for UART
-Thu Apr 17 23:04:12 2025
+Fri Apr 18 00:18:36 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -13,30 +13,34 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |uart_top|uart:uart_inst|uart_tx:tx_inst|state
-  9. State Machine - |uart_top|uart:uart_inst|uart_rx:rx_inst|state
- 10. State Machine - |uart_top|uart:uart_inst|fifo:rx_fifo|state
- 11. State Machine - |uart_top|uart:uart_inst|fifo:tx_fifo|state
- 12. State Machine - |uart_top|fall_edge_detector:reader|state
- 13. State Machine - |uart_top|fall_edge_detector:writer|state
- 14. Registers Removed During Synthesis
- 15. Removed Registers Triggering Further Register Optimizations
- 16. General Register Statistics
- 17. Inverted Register Statistics
- 18. Multiplexer Restructuring Statistics (Restructuring Performed)
- 19. Parameter Settings for User Entity Instance: Top-level Entity: |uart_top
- 20. Parameter Settings for User Entity Instance: uart:uart_inst
- 21. Parameter Settings for User Entity Instance: uart:uart_inst|m_counter:m
- 22. Parameter Settings for User Entity Instance: uart:uart_inst|fifo:tx_fifo
- 23. Parameter Settings for User Entity Instance: uart:uart_inst|fifo:rx_fifo
- 24. Parameter Settings for User Entity Instance: uart:uart_inst|uart_rx:rx_inst
- 25. Parameter Settings for User Entity Instance: uart:uart_inst|uart_tx:tx_inst
- 26. Port Connectivity Checks: "uart:uart_inst|m_counter:m"
- 27. Port Connectivity Checks: "uart:uart_inst"
- 28. Post-Synthesis Netlist Statistics for Top Partition
- 29. Elapsed Time Per Partition
- 30. Analysis & Synthesis Messages
- 31. Analysis & Synthesis Suppressed Messages
+  8. State Machine - |uart_top|bin2bcd:get_bcd|state
+  9. State Machine - |uart_top|uart:uart_inst|uart_tx:tx_inst|state
+ 10. State Machine - |uart_top|uart:uart_inst|uart_rx:rx_inst|state
+ 11. State Machine - |uart_top|uart:uart_inst|fifo:rx_fifo|state
+ 12. State Machine - |uart_top|uart:uart_inst|fifo:tx_fifo|state
+ 13. State Machine - |uart_top|fall_edge_detector:reader|state
+ 14. State Machine - |uart_top|fall_edge_detector:writer|state
+ 15. Registers Removed During Synthesis
+ 16. Removed Registers Triggering Further Register Optimizations
+ 17. General Register Statistics
+ 18. Inverted Register Statistics
+ 19. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 20. Parameter Settings for User Entity Instance: Top-level Entity: |uart_top
+ 21. Parameter Settings for User Entity Instance: uart:uart_inst
+ 22. Parameter Settings for User Entity Instance: uart:uart_inst|m_counter:m
+ 23. Parameter Settings for User Entity Instance: uart:uart_inst|fifo:tx_fifo
+ 24. Parameter Settings for User Entity Instance: uart:uart_inst|fifo:rx_fifo
+ 25. Parameter Settings for User Entity Instance: uart:uart_inst|uart_rx:rx_inst
+ 26. Parameter Settings for User Entity Instance: uart:uart_inst|uart_tx:tx_inst
+ 27. Parameter Settings for User Entity Instance: bin2bcd:get_bcd
+ 28. Port Connectivity Checks: "bcd2sseg_active_low:get_sseg"
+ 29. Port Connectivity Checks: "bin2bcd:get_bcd"
+ 30. Port Connectivity Checks: "uart:uart_inst|m_counter:m"
+ 31. Port Connectivity Checks: "uart:uart_inst"
+ 32. Post-Synthesis Netlist Statistics for Top Partition
+ 33. Elapsed Time Per Partition
+ 34. Analysis & Synthesis Messages
+ 35. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -63,16 +67,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Apr 17 23:04:12 2025          ;
+; Analysis & Synthesis Status        ; Successful - Fri Apr 18 00:18:36 2025          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; UART                                           ;
 ; Top-level Entity Name              ; uart_top                                       ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 360                                            ;
-;     Total combinational functions  ; 230                                            ;
-;     Dedicated logic registers      ; 202                                            ;
-; Total registers                    ; 202                                            ;
-; Total pins                         ; 22                                             ;
+; Total logic elements               ; 406                                            ;
+;     Total combinational functions  ; 271                                            ;
+;     Dedicated logic registers      ; 222                                            ;
+; Total registers                    ; 222                                            ;
+; Total pins                         ; 30                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -185,19 +189,21 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                      ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                        ; Library ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------+---------+
-; uart_tx.v                        ; yes             ; User Verilog HDL File  ; C:/Users/user1111/Documents/DigitalDesign/UART/uart_tx.v            ;         ;
-; uart_top.v                       ; yes             ; User Verilog HDL File  ; C:/Users/user1111/Documents/DigitalDesign/UART/uart_top.v           ;         ;
-; uart_rx.v                        ; yes             ; User Verilog HDL File  ; C:/Users/user1111/Documents/DigitalDesign/UART/uart_rx.v            ;         ;
-; uart.v                           ; yes             ; User Verilog HDL File  ; C:/Users/user1111/Documents/DigitalDesign/UART/uart.v               ;         ;
-; m_counter.v                      ; yes             ; User Verilog HDL File  ; C:/Users/user1111/Documents/DigitalDesign/UART/m_counter.v          ;         ;
-; fifo.v                           ; yes             ; User Verilog HDL File  ; C:/Users/user1111/Documents/DigitalDesign/UART/fifo.v               ;         ;
-; fall_edge_detector.v             ; yes             ; User Verilog HDL File  ; C:/Users/user1111/Documents/DigitalDesign/UART/fall_edge_detector.v ;         ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                             ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                         ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
+; uart_tx.v                        ; yes             ; User Verilog HDL File        ; C:/Users/user1111/Documents/DigitalDesign/UART/uart_tx.v             ;         ;
+; uart_top.v                       ; yes             ; User Verilog HDL File        ; C:/Users/user1111/Documents/DigitalDesign/UART/uart_top.v            ;         ;
+; uart_rx.v                        ; yes             ; User Verilog HDL File        ; C:/Users/user1111/Documents/DigitalDesign/UART/uart_rx.v             ;         ;
+; uart.v                           ; yes             ; User Verilog HDL File        ; C:/Users/user1111/Documents/DigitalDesign/UART/uart.v                ;         ;
+; m_counter.v                      ; yes             ; User Verilog HDL File        ; C:/Users/user1111/Documents/DigitalDesign/UART/m_counter.v           ;         ;
+; fifo.v                           ; yes             ; User Verilog HDL File        ; C:/Users/user1111/Documents/DigitalDesign/UART/fifo.v                ;         ;
+; fall_edge_detector.v             ; yes             ; User Verilog HDL File        ; C:/Users/user1111/Documents/DigitalDesign/UART/fall_edge_detector.v  ;         ;
+; bin2bcd.v                        ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/user1111/Documents/DigitalDesign/UART/bin2bcd.v             ;         ;
+; bcd2sseg_active_low.v            ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/user1111/Documents/DigitalDesign/UART/bcd2sseg_active_low.v ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -205,49 +211,64 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 360       ;
+; Estimated Total logic elements              ; 406       ;
 ;                                             ;           ;
-; Total combinational functions               ; 230       ;
+; Total combinational functions               ; 271       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 153       ;
-;     -- 3 input functions                    ; 39        ;
-;     -- <=2 input functions                  ; 38        ;
+;     -- 4 input functions                    ; 188       ;
+;     -- 3 input functions                    ; 48        ;
+;     -- <=2 input functions                  ; 35        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 223       ;
-;     -- arithmetic mode                      ; 7         ;
+;     -- normal mode                          ; 267       ;
+;     -- arithmetic mode                      ; 4         ;
 ;                                             ;           ;
-; Total registers                             ; 202       ;
-;     -- Dedicated logic registers            ; 202       ;
+; Total registers                             ; 222       ;
+;     -- Dedicated logic registers            ; 222       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 22        ;
+; I/O pins                                    ; 30        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 202       ;
-; Total fan-out                               ; 1482      ;
-; Average fan-out                             ; 3.11      ;
+; Maximum fan-out                             ; 222       ;
+; Total fan-out                               ; 1732      ;
+; Average fan-out                             ; 3.13      ;
 +---------------------------------------------+-----------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                ;
-+--------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------+--------------------+--------------+
-; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                      ; Entity Name        ; Library Name ;
-+--------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------+--------------------+--------------+
-; |uart_top                      ; 230 (0)             ; 202 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 22   ; 0            ; 0          ; |uart_top                                ; uart_top           ; work         ;
-;    |fall_edge_detector:reader| ; 1 (1)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |uart_top|fall_edge_detector:reader      ; fall_edge_detector ; work         ;
-;    |fall_edge_detector:writer| ; 1 (1)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |uart_top|fall_edge_detector:writer      ; fall_edge_detector ; work         ;
-;    |uart:uart_inst|            ; 228 (0)             ; 198 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |uart_top|uart:uart_inst                 ; uart               ; work         ;
-;       |fifo:rx_fifo|           ; 67 (67)             ; 74 (74)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |uart_top|uart:uart_inst|fifo:rx_fifo    ; fifo               ; work         ;
-;       |fifo:tx_fifo|           ; 59 (59)             ; 74 (74)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |uart_top|uart:uart_inst|fifo:tx_fifo    ; fifo               ; work         ;
-;       |m_counter:m|            ; 15 (15)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |uart_top|uart:uart_inst|m_counter:m     ; m_counter          ; work         ;
-;       |uart_rx:rx_inst|        ; 45 (45)             ; 20 (20)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |uart_top|uart:uart_inst|uart_rx:rx_inst ; uart_rx            ; work         ;
-;       |uart_tx:tx_inst|        ; 42 (42)             ; 21 (21)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |uart_top|uart:uart_inst|uart_tx:tx_inst ; uart_tx            ; work         ;
-+--------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------+--------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                    ;
++-----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                      ; Entity Name         ; Library Name ;
++-----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------+---------------------+--------------+
+; |uart_top                         ; 271 (5)             ; 222 (4)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 30   ; 0            ; 0          ; |uart_top                                ; uart_top            ; work         ;
+;    |bcd2sseg_active_low:get_sseg| ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |uart_top|bcd2sseg_active_low:get_sseg   ; bcd2sseg_active_low ; work         ;
+;    |bin2bcd:get_bcd|              ; 41 (41)             ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |uart_top|bin2bcd:get_bcd                ; bin2bcd             ; work         ;
+;    |fall_edge_detector:reader|    ; 1 (1)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |uart_top|fall_edge_detector:reader      ; fall_edge_detector  ; work         ;
+;    |fall_edge_detector:writer|    ; 1 (1)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |uart_top|fall_edge_detector:writer      ; fall_edge_detector  ; work         ;
+;    |uart:uart_inst|               ; 216 (0)             ; 195 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |uart_top|uart:uart_inst                 ; uart                ; work         ;
+;       |fifo:rx_fifo|              ; 67 (67)             ; 74 (74)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |uart_top|uart:uart_inst|fifo:rx_fifo    ; fifo                ; work         ;
+;       |fifo:tx_fifo|              ; 59 (59)             ; 74 (74)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |uart_top|uart:uart_inst|fifo:tx_fifo    ; fifo                ; work         ;
+;       |m_counter:m|               ; 10 (10)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |uart_top|uart:uart_inst|m_counter:m     ; m_counter           ; work         ;
+;       |uart_rx:rx_inst|           ; 39 (39)             ; 20 (20)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |uart_top|uart:uart_inst|uart_rx:rx_inst ; uart_rx             ; work         ;
+;       |uart_tx:tx_inst|           ; 41 (41)             ; 21 (21)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |uart_top|uart:uart_inst|uart_tx:tx_inst ; uart_tx             ; work         ;
++-----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------+
+; State Machine - |uart_top|bin2bcd:get_bcd|state                  ;
++--------------+------------+--------------+------------+----------+
+; Name         ; state.LAST ; state.FINISH ; state.PROC ; state.00 ;
++--------------+------------+--------------+------------+----------+
+; state.00     ; 0          ; 0            ; 0          ; 0        ;
+; state.PROC   ; 0          ; 0            ; 1          ; 1        ;
+; state.FINISH ; 0          ; 1            ; 0          ; 1        ;
+; state.LAST   ; 1          ; 0            ; 0          ; 1        ;
++--------------+------------+--------------+------------+----------+
 
 
 Encoding Type:  One-Hot
@@ -331,6 +352,8 @@ Encoding Type:  One-Hot
 +----------------------------------------+--------------------+
 ; Register name                          ; Reason for Removal ;
 +----------------------------------------+--------------------+
+; bin2bcd:get_bcd|state~8                ; Lost fanout        ;
+; bin2bcd:get_bcd|state~9                ; Lost fanout        ;
 ; uart:uart_inst|uart_tx:tx_inst|state~8 ; Lost fanout        ;
 ; uart:uart_inst|uart_tx:tx_inst|state~9 ; Lost fanout        ;
 ; uart:uart_inst|uart_rx:rx_inst|state~8 ; Lost fanout        ;
@@ -343,7 +366,7 @@ Encoding Type:  One-Hot
 ; fall_edge_detector:writer|state.00     ; Lost fanout        ;
 ; fall_edge_detector:reader|state.LOW    ; Lost fanout        ;
 ; fall_edge_detector:reader|state.00     ; Lost fanout        ;
-; Total Number of Removed Registers = 12 ;                    ;
+; Total Number of Removed Registers = 14 ;                    ;
 +----------------------------------------+--------------------+
 
 
@@ -362,12 +385,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 202   ;
+; Total registers                              ; 222   ;
 ; Number of registers using Synchronous Clear  ; 1     ;
 ; Number of registers using Synchronous Load   ; 7     ;
-; Number of registers using Asynchronous Clear ; 74    ;
+; Number of registers using Asynchronous Clear ; 94    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 158   ;
+; Number of registers using Clock Enable       ; 172   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -378,7 +401,7 @@ Encoding Type:  One-Hot
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
 ; uart:uart_inst|uart_tx:tx_inst|tx      ; 2       ;
-; uart:uart_inst|fifo:rx_fifo|write_en   ; 10      ;
+; uart:uart_inst|fifo:rx_fifo|write_en   ; 9       ;
 ; uart:uart_inst|fifo:tx_fifo|write_en   ; 9       ;
 ; Total number of inverted registers = 3 ;         ;
 +----------------------------------------+---------+
@@ -391,47 +414,49 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
 ; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |uart_top|uart:uart_inst|fifo:rx_fifo|read_addr[2]  ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |uart_top|uart:uart_inst|fifo:tx_fifo|write_addr[2] ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |uart_top|uart:uart_inst|fifo:tx_fifo|read_addr[2]  ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |uart_top|uart:uart_inst|fifo:rx_fifo|write_addr[2] ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |uart_top|uart:uart_inst|uart_tx:tx_inst|s_reg[3]   ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |uart_top|uart:uart_inst|uart_tx:tx_inst|in_reg[0]  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |uart_top|uart:uart_inst|fifo:tx_fifo|read_addr[0]  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |uart_top|uart:uart_inst|fifo:rx_fifo|write_addr[1] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |uart_top|uart:uart_inst|uart_tx:tx_inst|s_reg[0]   ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |uart_top|uart:uart_inst|uart_tx:tx_inst|in_reg[5]  ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |uart_top|bin2bcd:get_bcd|bcd0[3]                   ;
 ; 8:1                ; 3 bits    ; 15 LEs        ; 3 LEs                ; 12 LEs                 ; Yes        ; |uart_top|uart:uart_inst|uart_tx:tx_inst|n[0]       ;
 ; 9:1                ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |uart_top|uart:uart_inst|uart_rx:rx_inst|s_reg[0]   ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |uart_top|bin2bcd:get_bcd|bin_reg[7]                ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |uart_top|fall_edge_detector:reader|Selector3       ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |uart_top|fall_edge_detector:writer|Selector3       ;
-; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |uart_top|uart:uart_inst|fifo:rx_fifo|Selector3     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |uart_top|fall_edge_detector:writer|Selector1       ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |uart_top|uart:uart_inst|fifo:rx_fifo|Selector5     ;
 ; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |uart_top|uart:uart_inst|fifo:tx_fifo|Selector5     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |uart_top|uart:uart_inst|uart_tx:tx_inst|Selector18 ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |uart_top|uart:uart_inst|uart_tx:tx_inst|Selector19 ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; No         ; |uart_top|uart:uart_inst|uart_rx:rx_inst|Selector16 ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |uart_top|uart:uart_inst|uart_tx:tx_inst|Selector17 ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; No         ; |uart_top|uart:uart_inst|uart_rx:rx_inst|Selector19 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
 
 
 +--------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: Top-level Entity: |uart_top ;
-+----------------+-------+-------------------------------------------------+
-; Parameter Name ; Value ; Type                                            ;
-+----------------+-------+-------------------------------------------------+
-; WIDTH          ; 8     ; Signed Integer                                  ;
-; SB_TICK        ; 16    ; Signed Integer                                  ;
-; SAMP           ; 16    ; Signed Integer                                  ;
-; BAUND_RATE     ; 19200 ; Signed Integer                                  ;
-; FIFO_DEPTH     ; 8     ; Signed Integer                                  ;
-+----------------+-------+-------------------------------------------------+
++----------------+--------+------------------------------------------------+
+; Parameter Name ; Value  ; Type                                           ;
++----------------+--------+------------------------------------------------+
+; WIDTH          ; 8      ; Signed Integer                                 ;
+; SB_TICK        ; 16     ; Signed Integer                                 ;
+; SAMP           ; 16     ; Signed Integer                                 ;
+; BAUND_RATE     ; 128000 ; Signed Integer                                 ;
+; FIFO_DEPTH     ; 8      ; Signed Integer                                 ;
++----------------+--------+------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: uart:uart_inst ;
-+----------------+-------+------------------------------------+
-; Parameter Name ; Value ; Type                               ;
-+----------------+-------+------------------------------------+
-; WIDTH          ; 8     ; Signed Integer                     ;
-; SB_TICK        ; 16    ; Signed Integer                     ;
-; SAMP           ; 16    ; Signed Integer                     ;
-; BAUND_RATE     ; 19200 ; Signed Integer                     ;
-; FIFO_DEPTH     ; 8     ; Signed Integer                     ;
-+----------------+-------+------------------------------------+
++----------------+--------+-----------------------------------+
+; Parameter Name ; Value  ; Type                              ;
++----------------+--------+-----------------------------------+
+; WIDTH          ; 8      ; Signed Integer                    ;
+; SB_TICK        ; 16     ; Signed Integer                    ;
+; SAMP           ; 16     ; Signed Integer                    ;
+; BAUND_RATE     ; 128000 ; Signed Integer                    ;
+; FIFO_DEPTH     ; 8      ; Signed Integer                    ;
++----------------+--------+-----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -440,7 +465,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+------------------------------------------------+
 ; Parameter Name ; Value ; Type                                           ;
 +----------------+-------+------------------------------------------------+
-; M              ; 162   ; Signed Integer                                 ;
+; M              ; 24    ; Signed Integer                                 ;
 +----------------+-------+------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -491,6 +516,48 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bin2bcd:get_bcd ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; WIDTH          ; 8     ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bcd2sseg_active_low:get_sseg"                                                                                                                 ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                                      ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; bcd5  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; bcd4  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; bcd3  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; bcd2  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; bcd1  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; sseg5 ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; sseg4 ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; sseg3 ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; sseg2 ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; sseg1 ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bin2bcd:get_bcd"                                                                                          ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; ready ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; bcd5  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; bcd4  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; bcd3  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; bcd2  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; bcd1  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
 +----------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "uart:uart_inst|m_counter:m"                                                                                 ;
 +---------+--------+----------+----------------------------------------------------------------------------------------------------------+
@@ -517,24 +584,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 22                          ;
-; cycloneiii_ff         ; 202                         ;
-;     CLR               ; 44                          ;
+; boundary_port         ; 30                          ;
+; cycloneiii_ff         ; 222                         ;
+;     CLR               ; 50                          ;
 ;     ENA               ; 128                         ;
-;     ENA CLR           ; 22                          ;
+;     ENA CLR           ; 36                          ;
 ;     ENA CLR SCLR      ; 1                           ;
 ;     ENA CLR SLD       ; 7                           ;
-; cycloneiii_lcell_comb ; 231                         ;
-;     arith             ; 7                           ;
-;         2 data inputs ; 7                           ;
-;     normal            ; 224                         ;
-;         1 data inputs ; 6                           ;
+; cycloneiii_lcell_comb ; 274                         ;
+;     arith             ; 4                           ;
+;         2 data inputs ; 4                           ;
+;     normal            ; 270                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 7                           ;
 ;         2 data inputs ; 26                          ;
-;         3 data inputs ; 39                          ;
-;         4 data inputs ; 153                         ;
+;         3 data inputs ; 48                          ;
+;         4 data inputs ; 188                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.64                        ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 3.20                        ;
 +-----------------------+-----------------------------+
 
 
@@ -553,30 +621,33 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Thu Apr 17 23:04:05 2025
+    Info: Processing started: Fri Apr 18 00:18:29 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off UART -c UART
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file uart_tx.v
     Info (12023): Found entity 1: uart_tx File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_tx.v Line: 3
-Info (12021): Found 6 design units, including 6 entities, in source file uart_top.v
+Info (12021): Found 8 design units, including 8 entities, in source file uart_top.v
     Info (12023): Found entity 1: uart_rx File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_rx.v Line: 3
     Info (12023): Found entity 2: m_counter File: C:/Users/user1111/Documents/DigitalDesign/UART/m_counter.v Line: 3
     Info (12023): Found entity 3: fifo File: C:/Users/user1111/Documents/DigitalDesign/UART/fifo.v Line: 4
     Info (12023): Found entity 4: uart File: C:/Users/user1111/Documents/DigitalDesign/UART/uart.v Line: 7
     Info (12023): Found entity 5: fall_edge_detector File: C:/Users/user1111/Documents/DigitalDesign/UART/fall_edge_detector.v Line: 3
-    Info (12023): Found entity 6: uart_top File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_top.v Line: 5
+    Info (12023): Found entity 6: bin2bcd File: C:/Users/user1111/Documents/DigitalDesign/UART/bin2bcd.v Line: 3
+    Info (12023): Found entity 7: bcd2sseg_active_low File: C:/Users/user1111/Documents/DigitalDesign/UART/bcd2sseg_active_low.v Line: 3
+    Info (12023): Found entity 8: uart_top File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_top.v Line: 7
 Info (12021): Found 0 design units, including 0 entities, in source file uart_rx.v
 Info (12021): Found 0 design units, including 0 entities, in source file uart_reg.v
 Info (12021): Found 0 design units, including 0 entities, in source file uart.v
 Info (12021): Found 0 design units, including 0 entities, in source file m_counter.v
 Info (12021): Found 0 design units, including 0 entities, in source file fifo.v
 Info (12021): Found 0 design units, including 0 entities, in source file fall_edge_detector.v
+Warning (10236): Verilog HDL Implicit Net warning at uart_top.v(76): created implicit net for "bcd_done" File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_top.v Line: 76
 Info (12127): Elaborating entity "uart_top" for the top level hierarchy
-Info (12128): Elaborating entity "fall_edge_detector" for hierarchy "fall_edge_detector:writer" File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_top.v Line: 27
-Info (12128): Elaborating entity "uart" for hierarchy "uart:uart_inst" File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_top.v Line: 54
+Info (12128): Elaborating entity "fall_edge_detector" for hierarchy "fall_edge_detector:writer" File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_top.v Line: 30
+Info (12128): Elaborating entity "uart" for hierarchy "uart:uart_inst" File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_top.v Line: 57
 Info (12128): Elaborating entity "m_counter" for hierarchy "uart:uart_inst|m_counter:m" File: C:/Users/user1111/Documents/DigitalDesign/UART/uart.v Line: 33
-Warning (10230): Verilog HDL assignment warning at m_counter.v(20): truncated value with size 32 to match size of target (8) File: C:/Users/user1111/Documents/DigitalDesign/UART/m_counter.v Line: 20
+Warning (10230): Verilog HDL assignment warning at m_counter.v(20): truncated value with size 32 to match size of target (5) File: C:/Users/user1111/Documents/DigitalDesign/UART/m_counter.v Line: 20
 Info (12128): Elaborating entity "fifo" for hierarchy "uart:uart_inst|fifo:tx_fifo" File: C:/Users/user1111/Documents/DigitalDesign/UART/uart.v Line: 44
 Info (12128): Elaborating entity "uart_rx" for hierarchy "uart:uart_inst|uart_rx:rx_inst" File: C:/Users/user1111/Documents/DigitalDesign/UART/uart.v Line: 64
 Warning (10230): Verilog HDL assignment warning at uart_rx.v(45): truncated value with size 32 to match size of target (4) File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_rx.v Line: 45
@@ -588,24 +659,38 @@ Warning (10230): Verilog HDL assignment warning at uart_tx.v(53): truncated valu
 Warning (10230): Verilog HDL assignment warning at uart_tx.v(65): truncated value with size 32 to match size of target (3) File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_tx.v Line: 65
 Warning (10230): Verilog HDL assignment warning at uart_tx.v(69): truncated value with size 32 to match size of target (4) File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_tx.v Line: 69
 Warning (10230): Verilog HDL assignment warning at uart_tx.v(80): truncated value with size 32 to match size of target (4) File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_tx.v Line: 80
+Info (12128): Elaborating entity "bin2bcd" for hierarchy "bin2bcd:get_bcd" File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_top.v Line: 77
+Warning (10230): Verilog HDL assignment warning at bin2bcd.v(49): truncated value with size 32 to match size of target (3) File: C:/Users/user1111/Documents/DigitalDesign/UART/bin2bcd.v Line: 49
+Info (12128): Elaborating entity "bcd2sseg_active_low" for hierarchy "bcd2sseg_active_low:get_sseg" File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_top.v Line: 83
 Info (276014): Found 2 instances of uninferred RAM logic
     Info (276004): RAM logic "uart:uart_inst|fifo:rx_fifo|mem" is uninferred due to inappropriate RAM size File: C:/Users/user1111/Documents/DigitalDesign/UART/fifo.v Line: 24
     Info (276004): RAM logic "uart:uart_inst|fifo:tx_fifo|mem" is uninferred due to inappropriate RAM size File: C:/Users/user1111/Documents/DigitalDesign/UART/fifo.v Line: 24
-Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (13000): Registers with preset signals will power-up high File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_tx.v Line: 9
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "bin2bcd:get_bcd|bin_reg[7]" is converted into an equivalent circuit using register "bin2bcd:get_bcd|bin_reg[7]~_emulated" and latch "bin2bcd:get_bcd|bin_reg[7]~1" File: C:/Users/user1111/Documents/DigitalDesign/UART/bin2bcd.v Line: 34
+    Warning (13310): Register "bin2bcd:get_bcd|bin_reg[6]" is converted into an equivalent circuit using register "bin2bcd:get_bcd|bin_reg[6]~_emulated" and latch "bin2bcd:get_bcd|bin_reg[6]~5" File: C:/Users/user1111/Documents/DigitalDesign/UART/bin2bcd.v Line: 34
+    Warning (13310): Register "bin2bcd:get_bcd|bin_reg[5]" is converted into an equivalent circuit using register "bin2bcd:get_bcd|bin_reg[5]~_emulated" and latch "bin2bcd:get_bcd|bin_reg[5]~9" File: C:/Users/user1111/Documents/DigitalDesign/UART/bin2bcd.v Line: 34
+    Warning (13310): Register "bin2bcd:get_bcd|bin_reg[4]" is converted into an equivalent circuit using register "bin2bcd:get_bcd|bin_reg[4]~_emulated" and latch "bin2bcd:get_bcd|bin_reg[4]~13" File: C:/Users/user1111/Documents/DigitalDesign/UART/bin2bcd.v Line: 34
+    Warning (13310): Register "bin2bcd:get_bcd|bin_reg[3]" is converted into an equivalent circuit using register "bin2bcd:get_bcd|bin_reg[3]~_emulated" and latch "bin2bcd:get_bcd|bin_reg[3]~17" File: C:/Users/user1111/Documents/DigitalDesign/UART/bin2bcd.v Line: 34
+    Warning (13310): Register "bin2bcd:get_bcd|bin_reg[2]" is converted into an equivalent circuit using register "bin2bcd:get_bcd|bin_reg[2]~_emulated" and latch "bin2bcd:get_bcd|bin_reg[2]~21" File: C:/Users/user1111/Documents/DigitalDesign/UART/bin2bcd.v Line: 34
+    Warning (13310): Register "bin2bcd:get_bcd|bin_reg[1]" is converted into an equivalent circuit using register "bin2bcd:get_bcd|bin_reg[1]~_emulated" and latch "bin2bcd:get_bcd|bin_reg[1]~25" File: C:/Users/user1111/Documents/DigitalDesign/UART/bin2bcd.v Line: 34
+    Warning (13310): Register "bin2bcd:get_bcd|bin_reg[0]" is converted into an equivalent circuit using register "bin2bcd:get_bcd|bin_reg[0]~_emulated" and latch "bin2bcd:get_bcd|bin_reg[0]~29" File: C:/Users/user1111/Documents/DigitalDesign/UART/bin2bcd.v Line: 34
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "sseg[7]" is stuck at VCC File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_top.v Line: 20
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 12 registers lost all their fanouts during netlist optimizations.
+Info (17049): 14 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/user1111/Documents/DigitalDesign/UART/output_files/UART.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 386 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 440 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
-    Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 364 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 4781 megabytes
-    Info: Processing ended: Thu Apr 17 23:04:12 2025
+    Info (21059): Implemented 17 output pins
+    Info (21061): Implemented 410 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 24 warnings
+    Info: Peak virtual memory: 4797 megabytes
+    Info: Processing ended: Fri Apr 18 00:18:36 2025
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:16
 
