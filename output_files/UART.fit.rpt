@@ -1,5 +1,5 @@
 Fitter report for UART
-Thu Apr 17 07:56:26 2025
+Thu Apr 17 23:04:21 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -66,7 +66,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +------------------------------------+------------------------------------------------+
-; Fitter Status                      ; Successful - Thu Apr 17 07:56:26 2025          ;
+; Fitter Status                      ; Successful - Thu Apr 17 23:04:21 2025          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; UART                                           ;
 ; Top-level Entity Name              ; uart_top                                       ;
@@ -157,7 +157,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   1.6%      ;
+;     Processors 2-6         ;   1.7%      ;
 +----------------------------+-------------+
 
 
@@ -1506,7 +1506,7 @@ Info (176353): Automatically promoted node clk~input (placed in PIN P11 (CLK7p, 
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -1519,7 +1519,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.39 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.40 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1530,10 +1530,10 @@ Warning (169177): 2 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2
     Info (169178): Pin rx uses I/O standard 3.3-V LVTTL at V9 File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_top.v Line: 16
 Info (144001): Generated suppressed messages file C:/Users/user1111/Documents/DigitalDesign/UART/output_files/UART.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 5757 megabytes
-    Info: Processing ended: Thu Apr 17 07:56:26 2025
+    Info: Peak virtual memory: 5758 megabytes
+    Info: Processing ended: Thu Apr 17 23:04:21 2025
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:11
+    Info: Total CPU time (on all processors): 00:00:12
 
 
 +----------------------------+

@@ -18,9 +18,9 @@
 		reg write_en=1;	
 		reg [1:0] state;
 		
-		reg [log(N)-1:0] write_addr, read_addr;	
-		wire [log(N)-1:0] nxt_write_addr = write_addr + 2'd1;
-		wire [log(N)-1:0] nxt_read_addr = read_addr + 2'd1;
+		reg [log(N+1)-1:0] write_addr, read_addr;	
+		wire [log(N+1)-1:0] nxt_write_addr = write_addr + 2'd1;
+		wire [log(N+1)-1:0] nxt_read_addr = read_addr + 2'd1;
 		reg [W-1:0] mem [0:N-1];
 		always @(posedge clk) 
 			if (write_en) mem[write_addr] <= in;
@@ -69,10 +69,10 @@
 			end
 		end
 		function integer log;
-			input [7:0] N;
+			input [31:0] N;
 			integer i;
 			begin
-				for (i=7; !N[7]; i = i-1) 
+				for (i=31; !N[31]; i = i-1) 
 					N = N << 1;	
 				log = i;	
 			end	

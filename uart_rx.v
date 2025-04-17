@@ -16,8 +16,8 @@
 				   DATA=2,
 				   STOP=3;
 
-		reg [log(S)-1:0] s_reg;
-		reg [log(DBIT)-1:0] n;
+		reg [log(S+1)-1:0] s_reg;
+		reg [log(DBIT+1)-1:0] n;
 		reg [1:0] state;
 		always @(posedge clk, posedge reset) begin
 			if (reset) begin
@@ -71,10 +71,10 @@
 		end	
 
 		function integer log;
-			input [7:0] N;
+			input [31:0] N;
 			integer i;
 			begin
-				for (i=7; !N[7]; i = i-1) 
+				for (i=31; !N[31]; i = i-1) 
 					N = N << 1;	
 				log = i;	
 			end	

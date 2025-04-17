@@ -1,14 +1,14 @@
 |uart_top
-tx <= uart:uart_inst.tx
+tx << uart:uart_inst.tx
 rx => rx.IN1
-leds[0] <= uart:uart_inst.data_out
-leds[1] <= uart:uart_inst.data_out
-leds[2] <= uart:uart_inst.data_out
-leds[3] <= uart:uart_inst.data_out
-leds[4] <= uart:uart_inst.data_out
-leds[5] <= uart:uart_inst.data_out
-leds[6] <= uart:uart_inst.data_out
-leds[7] <= uart:uart_inst.data_out
+leds[0] << uart:uart_inst.data_out
+leds[1] << uart:uart_inst.data_out
+leds[2] << uart:uart_inst.data_out
+leds[3] << uart:uart_inst.data_out
+leds[4] << uart:uart_inst.data_out
+leds[5] << uart:uart_inst.data_out
+leds[6] << uart:uart_inst.data_out
+leds[7] << uart:uart_inst.data_out
 sw[0] => sw[0].IN1
 sw[1] => sw[1].IN1
 sw[2] => sw[2].IN1
