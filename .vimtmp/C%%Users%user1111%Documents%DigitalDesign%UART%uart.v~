@@ -75,7 +75,6 @@
 	function integer compute_m(input [31:0] baund_r, sample);
 		begin
 			compute_m = 32'd50_000_000 / (baund_r * sample);
-			$display(compute_m);
 		end
 	endfunction
 	endmodule
