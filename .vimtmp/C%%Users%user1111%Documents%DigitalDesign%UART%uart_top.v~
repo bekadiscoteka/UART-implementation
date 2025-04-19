@@ -7,9 +7,9 @@
 module uart_top 
 	#(
 		parameter WIDTH=8,
-				SB_TICK=16,
+				SB=1,
 					
-				SAMP=16,
+				S=16,
 				BAUND_RATE=9600,
 
 				FIFO_DEPTH=8
@@ -18,10 +18,16 @@ module uart_top
 		output tx, input rx,
 		output [WIDTH-1:0] read_value, 
 		output [7:0] sseg,
+		output ready,
 		input [WIDTH-1:0] sw,
 		input clk, reset, write, read //write, get active-low buttons
 );
+
+	localparam SB_TICK=SB*S;
+	wire bcd_done;
 	wire do_write, do_read;
+	wire uart_ready;
+	assign ready = uart_ready;
 	fall_edge_detector writer(
 		.tick(do_write),
 		.clk(clk),
@@ -40,7 +46,7 @@ module uart_top
 		.SB_TICK(SB_TICK),
 		.FIFO_DEPTH(FIFO_DEPTH),
 		.BAUND_RATE(BAUND_RATE),
-		.SAMP(SAMP),
+		.S(S),
 		.WIDTH(WIDTH)
 	)
 	uart_inst(
@@ -53,7 +59,8 @@ module uart_top
 		.data_in(sw),
 		.rx(rx),
 		.wr_data(do_write),
-		.rd_data(do_read)
+		.rd_data(do_read),
+		.ready(uart_ready)
 	);	
 	
 	// this convertion part handles only numbers

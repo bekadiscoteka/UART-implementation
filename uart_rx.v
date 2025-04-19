@@ -1,5 +1,6 @@
 `ifndef UART_RX
 	`define UART_RX
+	`include "division.v"
 	module uart_rx #(
 		parameter DBIT=8,
 				  S=16,
@@ -7,12 +8,14 @@
 	)
 	(
 		output reg [7:0] d_out,
-		output reg [15:0] m,
+		output wire [31:0] m_out,
+		output ready,
 		output reg done_tick,
-		output reg detect_done_tick,
+		output wire detect_done_tick,
 		input rx, s_tick,
 		input clk, reset
 	);
+
 		localparam IDLE=0,
 				   START=1,
 				   DATA=2,
@@ -21,17 +24,31 @@
 		localparam BAUND_DETECT=0,
 				   OPERATE=1;
 
-		reg [log(S+1)-1:0] s_operate_reg;
+		division #(.W(32)) divide (
+			.clk(clk),
+			.reset(reset),
+			.start(div_start),
+			.done_tick(detect_done_tick),
+			.dvnd(cycle_per_byte),
+			.dvsr(S),
+			.quo(m_out)
+		);
+
+		reg [log(S):0] s_operate_reg;
 		reg [7:0] cycle;
 		reg [31:0] temp_cycle_per_byte, cycle_per_byte;
-		reg [log(DBIT+1)-1:0] n;
+		reg [log(DBIT):0] n;
+		reg div_start;
 		reg state;
 		reg [1:0] operate_state, baund_detect_state;
 
+		assign ready = (state == OPERATE) && (operate_state == IDLE);
 		always @(posedge clk, posedge reset) begin
 			if (reset) begin
 				temp_cycle_per_byte <= 0;
 				cycle_per_byte <= 0;
+				cycle <= 0;
+				div_start <= 0;
 				operate_state <= IDLE;
 				baund_detect_state <= IDLE;	
 				s_operate_reg <= 0;				
@@ -39,49 +56,49 @@
 				state <= BAUND_DETECT;
 				n <= 0;
 				done_tick <= 0;
-				detect_done_tick <= 0;
-				m <= 0;
 			end
 			else begin
 				case (state)
 					BAUND_DETECT: begin
 						case (baund_detect_state) 
-							IDLE: if (!rx) baund_detect_state <= START;
+							IDLE: if (!rx) baund_detect_state <= DATA;
 							DATA: begin
 								if (cycle == 7) begin
 									cycle <= 0;
+									if (!rx) cycle_per_byte <= temp_cycle_per_byte + 1;
 									temp_cycle_per_byte <= 
 										temp_cycle_per_byte + 1;	
 									if (temp_cycle_per_byte == 
-										((1/300 * 16) / (1/50_000_000))) begin 
+										(50_000_000/(300 * S)) * 9) begin //((1/300 * 16) / (1/50_000_000))) begin 
 										//slowest baund can be 300 baund 
 									   	baund_detect_state <= STOP;
 										cycle <= 0;
+										$display("cycle per byte: %", cycle_per_byte);
 									end
-									if (!rx) cycle_per_byte <= temp_cycle_per_byte + 1;
 								end
+								else if (!rx) begin
+								   	cycle_per_byte <= temp_cycle_per_byte;
+									cycle <= cycle + 1;
+								end
+
 								else cycle <= cycle + 1;
+								
 							end
 							STOP: begin
-								cycle <= cycle + 1;
-								if (cycle_per_byte > 0) 
-									cycle_per_byte <= cycle_per_byte - 1;
-								if (cycle == S) begin
-									m <= m + 1;
-									if (cycle_per_byte == 0) begin
-										detect_done_tick <= 1;
-										state <= OPERATE;
-										operate_state <= IDLE;
-									end
-								end	
+								div_start <= 1;	
+								$display(divide.counter);
+								if (detect_done_tick) begin
+									$display(divide.quo);
+									div_start <= 0;
+									state <= OPERATE;
+									baund_detect_state <= IDLE;
+								end
 							end
 						endcase
-
 					end
 					OPERATE: begin
 						case (operate_state) 
 							IDLE: begin
-								detect_done_tick <= 0;
 								s_operate_reg <= 0;
 								d_out <= 0;
 								n <= 0;

@@ -68,6 +68,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "ready",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				},
@@ -76,19 +80,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "read",
-					"strict" : false
-				},
-				{
 					"name" : "rx",
 					"strict" : false
 				},
 				{
-					"name" : "sw[0]",
+					"name" : "read",
 					"strict" : false
 				},
 				{
 					"name" : "write",
+					"strict" : false
+				},
+				{
+					"name" : "sw[0]",
 					"strict" : false
 				},
 				{

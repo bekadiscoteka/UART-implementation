@@ -1,5 +1,5 @@
 Fitter report for UART
-Fri Apr 18 00:18:45 2025
+Sun Apr 20 03:20:38 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -68,18 +68,18 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +------------------------------------+------------------------------------------------+
-; Fitter Status                      ; Successful - Fri Apr 18 00:18:45 2025          ;
+; Fitter Status                      ; Successful - Sun Apr 20 03:20:38 2025          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; UART                                           ;
 ; Top-level Entity Name              ; uart_top                                       ;
 ; Family                             ; MAX 10                                         ;
 ; Device                             ; 10M50DAF484C7G                                 ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 335 / 49,760 ( < 1 % )                         ;
-;     Total combinational functions  ; 272 / 49,760 ( < 1 % )                         ;
-;     Dedicated logic registers      ; 222 / 49,760 ( < 1 % )                         ;
-; Total registers                    ; 222                                            ;
-; Total pins                         ; 30 / 360 ( 8 % )                               ;
+; Total logic elements               ; 644 / 49,760 ( 1 % )                           ;
+;     Total combinational functions  ; 556 / 49,760 ( 1 % )                           ;
+;     Dedicated logic registers      ; 454 / 49,760 ( < 1 % )                         ;
+; Total registers                    ; 454                                            ;
+; Total pins                         ; 31 / 360 ( 9 % )                               ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                          ;
 ; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                                ;
@@ -154,32 +154,32 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 1.11        ;
+; Average used               ; 1.21        ;
 ; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.3%      ;
-;     Processor 3            ;   2.3%      ;
-;     Processor 4            ;   2.3%      ;
-;     Processor 5            ;   2.3%      ;
-;     Processor 6            ;   2.3%      ;
+;     Processor 2            ;   4.3%      ;
+;     Processor 3            ;   4.2%      ;
+;     Processor 4            ;   4.1%      ;
+;     Processor 5            ;   4.1%      ;
+;     Processor 6            ;   4.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------+
-; Incremental Compilation Preservation Summary                                                     ;
-+---------------------+--------------------+----------------------------+--------------------------+
-; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
-+---------------------+--------------------+----------------------------+--------------------------+
-; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 574 ) ; 0.00 % ( 0 / 574 )         ; 0.00 % ( 0 / 574 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 574 ) ; 0.00 % ( 0 / 574 )         ; 0.00 % ( 0 / 574 )       ;
-;                     ;                    ;                            ;                          ;
-; Routing (by net)    ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
-;     -- Achieved     ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
-+---------------------+--------------------+----------------------------+--------------------------+
++---------------------------------------------------------------------------------------------------+
+; Incremental Compilation Preservation Summary                                                      ;
++---------------------+---------------------+----------------------------+--------------------------+
+; Type                ; Total [A + B]       ; From Design Partitions [A] ; From Rapid Recompile [B] ;
++---------------------+---------------------+----------------------------+--------------------------+
+; Placement (by node) ;                     ;                            ;                          ;
+;     -- Requested    ; 0.00 % ( 0 / 1092 ) ; 0.00 % ( 0 / 1092 )        ; 0.00 % ( 0 / 1092 )      ;
+;     -- Achieved     ; 0.00 % ( 0 / 1092 ) ; 0.00 % ( 0 / 1092 )        ; 0.00 % ( 0 / 1092 )      ;
+;                     ;                     ;                            ;                          ;
+; Routing (by net)    ;                     ;                            ;                          ;
+;     -- Requested    ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
+;     -- Achieved     ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
++---------------------+---------------------+----------------------------+--------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -197,7 +197,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 558 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 1076 )   ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 16 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -213,28 +213,28 @@ The pin-out file can be found in C:/Users/user1111/Documents/DigitalDesign/UART/
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Total logic elements                        ; 335 / 49,760 ( < 1 % ) ;
-;     -- Combinational with no register       ; 113                    ;
-;     -- Register only                        ; 63                     ;
-;     -- Combinational with a register        ; 159                    ;
+; Total logic elements                        ; 644 / 49,760 ( 1 % )   ;
+;     -- Combinational with no register       ; 190                    ;
+;     -- Register only                        ; 88                     ;
+;     -- Combinational with a register        ; 366                    ;
 ;                                             ;                        ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 188                    ;
-;     -- 3 input functions                    ; 48                     ;
-;     -- <=2 input functions                  ; 36                     ;
-;     -- Register only                        ; 63                     ;
+;     -- 4 input functions                    ; 329                    ;
+;     -- 3 input functions                    ; 89                     ;
+;     -- <=2 input functions                  ; 138                    ;
+;     -- Register only                        ; 88                     ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 268                    ;
-;     -- arithmetic mode                      ; 4                      ;
+;     -- normal mode                          ; 460                    ;
+;     -- arithmetic mode                      ; 96                     ;
 ;                                             ;                        ;
-; Total registers*                            ; 222 / 51,509 ( < 1 % ) ;
-;     -- Dedicated logic registers            ; 222 / 49,760 ( < 1 % ) ;
+; Total registers*                            ; 454 / 51,509 ( < 1 % ) ;
+;     -- Dedicated logic registers            ; 454 / 49,760 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 1,749 ( 0 % )      ;
 ;                                             ;                        ;
-; Total LABs:  partially or completely used   ; 25 / 3,110 ( < 1 % )   ;
+; Total LABs:  partially or completely used   ; 46 / 3,110 ( 1 % )     ;
 ; Virtual pins                                ; 0                      ;
-; I/O pins                                    ; 30 / 360 ( 8 % )       ;
+; I/O pins                                    ; 31 / 360 ( 9 % )       ;
 ;     -- Clock pins                           ; 2 / 8 ( 25 % )         ;
 ;     -- Dedicated input pins                 ; 1 / 1 ( 100 % )        ;
 ;                                             ;                        ;
@@ -252,12 +252,12 @@ The pin-out file can be found in C:/Users/user1111/Documents/DigitalDesign/UART/
 ; Remote update blocks                        ; 0 / 1 ( 0 % )          ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )          ;
 ; Impedance control blocks                    ; 0 / 1 ( 0 % )          ;
-; Average interconnect usage (total/H/V)      ; 0.2% / 0.1% / 0.2%     ;
-; Peak interconnect usage (total/H/V)         ; 3.0% / 3.2% / 2.7%     ;
-; Maximum fan-out                             ; 222                    ;
-; Highest non-global fan-out                  ; 110                    ;
-; Total fan-out                               ; 1787                   ;
-; Average fan-out                             ; 2.90                   ;
+; Average interconnect usage (total/H/V)      ; 0.3% / 0.2% / 0.3%     ;
+; Peak interconnect usage (total/H/V)         ; 5.1% / 5.3% / 4.7%     ;
+; Maximum fan-out                             ; 454                    ;
+; Highest non-global fan-out                  ; 342                    ;
+; Total fan-out                               ; 3586                   ;
+; Average fan-out                             ; 3.10                   ;
 +---------------------------------------------+------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -270,29 +270,29 @@ The pin-out file can be found in C:/Users/user1111/Documents/DigitalDesign/UART/
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 335 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
-;     -- Combinational with no register       ; 113                   ; 0                              ;
-;     -- Register only                        ; 63                    ; 0                              ;
-;     -- Combinational with a register        ; 159                   ; 0                              ;
+; Total logic elements                        ; 644 / 49760 ( 1 % )   ; 0 / 49760 ( 0 % )              ;
+;     -- Combinational with no register       ; 190                   ; 0                              ;
+;     -- Register only                        ; 88                    ; 0                              ;
+;     -- Combinational with a register        ; 366                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
-;     -- 4 input functions                    ; 188                   ; 0                              ;
-;     -- 3 input functions                    ; 48                    ; 0                              ;
-;     -- <=2 input functions                  ; 36                    ; 0                              ;
-;     -- Register only                        ; 63                    ; 0                              ;
+;     -- 4 input functions                    ; 329                   ; 0                              ;
+;     -- 3 input functions                    ; 89                    ; 0                              ;
+;     -- <=2 input functions                  ; 138                   ; 0                              ;
+;     -- Register only                        ; 88                    ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
-;     -- normal mode                          ; 268                   ; 0                              ;
-;     -- arithmetic mode                      ; 4                     ; 0                              ;
+;     -- normal mode                          ; 460                   ; 0                              ;
+;     -- arithmetic mode                      ; 96                    ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total registers                             ; 222                   ; 0                              ;
-;     -- Dedicated logic registers            ; 222 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
+; Total registers                             ; 454                   ; 0                              ;
+;     -- Dedicated logic registers            ; 454 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 25 / 3110 ( < 1 % )   ; 0 / 3110 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 46 / 3110 ( 1 % )     ; 0 / 3110 ( 0 % )               ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
-; I/O pins                                    ; 30                    ; 0                              ;
+; I/O pins                                    ; 31                    ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 288 ( 0 % )       ; 0 / 288 ( 0 % )                ;
 ; Total memory bits                           ; 0                     ; 0                              ;
 ; Total RAM block bits                        ; 0                     ; 0                              ;
@@ -307,8 +307,8 @@ The pin-out file can be found in C:/Users/user1111/Documents/DigitalDesign/UART/
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 1793                  ; 8                              ;
-;     -- Registered Connections               ; 733                   ; 0                              ;
+;     -- Total Connections                    ; 3592                  ; 8                              ;
+;     -- Registered Connections               ; 1460                  ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
 ;     -- Top                                  ; 0                     ; 0                              ;
@@ -316,7 +316,7 @@ The pin-out file can be found in C:/Users/user1111/Documents/DigitalDesign/UART/
 ;                                             ;                       ;                                ;
 ; Partition Interface                         ;                       ;                                ;
 ;     -- Input Ports                          ; 13                    ; 0                              ;
-;     -- Output Ports                         ; 17                    ; 0                              ;
+;     -- Output Ports                         ; 18                    ; 0                              ;
 ;     -- Bidir Ports                          ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Registered Ports                            ;                       ;                                ;
@@ -340,10 +340,10 @@ The pin-out file can be found in C:/Users/user1111/Documents/DigitalDesign/UART/
 +-------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; Name  ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +-------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
-; clk   ; P11   ; 3        ; 34           ; 0            ; 28           ; 222                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; 0         ;
+; clk   ; P11   ; 3        ; 34           ; 0            ; 28           ; 454                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; 0         ;
 ; read  ; A7    ; 7        ; 49           ; 54           ; 28           ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
-; reset ; B14   ; 7        ; 56           ; 54           ; 0            ; 110                   ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
-; rx    ; V9    ; 3        ; 31           ; 0            ; 28           ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; 0         ;
+; reset ; B14   ; 7        ; 56           ; 54           ; 0            ; 342                   ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
+; rx    ; V9    ; 3        ; 31           ; 0            ; 28           ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; 0         ;
 ; sw[0] ; C10   ; 7        ; 51           ; 54           ; 28           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
 ; sw[1] ; C11   ; 7        ; 51           ; 54           ; 21           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
 ; sw[2] ; D12   ; 7        ; 51           ; 54           ; 0            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
@@ -369,6 +369,7 @@ The pin-out file can be found in C:/Users/user1111/Documents/DigitalDesign/UART/
 ; read_value[5] ; C13   ; 7        ; 58           ; 54           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; read_value[6] ; E14   ; 7        ; 66           ; 54           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; read_value[7] ; D14   ; 7        ; 56           ; 54           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; ready         ; A11   ; 7        ; 51           ; 54           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; sseg[0]       ; C14   ; 7        ; 58           ; 54           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; sseg[1]       ; E15   ; 7        ; 74           ; 54           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; sseg[2]       ; C15   ; 7        ; 60           ; 54           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
@@ -409,7 +410,7 @@ The pin-out file can be found in C:/Users/user1111/Documents/DigitalDesign/UART/
 ; 4        ; 0 / 48 ( 0 % )   ; 2.5V          ; --           ;
 ; 5        ; 0 / 40 ( 0 % )   ; 2.5V          ; --           ;
 ; 6        ; 0 / 60 ( 0 % )   ; 2.5V          ; --           ;
-; 7        ; 27 / 52 ( 52 % ) ; 2.5V          ; --           ;
+; 7        ; 28 / 52 ( 54 % ) ; 2.5V          ; --           ;
 ; 8        ; 4 / 36 ( 11 % )  ; 2.5V          ; --           ;
 +----------+------------------+---------------+--------------+
 
@@ -429,7 +430,7 @@ The pin-out file can be found in C:/Users/user1111/Documents/DigitalDesign/UART/
 ; A8       ; 447        ; 7        ; read_value[0]                                  ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; A9       ; 449        ; 7        ; read_value[1]                                  ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; A10      ; 439        ; 7        ; read_value[2]                                  ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
-; A11      ; 437        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
+; A11      ; 437        ; 7        ; ready                                          ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; A12      ; 435        ; 7        ; sw[4]                                          ; input  ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; A13      ; 433        ; 7        ; sw[6]                                          ; input  ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; A14      ; 425        ; 7        ; sw[7]                                          ; input  ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
@@ -929,10 +930,11 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; sseg[5]       ; Incomplete set of assignments ;
 ; sseg[6]       ; Incomplete set of assignments ;
 ; sseg[7]       ; Incomplete set of assignments ;
+; ready         ; Incomplete set of assignments ;
 ; reset         ; Incomplete set of assignments ;
 ; read          ; Incomplete set of assignments ;
-; sw[0]         ; Incomplete set of assignments ;
 ; write         ; Incomplete set of assignments ;
+; sw[0]         ; Incomplete set of assignments ;
 ; sw[1]         ; Incomplete set of assignments ;
 ; sw[2]         ; Incomplete set of assignments ;
 ; sw[3]         ; Incomplete set of assignments ;
@@ -943,23 +945,24 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +---------------+-------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                       ;
-+-----------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+------------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node        ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; ADC blocks ; Full Hierarchy Name                      ; Entity Name         ; Library Name ;
-+-----------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+------------------------------------------+---------------------+--------------+
-; |uart_top                         ; 335 (8)     ; 222 (4)                   ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 30   ; 0            ; 113 (4)      ; 63 (4)            ; 159 (2)          ; 0          ; |uart_top                                ; uart_top            ; work         ;
-;    |bcd2sseg_active_low:get_sseg| ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0          ; |uart_top|bcd2sseg_active_low:get_sseg   ; bcd2sseg_active_low ; work         ;
-;    |bin2bcd:get_bcd|              ; 43 (43)     ; 19 (19)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 21 (21)      ; 1 (1)             ; 21 (21)          ; 0          ; |uart_top|bin2bcd:get_bcd                ; bin2bcd             ; work         ;
-;    |fall_edge_detector:reader|    ; 2 (2)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 1 (1)            ; 0          ; |uart_top|fall_edge_detector:reader      ; fall_edge_detector  ; work         ;
-;    |fall_edge_detector:writer|    ; 2 (2)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 1 (1)            ; 0          ; |uart_top|fall_edge_detector:writer      ; fall_edge_detector  ; work         ;
-;    |uart:uart_inst|               ; 277 (0)     ; 195 (0)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 81 (0)       ; 56 (0)            ; 140 (0)          ; 0          ; |uart_top|uart:uart_inst                 ; uart                ; work         ;
-;       |fifo:rx_fifo|              ; 96 (96)     ; 74 (74)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 21 (21)      ; 24 (24)           ; 51 (51)          ; 0          ; |uart_top|uart:uart_inst|fifo:rx_fifo    ; fifo                ; work         ;
-;       |fifo:tx_fifo|              ; 91 (91)     ; 74 (74)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (17)      ; 32 (32)           ; 42 (42)          ; 0          ; |uart_top|uart:uart_inst|fifo:tx_fifo    ; fifo                ; work         ;
-;       |m_counter:m|               ; 10 (10)     ; 6 (6)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 6 (6)            ; 0          ; |uart_top|uart:uart_inst|m_counter:m     ; m_counter           ; work         ;
-;       |uart_rx:rx_inst|           ; 39 (39)     ; 20 (20)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 19 (19)      ; 0 (0)             ; 20 (20)          ; 0          ; |uart_top|uart:uart_inst|uart_rx:rx_inst ; uart_rx             ; work         ;
-;       |uart_tx:tx_inst|           ; 41 (41)     ; 21 (21)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 20 (20)      ; 0 (0)             ; 21 (21)          ; 0          ; |uart_top|uart:uart_inst|uart_tx:tx_inst ; uart_tx             ; work         ;
-+-----------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+------------------------------------------+---------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                         ;
++-------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+----------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node          ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; ADC blocks ; Full Hierarchy Name                                      ; Entity Name         ; Library Name ;
++-------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+----------------------------------------------------------+---------------------+--------------+
+; |uart_top                           ; 644 (10)    ; 454 (4)                   ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 31   ; 0            ; 190 (6)      ; 88 (3)            ; 366 (0)          ; 0          ; |uart_top                                                ; uart_top            ; work         ;
+;    |bcd2sseg_active_low:get_sseg|   ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0          ; |uart_top|bcd2sseg_active_low:get_sseg                   ; bcd2sseg_active_low ; work         ;
+;    |bin2bcd:get_bcd|                ; 44 (44)     ; 19 (19)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 23 (23)      ; 3 (3)             ; 18 (18)          ; 0          ; |uart_top|bin2bcd:get_bcd                                ; bin2bcd             ; work         ;
+;    |fall_edge_detector:reader|      ; 2 (2)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 1 (1)            ; 0          ; |uart_top|fall_edge_detector:reader                      ; fall_edge_detector  ; work         ;
+;    |fall_edge_detector:writer|      ; 2 (2)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 1 (1)            ; 0          ; |uart_top|fall_edge_detector:writer                      ; fall_edge_detector  ; work         ;
+;    |uart:uart_inst|                 ; 581 (0)     ; 427 (0)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 154 (0)      ; 80 (0)            ; 347 (0)          ; 0          ; |uart_top|uart:uart_inst                                 ; uart                ; work         ;
+;       |fifo:rx_fifo|                ; 99 (99)     ; 74 (74)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 25 (25)      ; 31 (31)           ; 43 (43)          ; 0          ; |uart_top|uart:uart_inst|fifo:rx_fifo                    ; fifo                ; work         ;
+;       |fifo:tx_fifo|                ; 94 (94)     ; 74 (74)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 19 (19)      ; 34 (34)           ; 41 (41)          ; 0          ; |uart_top|uart:uart_inst|fifo:tx_fifo                    ; fifo                ; work         ;
+;       |rx_specific_counter:counter| ; 53 (53)     ; 49 (49)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 14 (14)           ; 35 (35)          ; 0          ; |uart_top|uart:uart_inst|rx_specific_counter:counter     ; rx_specific_counter ; work         ;
+;       |uart_rx:rx_inst|             ; 299 (138)   ; 208 (99)                  ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 88 (38)      ; 1 (0)             ; 210 (100)        ; 0          ; |uart_top|uart:uart_inst|uart_rx:rx_inst                 ; uart_rx             ; work         ;
+;          |division:divide|          ; 161 (161)   ; 109 (109)                 ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 50 (50)      ; 1 (1)             ; 110 (110)        ; 0          ; |uart_top|uart:uart_inst|uart_rx:rx_inst|division:divide ; division            ; work         ;
+;       |uart_tx:tx_inst|             ; 40 (40)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 18 (18)      ; 0 (0)             ; 22 (22)          ; 0          ; |uart_top|uart:uart_inst|uart_tx:tx_inst                 ; uart_tx             ; work         ;
++-------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+----------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -985,258 +988,502 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sseg[5]       ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; sseg[6]       ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; sseg[7]       ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; ready         ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; clk           ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; reset         ; Input    ; (0) 0 ps      ; (0) 0 ps      ; --                    ; --  ; --   ;
-; read          ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
-; rx            ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
-; sw[0]         ; Input    ; (6) 868 ps    ; (6) 868 ps    ; --                    ; --  ; --   ;
+; rx            ; Input    ; --            ; (0) 0 ps      ; --                    ; --  ; --   ;
+; read          ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
 ; write         ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
+; sw[0]         ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
 ; sw[1]         ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
-; sw[2]         ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
+; sw[2]         ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
 ; sw[3]         ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
 ; sw[4]         ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
 ; sw[5]         ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
 ; sw[6]         ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
-; sw[7]         ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
+; sw[7]         ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
 +---------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+----------------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                                   ;
-+----------------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                                ; Pad To Core Index ; Setting ;
-+----------------------------------------------------+-------------------+---------+
-; clk                                                ;                   ;         ;
-; reset                                              ;                   ;         ;
-;      - bcd[0]                                      ; 1                 ; 0       ;
-;      - bcd[1]                                      ; 1                 ; 0       ;
-;      - bcd[2]                                      ; 1                 ; 0       ;
-;      - bcd[3]                                      ; 1                 ; 0       ;
-;      - uart:uart_inst|m_counter:m|tick             ; 1                 ; 0       ;
-;      - uart:uart_inst|fifo:rx_fifo|read_addr[0]    ; 1                 ; 0       ;
-;      - uart:uart_inst|fifo:rx_fifo|read_addr[1]    ; 1                 ; 0       ;
-;      - uart:uart_inst|fifo:rx_fifo|read_addr[2]    ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_tx:tx_inst|done_tick    ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_tx:tx_inst|s_reg[0]     ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_tx:tx_inst|s_reg[1]     ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_tx:tx_inst|s_reg[2]     ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_tx:tx_inst|s_reg[3]     ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_tx:tx_inst|n[0]         ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_tx:tx_inst|n[2]         ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_tx:tx_inst|state.00     ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_tx:tx_inst|state.START  ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_tx:tx_inst|state.DATA   ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_tx:tx_inst|state.STOP   ; 1                 ; 0       ;
-;      - uart:uart_inst|fifo:tx_fifo|state.EMPTY     ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_tx:tx_inst|n[1]         ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_tx:tx_inst|in_reg[0]    ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_tx:tx_inst|in_reg[1]    ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_tx:tx_inst|in_reg[2]    ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_tx:tx_inst|in_reg[3]    ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_tx:tx_inst|in_reg[4]    ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_tx:tx_inst|in_reg[5]    ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_tx:tx_inst|in_reg[6]    ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_tx:tx_inst|tx           ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_rx:rx_inst|d_out[5]     ; 1                 ; 0       ;
-;      - uart:uart_inst|fifo:rx_fifo|write_addr[1]   ; 1                 ; 0       ;
-;      - uart:uart_inst|fifo:rx_fifo|write_addr[2]   ; 1                 ; 0       ;
-;      - uart:uart_inst|fifo:rx_fifo|write_addr[0]   ; 1                 ; 0       ;
-;      - uart:uart_inst|fifo:rx_fifo|write_en        ; 1                 ; 0       ;
-;      - uart:uart_inst|fifo:rx_fifo|state.EMPTY     ; 1                 ; 0       ;
-;      - fall_edge_detector:reader|state.TICK        ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_rx:rx_inst|d_out[6]     ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_rx:rx_inst|d_out[7]     ; 1                 ; 0       ;
-;      - bin2bcd:get_bcd|bcd0[0]                     ; 1                 ; 0       ;
-;      - bin2bcd:get_bcd|state.FINISH                ; 1                 ; 0       ;
-;      - bin2bcd:get_bcd|bcd0[1]                     ; 1                 ; 0       ;
-;      - bin2bcd:get_bcd|bcd0[2]                     ; 1                 ; 0       ;
-;      - bin2bcd:get_bcd|bcd0[3]                     ; 1                 ; 0       ;
-;      - uart:uart_inst|fifo:tx_fifo|read_addr[1]    ; 1                 ; 0       ;
-;      - uart:uart_inst|fifo:tx_fifo|read_addr[0]    ; 1                 ; 0       ;
-;      - uart:uart_inst|fifo:tx_fifo|read_addr[2]    ; 1                 ; 0       ;
-;      - uart:uart_inst|m_counter:m|counter[4]       ; 1                 ; 0       ;
-;      - uart:uart_inst|m_counter:m|counter[3]       ; 1                 ; 0       ;
-;      - uart:uart_inst|m_counter:m|counter[2]       ; 1                 ; 0       ;
-;      - uart:uart_inst|m_counter:m|counter[1]       ; 1                 ; 0       ;
-;      - uart:uart_inst|m_counter:m|counter[0]       ; 1                 ; 0       ;
-;      - uart:uart_inst|fifo:tx_fifo|write_addr[1]   ; 1                 ; 0       ;
-;      - uart:uart_inst|fifo:tx_fifo|write_addr[0]   ; 1                 ; 0       ;
-;      - uart:uart_inst|fifo:tx_fifo|write_addr[2]   ; 1                 ; 0       ;
-;      - uart:uart_inst|fifo:tx_fifo|state.PROC      ; 1                 ; 0       ;
-;      - fall_edge_detector:writer|state.TICK        ; 1                 ; 0       ;
-;      - uart:uart_inst|fifo:tx_fifo|state.FULL      ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_rx:rx_inst|d_out[0]     ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_rx:rx_inst|d_out[1]     ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_rx:rx_inst|d_out[2]     ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_rx:rx_inst|d_out[3]     ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_rx:rx_inst|d_out[4]     ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_rx:rx_inst|state.DATA   ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_rx:rx_inst|s_reg[3]     ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_rx:rx_inst|s_reg[2]     ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_rx:rx_inst|s_reg[1]     ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_rx:rx_inst|s_reg[0]     ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_rx:rx_inst|state.START  ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_rx:rx_inst|state.STOP   ; 1                 ; 0       ;
-;      - uart:uart_inst|fifo:rx_fifo|state.FULL      ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_rx:rx_inst|done_tick    ; 1                 ; 0       ;
-;      - uart:uart_inst|fifo:rx_fifo|state.PROC      ; 1                 ; 0       ;
-;      - fall_edge_detector:reader|state.HIGH        ; 1                 ; 0       ;
-;      - bin2bcd:get_bcd|state.PROC                  ; 1                 ; 0       ;
-;      - bin2bcd:get_bcd|state.LAST                  ; 1                 ; 0       ;
-;      - bin2bcd:get_bcd|state.00                    ; 1                 ; 0       ;
-;      - uart:uart_inst|fifo:tx_fifo|write_en        ; 1                 ; 0       ;
-;      - fall_edge_detector:writer|state.HIGH        ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_rx:rx_inst|n[2]         ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_rx:rx_inst|n[1]         ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_rx:rx_inst|n[0]         ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_rx:rx_inst|state.00     ; 1                 ; 0       ;
-;      - bin2bcd:get_bcd|counter[0]                  ; 1                 ; 0       ;
-;      - bin2bcd:get_bcd|counter[2]                  ; 1                 ; 0       ;
-;      - bin2bcd:get_bcd|counter[1]                  ; 1                 ; 0       ;
-;      - bin2bcd:get_bcd|bin_reg[7]~_emulated        ; 1                 ; 0       ;
-;      - bin2bcd:get_bcd|bin_reg[7]~2                ; 1                 ; 0       ;
-;      - bin2bcd:get_bcd|bin_reg[6]~_emulated        ; 1                 ; 0       ;
-;      - bin2bcd:get_bcd|bin_reg[6]~6                ; 1                 ; 0       ;
-;      - bin2bcd:get_bcd|bin_reg[5]~_emulated        ; 1                 ; 0       ;
-;      - bin2bcd:get_bcd|bin_reg[5]~10               ; 1                 ; 0       ;
-;      - uart:uart_inst|uart_tx:tx_inst|in_reg[7]    ; 1                 ; 0       ;
-;      - bin2bcd:get_bcd|bin_reg[4]~_emulated        ; 1                 ; 0       ;
-;      - bin2bcd:get_bcd|bin_reg[4]~14               ; 1                 ; 0       ;
-;      - bin2bcd:get_bcd|bin_reg[3]~_emulated        ; 1                 ; 0       ;
-;      - bin2bcd:get_bcd|bin_reg[3]~18               ; 1                 ; 0       ;
-;      - bin2bcd:get_bcd|bin_reg[2]~_emulated        ; 1                 ; 0       ;
-;      - bin2bcd:get_bcd|bin_reg[2]~22               ; 1                 ; 0       ;
-;      - bin2bcd:get_bcd|bin_reg[1]~_emulated        ; 1                 ; 0       ;
-;      - bin2bcd:get_bcd|bin_reg[1]~26               ; 1                 ; 0       ;
-;      - bin2bcd:get_bcd|bin_reg[0]~_emulated        ; 1                 ; 0       ;
-;      - bin2bcd:get_bcd|bin_reg[0]~30               ; 1                 ; 0       ;
-;      - bin2bcd:get_bcd|bin_reg[7]~1                ; 0                 ; 0       ;
-;      - bin2bcd:get_bcd|bin_reg[6]~5                ; 0                 ; 0       ;
-;      - bin2bcd:get_bcd|bin_reg[5]~9                ; 1                 ; 0       ;
-;      - bin2bcd:get_bcd|bin_reg[4]~13               ; 0                 ; 0       ;
-;      - bin2bcd:get_bcd|bin_reg[3]~17               ; 1                 ; 0       ;
-;      - bin2bcd:get_bcd|bin_reg[2]~21               ; 1                 ; 0       ;
-;      - bin2bcd:get_bcd|bin_reg[1]~25               ; 1                 ; 0       ;
-;      - bin2bcd:get_bcd|bin_reg[0]~29               ; 0                 ; 0       ;
-; read                                               ;                   ;         ;
-;      - fall_edge_detector:reader|state.HIGH        ; 1                 ; 6       ;
-;      - fall_edge_detector:reader|Selector2~0       ; 1                 ; 6       ;
-; rx                                                 ;                   ;         ;
-;      - uart:uart_inst|uart_rx:rx_inst|Selector4~0  ; 0                 ; 6       ;
-;      - uart:uart_inst|uart_rx:rx_inst|Selector19~5 ; 0                 ; 6       ;
-;      - uart:uart_inst|uart_rx:rx_inst|Selector16~0 ; 0                 ; 6       ;
-; sw[0]                                              ;                   ;         ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~16          ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~0           ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~24          ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~48          ; 1                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~40          ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~32          ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~56          ; 1                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~8feeder     ; 0                 ; 6       ;
-; write                                              ;                   ;         ;
-;      - fall_edge_detector:writer|state.HIGH        ; 1                 ; 6       ;
-;      - fall_edge_detector:writer|Selector2~0       ; 1                 ; 6       ;
-; sw[1]                                              ;                   ;         ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~9           ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~17          ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~1           ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~25          ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~49          ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~41          ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~33          ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~57          ; 0                 ; 6       ;
-; sw[2]                                              ;                   ;         ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~10          ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~18          ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~2           ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~26          ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~50          ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~42          ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~34          ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~58          ; 0                 ; 6       ;
-; sw[3]                                              ;                   ;         ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~11          ; 1                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~3           ; 1                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~51          ; 1                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~35          ; 1                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~59          ; 1                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~43feeder    ; 1                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~19feeder    ; 1                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~27feeder    ; 1                 ; 6       ;
-; sw[4]                                              ;                   ;         ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~12          ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~4           ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~52          ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~36          ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~60          ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~44feeder    ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~20feeder    ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~28feeder    ; 0                 ; 6       ;
-; sw[5]                                              ;                   ;         ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~13          ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~5           ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~53          ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~45          ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~37          ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~61          ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~29feeder    ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~21feeder    ; 0                 ; 6       ;
-; sw[6]                                              ;                   ;         ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~22          ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~6           ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~30          ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~54          ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~38          ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~62          ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~46feeder    ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~14feeder    ; 0                 ; 6       ;
-; sw[7]                                              ;                   ;         ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~15          ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~7           ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~55          ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~39          ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~63          ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~23feeder    ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~31feeder    ; 0                 ; 6       ;
-;      - uart:uart_inst|fifo:tx_fifo|mem~47feeder    ; 0                 ; 6       ;
-+----------------------------------------------------+-------------------+---------+
++--------------------------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                                   ;
++--------------------------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                                                ; Pad To Core Index ; Setting ;
++--------------------------------------------------------------------+-------------------+---------+
+; clk                                                                ;                   ;         ;
+; reset                                                              ;                   ;         ;
+;      - bcd[0]                                                      ; 0                 ; 0       ;
+;      - bcd[1]                                                      ; 0                 ; 0       ;
+;      - bcd[2]                                                      ; 0                 ; 0       ;
+;      - bcd[3]                                                      ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|tick             ; 0                 ; 0       ;
+;      - uart:uart_inst|fifo:rx_fifo|read_addr[0]                    ; 0                 ; 0       ;
+;      - uart:uart_inst|fifo:rx_fifo|read_addr[1]                    ; 0                 ; 0       ;
+;      - uart:uart_inst|fifo:rx_fifo|read_addr[2]                    ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|state                        ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_tx:tx_inst|done_tick                    ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_tx:tx_inst|n[0]                         ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_tx:tx_inst|n[1]                         ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_tx:tx_inst|n[2]                         ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_tx:tx_inst|state.00                     ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_tx:tx_inst|state.START                  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_tx:tx_inst|state.DATA                   ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_tx:tx_inst|state.STOP                   ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|operate_state.IDLE           ; 0                 ; 0       ;
+;      - uart:uart_inst|fifo:tx_fifo|state.EMPTY                     ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_tx:tx_inst|in_reg[7]                    ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_tx:tx_inst|s_reg[0]                     ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_tx:tx_inst|s_reg[1]                     ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_tx:tx_inst|s_reg[2]                     ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_tx:tx_inst|s_reg[3]                     ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_tx:tx_inst|s_reg[4]                     ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|s_operate_reg[0]             ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|s_operate_reg[1]             ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|s_operate_reg[2]             ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|s_operate_reg[3]             ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|s_operate_reg[4]             ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|counter[0]       ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|counter[1]       ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|counter[2]       ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|counter[3]       ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|counter[4]       ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|counter[5]       ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|counter[6]       ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|counter[7]       ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|counter[8]       ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|counter[9]       ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|counter[10]      ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|counter[11]      ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|counter[12]      ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|counter[13]      ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|counter[14]      ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|counter[15]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_tx:tx_inst|in_reg[0]                    ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_tx:tx_inst|in_reg[1]                    ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_tx:tx_inst|in_reg[2]                    ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_tx:tx_inst|in_reg[3]                    ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_tx:tx_inst|in_reg[4]                    ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_tx:tx_inst|in_reg[5]                    ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_tx:tx_inst|in_reg[6]                    ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_tx:tx_inst|tx                           ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|d_out[5]                     ; 0                 ; 0       ;
+;      - uart:uart_inst|fifo:rx_fifo|write_addr[1]                   ; 0                 ; 0       ;
+;      - uart:uart_inst|fifo:rx_fifo|write_addr[2]                   ; 0                 ; 0       ;
+;      - uart:uart_inst|fifo:rx_fifo|write_addr[0]                   ; 0                 ; 0       ;
+;      - uart:uart_inst|fifo:rx_fifo|write_en                        ; 0                 ; 0       ;
+;      - uart:uart_inst|fifo:rx_fifo|state.EMPTY                     ; 0                 ; 0       ;
+;      - fall_edge_detector:reader|state.TICK                        ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|d_out[6]                     ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|d_out[7]                     ; 0                 ; 0       ;
+;      - bin2bcd:get_bcd|bcd0[0]                                     ; 0                 ; 0       ;
+;      - bin2bcd:get_bcd|state.FINISH                                ; 0                 ; 0       ;
+;      - bin2bcd:get_bcd|bcd0[1]                                     ; 0                 ; 0       ;
+;      - bin2bcd:get_bcd|bcd0[2]                                     ; 0                 ; 0       ;
+;      - bin2bcd:get_bcd|bcd0[3]                                     ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|baund_detect_state.STOP      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|state.FINISH ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|operate_state.STOP           ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|operate_state.DATA           ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|n[3]                         ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|n[2]                         ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|n[1]                         ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|n[0]                         ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|operate_state.START          ; 0                 ; 0       ;
+;      - uart:uart_inst|fifo:tx_fifo|write_addr[1]                   ; 0                 ; 0       ;
+;      - uart:uart_inst|fifo:tx_fifo|read_addr[1]                    ; 0                 ; 0       ;
+;      - uart:uart_inst|fifo:tx_fifo|write_addr[0]                   ; 0                 ; 0       ;
+;      - uart:uart_inst|fifo:tx_fifo|read_addr[0]                    ; 0                 ; 0       ;
+;      - uart:uart_inst|fifo:tx_fifo|write_addr[2]                   ; 0                 ; 0       ;
+;      - uart:uart_inst|fifo:tx_fifo|read_addr[2]                    ; 0                 ; 0       ;
+;      - uart:uart_inst|fifo:tx_fifo|state.PROC                      ; 0                 ; 0       ;
+;      - fall_edge_detector:writer|state.TICK                        ; 0                 ; 0       ;
+;      - uart:uart_inst|fifo:tx_fifo|state.FULL                      ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|_m[1]            ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|_m[0]            ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|_m[3]            ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|_m[2]            ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|_m[4]            ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|_m[5]            ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|_m[7]            ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|_m[6]            ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|_m[9]            ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|_m[8]            ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|_m[10]           ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|_m[11]           ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|_m[12]           ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|_m[13]           ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|_m[14]           ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|_m[15]           ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|_m[31]           ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|_m[30]           ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|_m[29]           ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|_m[28]           ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|_m[27]           ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|_m[26]           ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|_m[25]           ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|_m[24]           ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|_m[23]           ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|_m[22]           ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|_m[21]           ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|_m[20]           ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|_m[19]           ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|_m[18]           ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|_m[17]           ; 0                 ; 0       ;
+;      - uart:uart_inst|rx_specific_counter:counter|_m[16]           ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|d_out[0]                     ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|d_out[1]                     ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|d_out[2]                     ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|d_out[3]                     ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|d_out[4]                     ; 0                 ; 0       ;
+;      - uart:uart_inst|fifo:rx_fifo|state.FULL                      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|done_tick                    ; 0                 ; 0       ;
+;      - uart:uart_inst|fifo:rx_fifo|state.PROC                      ; 0                 ; 0       ;
+;      - fall_edge_detector:reader|state.HIGH                        ; 0                 ; 0       ;
+;      - bin2bcd:get_bcd|state.PROC                                  ; 0                 ; 0       ;
+;      - bin2bcd:get_bcd|state.LAST                                  ; 0                 ; 0       ;
+;      - bin2bcd:get_bcd|state.00                                    ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|baund_detect_state.DATA      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle[7]                     ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle[6]                     ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle[5]                     ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle[4]                     ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle[3]                     ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle[2]                     ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle[1]                     ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle[0]                     ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|temp_cycle_per_byte[31]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|temp_cycle_per_byte[30]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|temp_cycle_per_byte[29]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|temp_cycle_per_byte[28]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|temp_cycle_per_byte[27]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|temp_cycle_per_byte[26]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|temp_cycle_per_byte[25]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|temp_cycle_per_byte[24]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|temp_cycle_per_byte[23]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|temp_cycle_per_byte[22]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|temp_cycle_per_byte[21]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|temp_cycle_per_byte[20]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|temp_cycle_per_byte[16]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|temp_cycle_per_byte[19]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|temp_cycle_per_byte[18]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|temp_cycle_per_byte[17]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|temp_cycle_per_byte[14]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|temp_cycle_per_byte[13]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|temp_cycle_per_byte[15]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|temp_cycle_per_byte[12]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|temp_cycle_per_byte[11]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|temp_cycle_per_byte[10]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|temp_cycle_per_byte[9]       ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|temp_cycle_per_byte[8]       ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|temp_cycle_per_byte[5]       ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|temp_cycle_per_byte[4]       ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|temp_cycle_per_byte[7]       ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|temp_cycle_per_byte[6]       ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|temp_cycle_per_byte[3]       ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|temp_cycle_per_byte[2]       ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|temp_cycle_per_byte[1]       ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|temp_cycle_per_byte[0]       ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|state.PROC   ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|counter[9]   ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|counter[8]   ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|counter[7]   ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|counter[6]   ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|counter[5]   ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|counter[4]   ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|counter[3]   ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|counter[2]   ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|counter[1]   ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|counter[0]   ; 0                 ; 0       ;
+;      - fall_edge_detector:writer|state.HIGH                        ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|quo[1]       ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|quo[0]       ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|quo[3]       ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|quo[2]       ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|quo[4]       ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|quo[5]       ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|quo[7]       ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|quo[6]       ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|quo[9]       ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|quo[8]       ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|quo[10]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|quo[11]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|quo[12]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|quo[13]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|quo[14]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|quo[15]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|quo[31]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|quo[30]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|quo[29]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|quo[28]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|quo[27]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|quo[26]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|quo[25]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|quo[24]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|quo[23]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|quo[22]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|quo[21]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|quo[20]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|quo[19]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|quo[18]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|quo[17]      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|quo[16]      ; 0                 ; 0       ;
+;      - uart:uart_inst|fifo:tx_fifo|write_en                        ; 0                 ; 0       ;
+;      - bin2bcd:get_bcd|counter[0]                                  ; 0                 ; 0       ;
+;      - bin2bcd:get_bcd|counter[2]                                  ; 0                 ; 0       ;
+;      - bin2bcd:get_bcd|counter[1]                                  ; 0                 ; 0       ;
+;      - bin2bcd:get_bcd|bin_reg[7]~_emulated                        ; 0                 ; 0       ;
+;      - bin2bcd:get_bcd|bin_reg[7]~2                                ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|baund_detect_state.IDLE      ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|div_start                    ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|state.READY  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[63]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[62]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[61]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[60]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[59]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[58]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[57]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[56]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[55]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[54]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[53]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[52]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[51]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[50]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[49]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[48]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[47]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[46]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[45]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[44]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[43]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[42]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[41]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[40]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[39]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[38]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[37]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[36]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[35]  ; 0                 ; 0       ;
+;      - bin2bcd:get_bcd|bin_reg[6]~_emulated                        ; 0                 ; 0       ;
+;      - bin2bcd:get_bcd|bin_reg[6]~6                                ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[34]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[33]  ; 0                 ; 0       ;
+;      - bin2bcd:get_bcd|bin_reg[5]~_emulated                        ; 0                 ; 0       ;
+;      - bin2bcd:get_bcd|bin_reg[5]~10                               ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[32]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[31]  ; 0                 ; 0       ;
+;      - bin2bcd:get_bcd|bin_reg[4]~_emulated                        ; 0                 ; 0       ;
+;      - bin2bcd:get_bcd|bin_reg[4]~14                               ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[30]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[31]           ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[29]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[30]           ; 0                 ; 0       ;
+;      - bin2bcd:get_bcd|bin_reg[3]~_emulated                        ; 0                 ; 0       ;
+;      - bin2bcd:get_bcd|bin_reg[3]~18                               ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[28]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[29]           ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[27]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[28]           ; 0                 ; 0       ;
+;      - bin2bcd:get_bcd|bin_reg[2]~_emulated                        ; 0                 ; 0       ;
+;      - bin2bcd:get_bcd|bin_reg[2]~22                               ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[26]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[27]           ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[25]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[26]           ; 0                 ; 0       ;
+;      - bin2bcd:get_bcd|bin_reg[1]~_emulated                        ; 0                 ; 0       ;
+;      - bin2bcd:get_bcd|bin_reg[1]~26                               ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[24]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[25]           ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[23]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[24]           ; 0                 ; 0       ;
+;      - bin2bcd:get_bcd|bin_reg[0]~_emulated                        ; 0                 ; 0       ;
+;      - bin2bcd:get_bcd|bin_reg[0]~30                               ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[22]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[23]           ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[21]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[22]           ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[20]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[21]           ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[19]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[20]           ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[18]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[19]           ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[17]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[18]           ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[16]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[17]           ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[15]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[16]           ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[14]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[15]           ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[13]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[14]           ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[12]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[13]           ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[11]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[12]           ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[10]  ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[11]           ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[9]   ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[10]           ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[8]   ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[9]            ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[7]   ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[8]            ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[6]   ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[7]            ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[5]   ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[6]            ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[4]   ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[5]            ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[3]   ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[4]            ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[2]   ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[3]            ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[1]   ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[2]            ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[0]   ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[1]            ; 0                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[0]            ; 0                 ; 0       ;
+;      - bin2bcd:get_bcd|bin_reg[7]~1                                ; 1                 ; 0       ;
+;      - bin2bcd:get_bcd|bin_reg[6]~5                                ; 1                 ; 0       ;
+;      - bin2bcd:get_bcd|bin_reg[5]~9                                ; 1                 ; 0       ;
+;      - bin2bcd:get_bcd|bin_reg[4]~13                               ; 1                 ; 0       ;
+;      - bin2bcd:get_bcd|bin_reg[3]~17                               ; 1                 ; 0       ;
+;      - bin2bcd:get_bcd|bin_reg[2]~21                               ; 1                 ; 0       ;
+;      - bin2bcd:get_bcd|bin_reg[1]~25                               ; 1                 ; 0       ;
+;      - bin2bcd:get_bcd|bin_reg[0]~29                               ; 1                 ; 0       ;
+; rx                                                                 ;                   ;         ;
+;      - uart:uart_inst|uart_rx:rx_inst|operate_state~13             ; 1                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|Selector8~0                  ; 1                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|baund_detect_state~21        ; 1                 ; 0       ;
+;      - uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[31]~1         ; 1                 ; 0       ;
+; read                                                               ;                   ;         ;
+;      - fall_edge_detector:reader|Selector2~0                       ; 0                 ; 6       ;
+;      - fall_edge_detector:reader|state.HIGH~feeder                 ; 0                 ; 6       ;
+; write                                                              ;                   ;         ;
+;      - fall_edge_detector:writer|Selector2~0                       ; 1                 ; 6       ;
+;      - fall_edge_detector:writer|state.HIGH~feeder                 ; 1                 ; 6       ;
+; sw[0]                                                              ;                   ;         ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~8                           ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~0                           ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~24                          ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~48                          ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~32                          ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~56                          ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~40feeder                    ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~16feeder                    ; 0                 ; 6       ;
+; sw[1]                                                              ;                   ;         ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~9                           ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~1                           ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~25                          ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~49                          ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~41                          ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~33                          ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~57                          ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~17feeder                    ; 0                 ; 6       ;
+; sw[2]                                                              ;                   ;         ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~10                          ; 1                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~2                           ; 1                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~26                          ; 1                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~50                          ; 1                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~42                          ; 1                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~34                          ; 1                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~58                          ; 1                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~18feeder                    ; 1                 ; 6       ;
+; sw[3]                                                              ;                   ;         ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~11                          ; 1                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~19                          ; 1                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~3                           ; 1                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~27                          ; 1                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~51                          ; 1                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~43                          ; 1                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~35                          ; 1                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~59                          ; 1                 ; 6       ;
+; sw[4]                                                              ;                   ;         ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~12                          ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~20                          ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~4                           ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~28                          ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~52                          ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~36                          ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~60                          ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~44feeder                    ; 0                 ; 6       ;
+; sw[5]                                                              ;                   ;         ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~5                           ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~29                          ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~53                          ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~45                          ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~37                          ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~61                          ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~21feeder                    ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~13feeder                    ; 0                 ; 6       ;
+; sw[6]                                                              ;                   ;         ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~14                          ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~6                           ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~30                          ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~54                          ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~46                          ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~38                          ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~62                          ; 0                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~22feeder                    ; 0                 ; 6       ;
+; sw[7]                                                              ;                   ;         ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~15                          ; 1                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~7                           ; 1                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~31                          ; 1                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~55                          ; 1                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~39                          ; 1                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~63                          ; 1                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~23feeder                    ; 1                 ; 6       ;
+;      - uart:uart_inst|fifo:tx_fifo|mem~47feeder                    ; 1                 ; 6       ;
++--------------------------------------------------------------------+-------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                        ;
-+---------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; Name                                        ; Location           ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+---------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; bin2bcd:get_bcd|state.FINISH                ; FF_X57_Y51_N23     ; 20      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; clk                                         ; PIN_P11            ; 222     ; Clock                      ; yes    ; Global Clock         ; GCLK19           ; --                        ;
-; reset                                       ; PIN_B14            ; 110     ; Async. clear, Latch enable ; no     ; --                   ; --               ; --                        ;
-; uart:uart_inst|fifo:rx_fifo|mem~104         ; LCCOMB_X61_Y52_N22 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; uart:uart_inst|fifo:rx_fifo|mem~105         ; LCCOMB_X56_Y52_N14 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; uart:uart_inst|fifo:rx_fifo|mem~106         ; LCCOMB_X56_Y52_N0  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; uart:uart_inst|fifo:rx_fifo|mem~107         ; LCCOMB_X61_Y52_N16 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; uart:uart_inst|fifo:rx_fifo|mem~108         ; LCCOMB_X61_Y52_N30 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; uart:uart_inst|fifo:rx_fifo|mem~109         ; LCCOMB_X61_Y52_N8  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; uart:uart_inst|fifo:rx_fifo|mem~110         ; LCCOMB_X57_Y52_N24 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; uart:uart_inst|fifo:rx_fifo|mem~111         ; LCCOMB_X56_Y52_N10 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; uart:uart_inst|fifo:rx_fifo|read_addr[2]~0  ; LCCOMB_X54_Y52_N6  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; uart:uart_inst|fifo:rx_fifo|write_addr[1]~0 ; LCCOMB_X56_Y52_N18 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; uart:uart_inst|fifo:tx_fifo|mem~68          ; LCCOMB_X52_Y51_N0  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; uart:uart_inst|fifo:tx_fifo|mem~69          ; LCCOMB_X52_Y51_N2  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; uart:uart_inst|fifo:tx_fifo|mem~70          ; LCCOMB_X52_Y51_N12 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; uart:uart_inst|fifo:tx_fifo|mem~71          ; LCCOMB_X52_Y51_N14 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; uart:uart_inst|fifo:tx_fifo|mem~72          ; LCCOMB_X52_Y51_N16 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; uart:uart_inst|fifo:tx_fifo|mem~73          ; LCCOMB_X52_Y51_N18 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; uart:uart_inst|fifo:tx_fifo|mem~74          ; LCCOMB_X52_Y51_N4  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; uart:uart_inst|fifo:tx_fifo|mem~75          ; LCCOMB_X52_Y51_N10 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; uart:uart_inst|fifo:tx_fifo|write_addr[2]~0 ; LCCOMB_X56_Y51_N2  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; uart:uart_inst|fifo:tx_fifo|write_en~0      ; LCCOMB_X55_Y51_N12 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; uart:uart_inst|uart_rx:rx_inst|s_reg[0]~1   ; LCCOMB_X56_Y50_N2  ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; uart:uart_inst|uart_tx:tx_inst|in_reg[5]~8  ; LCCOMB_X55_Y50_N22 ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; uart:uart_inst|uart_tx:tx_inst|n[0]~2       ; LCCOMB_X55_Y50_N18 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; uart:uart_inst|uart_tx:tx_inst|s_reg[0]~1   ; LCCOMB_X55_Y51_N22 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; uart:uart_inst|uart_tx:tx_inst|state.DATA   ; FF_X55_Y50_N15     ; 18      ; Sync. clear, Sync. load    ; no     ; --                   ; --               ; --                        ;
-+---------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                                        ;
++-------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
+; Name                                                        ; Location           ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
+; bin2bcd:get_bcd|state.FINISH                                ; FF_X56_Y53_N13     ; 20      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; clk                                                         ; PIN_P11            ; 454     ; Clock                      ; yes    ; Global Clock         ; GCLK19           ; --                        ;
+; reset                                                       ; PIN_B14            ; 342     ; Async. clear, Latch enable ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|fifo:rx_fifo|mem~104                         ; LCCOMB_X59_Y51_N0  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|fifo:rx_fifo|mem~105                         ; LCCOMB_X60_Y50_N18 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|fifo:rx_fifo|mem~106                         ; LCCOMB_X60_Y50_N0  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|fifo:rx_fifo|mem~107                         ; LCCOMB_X60_Y50_N22 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|fifo:rx_fifo|mem~108                         ; LCCOMB_X60_Y50_N12 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|fifo:rx_fifo|mem~109                         ; LCCOMB_X60_Y50_N30 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|fifo:rx_fifo|mem~110                         ; LCCOMB_X60_Y50_N20 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|fifo:rx_fifo|mem~111                         ; LCCOMB_X60_Y50_N6  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|fifo:rx_fifo|read_addr[2]~0                  ; LCCOMB_X59_Y51_N4  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|fifo:rx_fifo|write_addr[1]~0                 ; LCCOMB_X59_Y51_N20 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|fifo:tx_fifo|mem~68                          ; LCCOMB_X52_Y52_N18 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|fifo:tx_fifo|mem~69                          ; LCCOMB_X52_Y52_N24 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|fifo:tx_fifo|mem~70                          ; LCCOMB_X52_Y52_N26 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|fifo:tx_fifo|mem~71                          ; LCCOMB_X52_Y52_N4  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|fifo:tx_fifo|mem~72                          ; LCCOMB_X52_Y53_N4  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|fifo:tx_fifo|mem~73                          ; LCCOMB_X52_Y53_N2  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|fifo:tx_fifo|mem~74                          ; LCCOMB_X52_Y53_N8  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|fifo:tx_fifo|mem~75                          ; LCCOMB_X52_Y53_N26 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|fifo:tx_fifo|write_addr[2]~0                 ; LCCOMB_X52_Y52_N6  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|fifo:tx_fifo|write_en~0                      ; LCCOMB_X52_Y51_N10 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|rx_specific_counter:counter|Equal0~15        ; LCCOMB_X56_Y50_N28 ; 17      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|uart_rx:rx_inst|baund_detect_state~22        ; LCCOMB_X54_Y51_N14 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|uart_rx:rx_inst|cycle[7]~0                   ; LCCOMB_X54_Y53_N16 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[31]~1         ; LCCOMB_X54_Y51_N16 ; 32      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|uart_rx:rx_inst|division:divide|state.FINISH ; FF_X56_Y53_N3      ; 159     ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|uart_rx:rx_inst|operate_state~17             ; LCCOMB_X59_Y52_N28 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|uart_rx:rx_inst|s_operate_reg[1]~14          ; LCCOMB_X58_Y52_N20 ; 5       ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|uart_rx:rx_inst|s_operate_reg[4]~15          ; LCCOMB_X58_Y52_N22 ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|uart_rx:rx_inst|state                        ; FF_X54_Y51_N1      ; 22      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|uart_rx:rx_inst|temp_cycle_per_byte[31]~0    ; LCCOMB_X55_Y51_N0  ; 32      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|uart_tx:tx_inst|in_reg[3]~8                  ; LCCOMB_X52_Y50_N26 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|uart_tx:tx_inst|n[3]~2                       ; LCCOMB_X51_Y51_N14 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|uart_tx:tx_inst|s_reg[4]~16                  ; LCCOMB_X52_Y51_N8  ; 5       ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|uart_tx:tx_inst|s_reg[4]~17                  ; LCCOMB_X52_Y51_N28 ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart:uart_inst|uart_tx:tx_inst|state.DATA                   ; FF_X51_Y51_N19     ; 19      ; Sync. clear, Sync. load    ; no     ; --                   ; --               ; --                        ;
++-------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------+
@@ -1244,7 +1491,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name ; Location ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; clk  ; PIN_P11  ; 222     ; 2                                    ; Global Clock         ; GCLK19           ; --                        ;
+; clk  ; PIN_P11  ; 454     ; 0                                    ; Global Clock         ; GCLK19           ; --                        ;
 +------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -1253,160 +1500,175 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-------------------------+
 ; Routing Resource Type ; Usage                   ;
 +-----------------------+-------------------------+
-; Block interconnects   ; 409 / 148,641 ( < 1 % ) ;
-; C16 interconnects     ; 10 / 5,382 ( < 1 % )    ;
-; C4 interconnects      ; 182 / 106,704 ( < 1 % ) ;
-; Direct links          ; 102 / 148,641 ( < 1 % ) ;
+; Block interconnects   ; 750 / 148,641 ( < 1 % ) ;
+; C16 interconnects     ; 25 / 5,382 ( < 1 % )    ;
+; C4 interconnects      ; 297 / 106,704 ( < 1 % ) ;
+; Direct links          ; 244 / 148,641 ( < 1 % ) ;
 ; Global clocks         ; 1 / 20 ( 5 % )          ;
-; Local interconnects   ; 187 / 49,760 ( < 1 % )  ;
+; Local interconnects   ; 386 / 49,760 ( < 1 % )  ;
 ; NSLEEPs               ; 0 / 500 ( 0 % )         ;
-; R24 interconnects     ; 5 / 5,406 ( < 1 % )     ;
-; R4 interconnects      ; 225 / 147,764 ( < 1 % ) ;
+; R24 interconnects     ; 8 / 5,406 ( < 1 % )     ;
+; R4 interconnects      ; 372 / 147,764 ( < 1 % ) ;
 +-----------------------+-------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 13.40) ; Number of LABs  (Total = 25) ;
+; Number of Logic Elements  (Average = 14.00) ; Number of LABs  (Total = 46) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 1                            ;
-; 2                                           ; 1                            ;
+; 1                                           ; 3                            ;
+; 2                                           ; 0                            ;
 ; 3                                           ; 0                            ;
 ; 4                                           ; 0                            ;
-; 5                                           ; 0                            ;
+; 5                                           ; 1                            ;
 ; 6                                           ; 0                            ;
-; 7                                           ; 1                            ;
+; 7                                           ; 0                            ;
 ; 8                                           ; 0                            ;
-; 9                                           ; 0                            ;
-; 10                                          ; 2                            ;
+; 9                                           ; 1                            ;
+; 10                                          ; 1                            ;
 ; 11                                          ; 1                            ;
-; 12                                          ; 1                            ;
-; 13                                          ; 0                            ;
-; 14                                          ; 2                            ;
-; 15                                          ; 2                            ;
-; 16                                          ; 14                           ;
+; 12                                          ; 2                            ;
+; 13                                          ; 1                            ;
+; 14                                          ; 3                            ;
+; 15                                          ; 1                            ;
+; 16                                          ; 32                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 2.12) ; Number of LABs  (Total = 25) ;
+; LAB-wide Signals  (Average = 2.39) ; Number of LABs  (Total = 46) ;
 +------------------------------------+------------------------------+
-; 1 Async. clear                     ; 14                           ;
-; 1 Clock                            ; 24                           ;
-; 1 Clock enable                     ; 6                            ;
+; 1 Async. clear                     ; 36                           ;
+; 1 Clock                            ; 45                           ;
+; 1 Clock enable                     ; 13                           ;
+; 1 Sync. clear                      ; 2                            ;
 ; 1 Sync. load                       ; 1                            ;
-; 2 Clock enables                    ; 8                            ;
+; 2 Clock enables                    ; 13                           ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 21.48) ; Number of LABs  (Total = 25) ;
+; Number of Signals Sourced  (Average = 23.37) ; Number of LABs  (Total = 46) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 1                            ;
-; 2                                            ; 0                            ;
-; 3                                            ; 1                            ;
+; 2                                            ; 2                            ;
+; 3                                            ; 0                            ;
 ; 4                                            ; 0                            ;
 ; 5                                            ; 0                            ;
 ; 6                                            ; 0                            ;
 ; 7                                            ; 0                            ;
 ; 8                                            ; 0                            ;
-; 9                                            ; 0                            ;
+; 9                                            ; 1                            ;
 ; 10                                           ; 0                            ;
 ; 11                                           ; 0                            ;
-; 12                                           ; 1                            ;
+; 12                                           ; 0                            ;
 ; 13                                           ; 0                            ;
-; 14                                           ; 1                            ;
-; 15                                           ; 0                            ;
-; 16                                           ; 2                            ;
+; 14                                           ; 0                            ;
+; 15                                           ; 1                            ;
+; 16                                           ; 1                            ;
 ; 17                                           ; 0                            ;
-; 18                                           ; 2                            ;
+; 18                                           ; 3                            ;
 ; 19                                           ; 0                            ;
-; 20                                           ; 0                            ;
-; 21                                           ; 0                            ;
-; 22                                           ; 3                            ;
-; 23                                           ; 2                            ;
-; 24                                           ; 2                            ;
-; 25                                           ; 2                            ;
-; 26                                           ; 1                            ;
+; 20                                           ; 2                            ;
+; 21                                           ; 1                            ;
+; 22                                           ; 5                            ;
+; 23                                           ; 6                            ;
+; 24                                           ; 5                            ;
+; 25                                           ; 1                            ;
+; 26                                           ; 0                            ;
 ; 27                                           ; 1                            ;
-; 28                                           ; 3                            ;
-; 29                                           ; 0                            ;
+; 28                                           ; 1                            ;
+; 29                                           ; 2                            ;
 ; 30                                           ; 2                            ;
-; 31                                           ; 0                            ;
-; 32                                           ; 1                            ;
+; 31                                           ; 3                            ;
+; 32                                           ; 8                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 8.16) ; Number of LABs  (Total = 25) ;
+; Number of Signals Sourced Out  (Average = 8.83) ; Number of LABs  (Total = 46) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 4                            ;
-; 2                                               ; 0                            ;
-; 3                                               ; 0                            ;
-; 4                                               ; 0                            ;
-; 5                                               ; 2                            ;
-; 6                                               ; 3                            ;
-; 7                                               ; 3                            ;
-; 8                                               ; 3                            ;
-; 9                                               ; 1                            ;
-; 10                                              ; 1                            ;
-; 11                                              ; 3                            ;
-; 12                                              ; 1                            ;
-; 13                                              ; 0                            ;
-; 14                                              ; 1                            ;
-; 15                                              ; 1                            ;
-; 16                                              ; 0                            ;
-; 17                                              ; 2                            ;
+; 1                                               ; 3                            ;
+; 2                                               ; 2                            ;
+; 3                                               ; 4                            ;
+; 4                                               ; 3                            ;
+; 5                                               ; 4                            ;
+; 6                                               ; 2                            ;
+; 7                                               ; 2                            ;
+; 8                                               ; 5                            ;
+; 9                                               ; 4                            ;
+; 10                                              ; 4                            ;
+; 11                                              ; 2                            ;
+; 12                                              ; 2                            ;
+; 13                                              ; 1                            ;
+; 14                                              ; 3                            ;
+; 15                                              ; 0                            ;
+; 16                                              ; 3                            ;
+; 17                                              ; 0                            ;
+; 18                                              ; 0                            ;
+; 19                                              ; 0                            ;
+; 20                                              ; 0                            ;
+; 21                                              ; 0                            ;
+; 22                                              ; 0                            ;
+; 23                                              ; 0                            ;
+; 24                                              ; 0                            ;
+; 25                                              ; 0                            ;
+; 26                                              ; 0                            ;
+; 27                                              ; 0                            ;
+; 28                                              ; 0                            ;
+; 29                                              ; 0                            ;
+; 30                                              ; 0                            ;
+; 31                                              ; 0                            ;
+; 32                                              ; 2                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 13.96) ; Number of LABs  (Total = 25) ;
+; Number of Distinct Inputs  (Average = 14.48) ; Number of LABs  (Total = 46) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
-; 2                                            ; 1                            ;
+; 2                                            ; 0                            ;
 ; 3                                            ; 1                            ;
-; 4                                            ; 0                            ;
+; 4                                            ; 2                            ;
 ; 5                                            ; 1                            ;
-; 6                                            ; 1                            ;
-; 7                                            ; 1                            ;
+; 6                                            ; 4                            ;
+; 7                                            ; 4                            ;
 ; 8                                            ; 3                            ;
 ; 9                                            ; 2                            ;
 ; 10                                           ; 0                            ;
-; 11                                           ; 1                            ;
-; 12                                           ; 0                            ;
+; 11                                           ; 3                            ;
+; 12                                           ; 1                            ;
 ; 13                                           ; 3                            ;
 ; 14                                           ; 1                            ;
-; 15                                           ; 0                            ;
-; 16                                           ; 0                            ;
+; 15                                           ; 1                            ;
+; 16                                           ; 1                            ;
 ; 17                                           ; 0                            ;
-; 18                                           ; 0                            ;
+; 18                                           ; 1                            ;
 ; 19                                           ; 0                            ;
 ; 20                                           ; 4                            ;
-; 21                                           ; 0                            ;
-; 22                                           ; 0                            ;
-; 23                                           ; 0                            ;
-; 24                                           ; 1                            ;
+; 21                                           ; 1                            ;
+; 22                                           ; 3                            ;
+; 23                                           ; 1                            ;
+; 24                                           ; 0                            ;
 ; 25                                           ; 1                            ;
-; 26                                           ; 0                            ;
-; 27                                           ; 0                            ;
-; 28                                           ; 1                            ;
+; 26                                           ; 2                            ;
+; 27                                           ; 3                            ;
+; 28                                           ; 0                            ;
 ; 29                                           ; 0                            ;
-; 30                                           ; 0                            ;
+; 30                                           ; 1                            ;
 ; 31                                           ; 1                            ;
-; 32                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -1467,9 +1729,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 ; Pin/Rules          ; IO_000001 ; IO_000002    ; IO_000003 ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007 ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000033 ; IO_000034    ; IO_000042    ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
-; Total Pass         ; 30        ; 0            ; 30        ; 0            ; 0            ; 30        ; 30        ; 0            ; 30        ; 30        ; 0            ; 16           ; 0            ; 0            ; 13           ; 0            ; 16           ; 13           ; 0            ; 0            ; 0            ; 16           ; 0            ; 0            ; 0            ; 0            ; 0            ; 30        ; 0            ; 0            ;
+; Total Pass         ; 31        ; 0            ; 31        ; 0            ; 0            ; 31        ; 31        ; 0            ; 31        ; 31        ; 0            ; 17           ; 0            ; 0            ; 13           ; 0            ; 17           ; 13           ; 0            ; 0            ; 0            ; 17           ; 0            ; 0            ; 0            ; 0            ; 0            ; 31        ; 0            ; 0            ;
 ; Total Unchecked    ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
-; Total Inapplicable ; 0         ; 30           ; 0         ; 30           ; 30           ; 0         ; 0         ; 30           ; 0         ; 0         ; 30           ; 14           ; 30           ; 30           ; 17           ; 30           ; 14           ; 17           ; 30           ; 30           ; 30           ; 14           ; 30           ; 30           ; 30           ; 30           ; 30           ; 0         ; 30           ; 30           ;
+; Total Inapplicable ; 0         ; 31           ; 0         ; 31           ; 31           ; 0         ; 0         ; 31           ; 0         ; 0         ; 31           ; 14           ; 31           ; 31           ; 18           ; 31           ; 14           ; 18           ; 31           ; 31           ; 31           ; 14           ; 31           ; 31           ; 31           ; 31           ; 31           ; 0         ; 31           ; 31           ;
 ; Total Fail         ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
 ; tx                 ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; read_value[0]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -1488,12 +1750,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sseg[5]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; sseg[6]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; sseg[7]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; ready              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; clk                ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; reset              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; read               ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; rx                 ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; sw[0]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; read               ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; write              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sw[0]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; sw[1]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; sw[2]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; sw[3]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -1546,105 +1809,106 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; I/O             ; clk                  ; 57.3              ;
-; clk,reset,I/O   ; clk                  ; 13.3              ;
-; reset           ; clk                  ; 2.1               ;
+; I/O             ; clk                  ; 118.7             ;
+; clk,reset,I/O   ; clk                  ; 12.9              ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                       ;
-+------------------------------------------+--------------------------------------+-------------------+
-; Source Register                          ; Destination Register                 ; Delay Added in ns ;
-+------------------------------------------+--------------------------------------+-------------------+
-; reset                                    ; bin2bcd:get_bcd|bin_reg[4]~_emulated ; 3.206             ;
-; bin2bcd:get_bcd|bin_reg[0]~_emulated     ; bin2bcd:get_bcd|bin_reg[0]~_emulated ; 1.681             ;
-; uart:uart_inst|fifo:rx_fifo|mem~48       ; bin2bcd:get_bcd|bin_reg[0]~_emulated ; 1.681             ;
-; uart:uart_inst|fifo:rx_fifo|mem~40       ; bin2bcd:get_bcd|bin_reg[0]~_emulated ; 1.681             ;
-; uart:uart_inst|fifo:rx_fifo|mem~32       ; bin2bcd:get_bcd|bin_reg[0]~_emulated ; 1.681             ;
-; uart:uart_inst|fifo:rx_fifo|mem~56       ; bin2bcd:get_bcd|bin_reg[0]~_emulated ; 1.681             ;
-; uart:uart_inst|fifo:rx_fifo|mem~16       ; bin2bcd:get_bcd|bin_reg[0]~_emulated ; 1.681             ;
-; uart:uart_inst|fifo:rx_fifo|mem~8        ; bin2bcd:get_bcd|bin_reg[0]~_emulated ; 1.681             ;
-; uart:uart_inst|fifo:rx_fifo|mem~0        ; bin2bcd:get_bcd|bin_reg[0]~_emulated ; 1.681             ;
-; uart:uart_inst|fifo:rx_fifo|mem~24       ; bin2bcd:get_bcd|bin_reg[0]~_emulated ; 1.681             ;
-; bin2bcd:get_bcd|bin_reg[0]~29            ; bin2bcd:get_bcd|bin_reg[0]~_emulated ; 1.681             ;
-; uart:uart_inst|fifo:rx_fifo|read_addr[1] ; bin2bcd:get_bcd|bin_reg[0]~_emulated ; 1.681             ;
-; uart:uart_inst|fifo:rx_fifo|read_addr[2] ; bin2bcd:get_bcd|bin_reg[0]~_emulated ; 1.681             ;
-; uart:uart_inst|fifo:rx_fifo|read_addr[0] ; bin2bcd:get_bcd|bin_reg[0]~_emulated ; 1.681             ;
-; bin2bcd:get_bcd|bin_reg[3]~_emulated     ; bin2bcd:get_bcd|bin_reg[4]~_emulated ; 1.603             ;
-; bin2bcd:get_bcd|bin_reg[3]~17            ; bin2bcd:get_bcd|bin_reg[4]~_emulated ; 1.603             ;
-; uart:uart_inst|fifo:rx_fifo|mem~51       ; bin2bcd:get_bcd|bin_reg[4]~_emulated ; 1.603             ;
-; uart:uart_inst|fifo:rx_fifo|mem~43       ; bin2bcd:get_bcd|bin_reg[4]~_emulated ; 1.603             ;
-; uart:uart_inst|fifo:rx_fifo|mem~35       ; bin2bcd:get_bcd|bin_reg[4]~_emulated ; 1.603             ;
-; uart:uart_inst|fifo:rx_fifo|mem~59       ; bin2bcd:get_bcd|bin_reg[4]~_emulated ; 1.603             ;
-; uart:uart_inst|fifo:rx_fifo|mem~11       ; bin2bcd:get_bcd|bin_reg[4]~_emulated ; 1.603             ;
-; uart:uart_inst|fifo:rx_fifo|mem~19       ; bin2bcd:get_bcd|bin_reg[4]~_emulated ; 1.603             ;
-; uart:uart_inst|fifo:rx_fifo|mem~3        ; bin2bcd:get_bcd|bin_reg[4]~_emulated ; 1.603             ;
-; uart:uart_inst|fifo:rx_fifo|mem~27       ; bin2bcd:get_bcd|bin_reg[4]~_emulated ; 1.603             ;
-; bin2bcd:get_bcd|bin_reg[1]~_emulated     ; bin2bcd:get_bcd|bin_reg[2]~_emulated ; 1.458             ;
-; bin2bcd:get_bcd|bin_reg[1]~25            ; bin2bcd:get_bcd|bin_reg[2]~_emulated ; 1.458             ;
-; uart:uart_inst|fifo:rx_fifo|mem~49       ; bin2bcd:get_bcd|bin_reg[2]~_emulated ; 1.458             ;
-; uart:uart_inst|fifo:rx_fifo|mem~41       ; bin2bcd:get_bcd|bin_reg[2]~_emulated ; 1.458             ;
-; uart:uart_inst|fifo:rx_fifo|mem~33       ; bin2bcd:get_bcd|bin_reg[2]~_emulated ; 1.458             ;
-; uart:uart_inst|fifo:rx_fifo|mem~57       ; bin2bcd:get_bcd|bin_reg[2]~_emulated ; 1.458             ;
-; uart:uart_inst|fifo:rx_fifo|mem~9        ; bin2bcd:get_bcd|bin_reg[2]~_emulated ; 1.458             ;
-; uart:uart_inst|fifo:rx_fifo|mem~17       ; bin2bcd:get_bcd|bin_reg[2]~_emulated ; 1.458             ;
-; uart:uart_inst|fifo:rx_fifo|mem~1        ; bin2bcd:get_bcd|bin_reg[2]~_emulated ; 1.458             ;
-; uart:uart_inst|fifo:rx_fifo|mem~25       ; bin2bcd:get_bcd|bin_reg[2]~_emulated ; 1.458             ;
-; bin2bcd:get_bcd|bin_reg[4]~_emulated     ; bin2bcd:get_bcd|bin_reg[5]~_emulated ; 1.442             ;
-; bin2bcd:get_bcd|bin_reg[4]~13            ; bin2bcd:get_bcd|bin_reg[5]~_emulated ; 1.442             ;
-; uart:uart_inst|fifo:rx_fifo|mem~52       ; bin2bcd:get_bcd|bin_reg[5]~_emulated ; 1.442             ;
-; uart:uart_inst|fifo:rx_fifo|mem~44       ; bin2bcd:get_bcd|bin_reg[5]~_emulated ; 1.442             ;
-; uart:uart_inst|fifo:rx_fifo|mem~36       ; bin2bcd:get_bcd|bin_reg[5]~_emulated ; 1.442             ;
-; uart:uart_inst|fifo:rx_fifo|mem~60       ; bin2bcd:get_bcd|bin_reg[5]~_emulated ; 1.442             ;
-; uart:uart_inst|fifo:rx_fifo|mem~12       ; bin2bcd:get_bcd|bin_reg[5]~_emulated ; 1.442             ;
-; uart:uart_inst|fifo:rx_fifo|mem~20       ; bin2bcd:get_bcd|bin_reg[5]~_emulated ; 1.442             ;
-; uart:uart_inst|fifo:rx_fifo|mem~4        ; bin2bcd:get_bcd|bin_reg[5]~_emulated ; 1.442             ;
-; uart:uart_inst|fifo:rx_fifo|mem~28       ; bin2bcd:get_bcd|bin_reg[5]~_emulated ; 1.442             ;
-; bin2bcd:get_bcd|bin_reg[5]~_emulated     ; bin2bcd:get_bcd|bin_reg[6]~_emulated ; 1.428             ;
-; bin2bcd:get_bcd|bin_reg[5]~9             ; bin2bcd:get_bcd|bin_reg[6]~_emulated ; 1.428             ;
-; uart:uart_inst|fifo:rx_fifo|mem~29       ; bin2bcd:get_bcd|bin_reg[6]~_emulated ; 1.428             ;
-; uart:uart_inst|fifo:rx_fifo|mem~5        ; bin2bcd:get_bcd|bin_reg[6]~_emulated ; 1.428             ;
-; uart:uart_inst|fifo:rx_fifo|mem~21       ; bin2bcd:get_bcd|bin_reg[6]~_emulated ; 1.428             ;
-; uart:uart_inst|fifo:rx_fifo|mem~13       ; bin2bcd:get_bcd|bin_reg[6]~_emulated ; 1.428             ;
-; uart:uart_inst|fifo:rx_fifo|mem~61       ; bin2bcd:get_bcd|bin_reg[6]~_emulated ; 1.428             ;
-; uart:uart_inst|fifo:rx_fifo|mem~37       ; bin2bcd:get_bcd|bin_reg[6]~_emulated ; 1.428             ;
-; uart:uart_inst|fifo:rx_fifo|mem~45       ; bin2bcd:get_bcd|bin_reg[6]~_emulated ; 1.428             ;
-; uart:uart_inst|fifo:rx_fifo|mem~53       ; bin2bcd:get_bcd|bin_reg[6]~_emulated ; 1.428             ;
-; bin2bcd:get_bcd|bin_reg[6]~_emulated     ; bin2bcd:get_bcd|bin_reg[7]~_emulated ; 1.427             ;
-; bin2bcd:get_bcd|bin_reg[6]~5             ; bin2bcd:get_bcd|bin_reg[7]~_emulated ; 1.427             ;
-; uart:uart_inst|fifo:rx_fifo|mem~30       ; bin2bcd:get_bcd|bin_reg[7]~_emulated ; 1.427             ;
-; uart:uart_inst|fifo:rx_fifo|mem~6        ; bin2bcd:get_bcd|bin_reg[7]~_emulated ; 1.427             ;
-; uart:uart_inst|fifo:rx_fifo|mem~22       ; bin2bcd:get_bcd|bin_reg[7]~_emulated ; 1.427             ;
-; uart:uart_inst|fifo:rx_fifo|mem~14       ; bin2bcd:get_bcd|bin_reg[7]~_emulated ; 1.427             ;
-; uart:uart_inst|fifo:rx_fifo|mem~62       ; bin2bcd:get_bcd|bin_reg[7]~_emulated ; 1.427             ;
-; uart:uart_inst|fifo:rx_fifo|mem~38       ; bin2bcd:get_bcd|bin_reg[7]~_emulated ; 1.427             ;
-; uart:uart_inst|fifo:rx_fifo|mem~46       ; bin2bcd:get_bcd|bin_reg[7]~_emulated ; 1.427             ;
-; uart:uart_inst|fifo:rx_fifo|mem~54       ; bin2bcd:get_bcd|bin_reg[7]~_emulated ; 1.427             ;
-; bin2bcd:get_bcd|bin_reg[7]~1             ; bin2bcd:get_bcd|bcd0[0]              ; 1.420             ;
-; bin2bcd:get_bcd|bin_reg[7]~_emulated     ; bin2bcd:get_bcd|bcd0[0]              ; 1.420             ;
-; uart:uart_inst|fifo:rx_fifo|mem~31       ; bin2bcd:get_bcd|bcd0[0]              ; 1.420             ;
-; uart:uart_inst|fifo:rx_fifo|mem~7        ; bin2bcd:get_bcd|bcd0[0]              ; 1.420             ;
-; uart:uart_inst|fifo:rx_fifo|mem~23       ; bin2bcd:get_bcd|bcd0[0]              ; 1.420             ;
-; uart:uart_inst|fifo:rx_fifo|mem~15       ; bin2bcd:get_bcd|bcd0[0]              ; 1.420             ;
-; uart:uart_inst|fifo:rx_fifo|mem~63       ; bin2bcd:get_bcd|bcd0[0]              ; 1.420             ;
-; uart:uart_inst|fifo:rx_fifo|mem~39       ; bin2bcd:get_bcd|bcd0[0]              ; 1.420             ;
-; uart:uart_inst|fifo:rx_fifo|mem~47       ; bin2bcd:get_bcd|bcd0[0]              ; 1.420             ;
-; uart:uart_inst|fifo:rx_fifo|mem~55       ; bin2bcd:get_bcd|bcd0[0]              ; 1.420             ;
-; bin2bcd:get_bcd|bin_reg[2]~_emulated     ; bin2bcd:get_bcd|bin_reg[3]~_emulated ; 1.410             ;
-; bin2bcd:get_bcd|bin_reg[2]~21            ; bin2bcd:get_bcd|bin_reg[3]~_emulated ; 1.410             ;
-; uart:uart_inst|fifo:rx_fifo|mem~50       ; bin2bcd:get_bcd|bin_reg[3]~_emulated ; 1.410             ;
-; uart:uart_inst|fifo:rx_fifo|mem~42       ; bin2bcd:get_bcd|bin_reg[3]~_emulated ; 1.410             ;
-; uart:uart_inst|fifo:rx_fifo|mem~34       ; bin2bcd:get_bcd|bin_reg[3]~_emulated ; 1.410             ;
-; uart:uart_inst|fifo:rx_fifo|mem~58       ; bin2bcd:get_bcd|bin_reg[3]~_emulated ; 1.410             ;
-; uart:uart_inst|fifo:rx_fifo|mem~10       ; bin2bcd:get_bcd|bin_reg[3]~_emulated ; 1.410             ;
-; uart:uart_inst|fifo:rx_fifo|mem~18       ; bin2bcd:get_bcd|bin_reg[3]~_emulated ; 1.410             ;
-; uart:uart_inst|fifo:rx_fifo|mem~2        ; bin2bcd:get_bcd|bin_reg[3]~_emulated ; 1.410             ;
-; uart:uart_inst|fifo:rx_fifo|mem~26       ; bin2bcd:get_bcd|bin_reg[3]~_emulated ; 1.410             ;
-+------------------------------------------+--------------------------------------+-------------------+
-Note: This table only shows the top 84 path(s) that have the largest delay added for hold.
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                                           ;
++--------------------------------------------------------+------------------------------------------------------------+-------------------+
+; Source Register                                        ; Destination Register                                       ; Delay Added in ns ;
++--------------------------------------------------------+------------------------------------------------------------+-------------------+
+; reset                                                  ; uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[20] ; 3.168             ;
+; bin2bcd:get_bcd|bin_reg[7]~1                           ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; bin2bcd:get_bcd|bin_reg[7]~_emulated                   ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|mem~52                     ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|mem~44                     ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|mem~36                     ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|mem~60                     ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|mem~12                     ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|mem~20                     ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|mem~4                      ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|mem~28                     ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|mem~31                     ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|mem~7                      ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|mem~23                     ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|mem~15                     ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|mem~63                     ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|mem~39                     ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|mem~47                     ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|mem~55                     ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|mem~30                     ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|mem~6                      ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|mem~22                     ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|mem~14                     ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|mem~62                     ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|mem~38                     ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|mem~46                     ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|mem~54                     ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|mem~29                     ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|mem~5                      ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|mem~21                     ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|mem~13                     ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|mem~61                     ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|mem~37                     ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|mem~45                     ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|read_addr[1]               ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|read_addr[2]               ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|read_addr[0]               ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; uart:uart_inst|fifo:rx_fifo|mem~53                     ; bin2bcd:get_bcd|bcd0[0]                                    ; 1.488             ;
+; bin2bcd:get_bcd|bin_reg[0]~_emulated                   ; bin2bcd:get_bcd|bin_reg[0]~_emulated                       ; 1.487             ;
+; uart:uart_inst|fifo:rx_fifo|mem~48                     ; bin2bcd:get_bcd|bin_reg[0]~_emulated                       ; 1.487             ;
+; uart:uart_inst|fifo:rx_fifo|mem~40                     ; bin2bcd:get_bcd|bin_reg[0]~_emulated                       ; 1.487             ;
+; uart:uart_inst|fifo:rx_fifo|mem~32                     ; bin2bcd:get_bcd|bin_reg[0]~_emulated                       ; 1.487             ;
+; uart:uart_inst|fifo:rx_fifo|mem~56                     ; bin2bcd:get_bcd|bin_reg[0]~_emulated                       ; 1.487             ;
+; uart:uart_inst|fifo:rx_fifo|mem~16                     ; bin2bcd:get_bcd|bin_reg[0]~_emulated                       ; 1.487             ;
+; uart:uart_inst|fifo:rx_fifo|mem~8                      ; bin2bcd:get_bcd|bin_reg[0]~_emulated                       ; 1.487             ;
+; uart:uart_inst|fifo:rx_fifo|mem~0                      ; bin2bcd:get_bcd|bin_reg[0]~_emulated                       ; 1.487             ;
+; uart:uart_inst|fifo:rx_fifo|mem~24                     ; bin2bcd:get_bcd|bin_reg[0]~_emulated                       ; 1.487             ;
+; bin2bcd:get_bcd|bin_reg[0]~29                          ; bin2bcd:get_bcd|bin_reg[0]~_emulated                       ; 1.487             ;
+; bin2bcd:get_bcd|bin_reg[6]~_emulated                   ; bin2bcd:get_bcd|bin_reg[7]~_emulated                       ; 1.449             ;
+; bin2bcd:get_bcd|bin_reg[6]~5                           ; bin2bcd:get_bcd|bin_reg[7]~_emulated                       ; 1.449             ;
+; bin2bcd:get_bcd|bin_reg[4]~_emulated                   ; bin2bcd:get_bcd|bin_reg[5]~_emulated                       ; 1.436             ;
+; bin2bcd:get_bcd|bin_reg[4]~13                          ; bin2bcd:get_bcd|bin_reg[5]~_emulated                       ; 1.436             ;
+; bin2bcd:get_bcd|bin_reg[2]~_emulated                   ; bin2bcd:get_bcd|bin_reg[3]~_emulated                       ; 1.435             ;
+; bin2bcd:get_bcd|bin_reg[3]~_emulated                   ; bin2bcd:get_bcd|bin_reg[4]~_emulated                       ; 1.435             ;
+; bin2bcd:get_bcd|bin_reg[2]~21                          ; bin2bcd:get_bcd|bin_reg[3]~_emulated                       ; 1.435             ;
+; bin2bcd:get_bcd|bin_reg[3]~17                          ; bin2bcd:get_bcd|bin_reg[4]~_emulated                       ; 1.435             ;
+; uart:uart_inst|fifo:rx_fifo|mem~51                     ; bin2bcd:get_bcd|bin_reg[4]~_emulated                       ; 1.435             ;
+; uart:uart_inst|fifo:rx_fifo|mem~43                     ; bin2bcd:get_bcd|bin_reg[4]~_emulated                       ; 1.435             ;
+; uart:uart_inst|fifo:rx_fifo|mem~35                     ; bin2bcd:get_bcd|bin_reg[4]~_emulated                       ; 1.435             ;
+; uart:uart_inst|fifo:rx_fifo|mem~59                     ; bin2bcd:get_bcd|bin_reg[4]~_emulated                       ; 1.435             ;
+; uart:uart_inst|fifo:rx_fifo|mem~11                     ; bin2bcd:get_bcd|bin_reg[4]~_emulated                       ; 1.435             ;
+; uart:uart_inst|fifo:rx_fifo|mem~19                     ; bin2bcd:get_bcd|bin_reg[4]~_emulated                       ; 1.435             ;
+; uart:uart_inst|fifo:rx_fifo|mem~3                      ; bin2bcd:get_bcd|bin_reg[4]~_emulated                       ; 1.435             ;
+; uart:uart_inst|fifo:rx_fifo|mem~27                     ; bin2bcd:get_bcd|bin_reg[4]~_emulated                       ; 1.435             ;
+; uart:uart_inst|fifo:rx_fifo|mem~50                     ; bin2bcd:get_bcd|bin_reg[3]~_emulated                       ; 1.435             ;
+; uart:uart_inst|fifo:rx_fifo|mem~42                     ; bin2bcd:get_bcd|bin_reg[3]~_emulated                       ; 1.435             ;
+; uart:uart_inst|fifo:rx_fifo|mem~34                     ; bin2bcd:get_bcd|bin_reg[3]~_emulated                       ; 1.435             ;
+; uart:uart_inst|fifo:rx_fifo|mem~58                     ; bin2bcd:get_bcd|bin_reg[3]~_emulated                       ; 1.435             ;
+; uart:uart_inst|fifo:rx_fifo|mem~10                     ; bin2bcd:get_bcd|bin_reg[3]~_emulated                       ; 1.435             ;
+; uart:uart_inst|fifo:rx_fifo|mem~18                     ; bin2bcd:get_bcd|bin_reg[3]~_emulated                       ; 1.435             ;
+; uart:uart_inst|fifo:rx_fifo|mem~2                      ; bin2bcd:get_bcd|bin_reg[3]~_emulated                       ; 1.435             ;
+; uart:uart_inst|fifo:rx_fifo|mem~26                     ; bin2bcd:get_bcd|bin_reg[3]~_emulated                       ; 1.435             ;
+; bin2bcd:get_bcd|bin_reg[1]~_emulated                   ; bin2bcd:get_bcd|bin_reg[2]~_emulated                       ; 1.415             ;
+; bin2bcd:get_bcd|bin_reg[1]~25                          ; bin2bcd:get_bcd|bin_reg[2]~_emulated                       ; 1.415             ;
+; uart:uart_inst|fifo:rx_fifo|mem~49                     ; bin2bcd:get_bcd|bin_reg[2]~_emulated                       ; 1.415             ;
+; uart:uart_inst|fifo:rx_fifo|mem~41                     ; bin2bcd:get_bcd|bin_reg[2]~_emulated                       ; 1.415             ;
+; uart:uart_inst|fifo:rx_fifo|mem~33                     ; bin2bcd:get_bcd|bin_reg[2]~_emulated                       ; 1.415             ;
+; uart:uart_inst|fifo:rx_fifo|mem~57                     ; bin2bcd:get_bcd|bin_reg[2]~_emulated                       ; 1.415             ;
+; uart:uart_inst|fifo:rx_fifo|mem~9                      ; bin2bcd:get_bcd|bin_reg[2]~_emulated                       ; 1.415             ;
+; uart:uart_inst|fifo:rx_fifo|mem~17                     ; bin2bcd:get_bcd|bin_reg[2]~_emulated                       ; 1.415             ;
+; uart:uart_inst|fifo:rx_fifo|mem~1                      ; bin2bcd:get_bcd|bin_reg[2]~_emulated                       ; 1.415             ;
+; uart:uart_inst|fifo:rx_fifo|mem~25                     ; bin2bcd:get_bcd|bin_reg[2]~_emulated                       ; 1.415             ;
+; bin2bcd:get_bcd|bin_reg[5]~_emulated                   ; bin2bcd:get_bcd|bin_reg[6]~_emulated                       ; 1.413             ;
+; bin2bcd:get_bcd|bin_reg[5]~9                           ; bin2bcd:get_bcd|bin_reg[6]~_emulated                       ; 1.413             ;
+; uart:uart_inst|uart_rx:rx_inst|baund_detect_state.STOP ; uart:uart_inst|uart_rx:rx_inst|state                       ; 0.052             ;
+; uart:uart_inst|uart_rx:rx_inst|division:divide|quo[6]  ; uart:uart_inst|rx_specific_counter:counter|_m[6]           ; 0.040             ;
++--------------------------------------------------------+------------------------------------------------------------+-------------------+
+Note: This table only shows the top 86 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -1691,7 +1955,7 @@ Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node clk~input (placed in PIN P11 (CLK7p, DIFFIO_TX_RX_B20p, DIFFOUT_B20p, High_Speed)) File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_top.v Line: 22
+Info (176353): Automatically promoted node clk~input (placed in PIN P11 (CLK7p, DIFFIO_TX_RX_B20p, DIFFOUT_B20p, High_Speed)) File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_top.v Line: 23
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G19
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -1702,28 +1966,28 @@ Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 2% of the available device resources in the region that extends from location X56_Y44 to location X66_Y54
+    Info (170196): Router estimated peak interconnect usage is 3% of the available device resources in the region that extends from location X56_Y44 to location X66_Y54
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.43 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
+Info (11888): Total time spent on timing analysis during the Fitter is 0.80 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (169177): 2 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing MAX 10 Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
-    Info (169178): Pin clk uses I/O standard 3.3-V LVTTL at P11 File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_top.v Line: 22
+    Info (169178): Pin clk uses I/O standard 3.3-V LVTTL at P11 File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_top.v Line: 23
     Info (169178): Pin rx uses I/O standard 3.3-V LVTTL at V9 File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_top.v Line: 18
 Info (144001): Generated suppressed messages file C:/Users/user1111/Documents/DigitalDesign/UART/output_files/UART.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5765 megabytes
-    Info: Processing ended: Fri Apr 18 00:18:45 2025
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:13
+    Info: Peak virtual memory: 5769 megabytes
+    Info: Processing ended: Sun Apr 20 03:20:38 2025
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:19
 
 
 +----------------------------+

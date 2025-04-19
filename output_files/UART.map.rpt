@@ -1,5 +1,5 @@
 Analysis & Synthesis report for UART
-Fri Apr 18 12:25:12 2025
+Sun Apr 20 03:20:26 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -10,8 +10,41 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
-  6. Analysis & Synthesis Suppressed Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |uart_top|bin2bcd:get_bcd|state
+  9. State Machine - |uart_top|uart:uart_inst|uart_tx:tx_inst|state
+ 10. State Machine - |uart_top|uart:uart_inst|uart_rx:rx_inst|baund_detect_state
+ 11. State Machine - |uart_top|uart:uart_inst|uart_rx:rx_inst|operate_state
+ 12. State Machine - |uart_top|uart:uart_inst|uart_rx:rx_inst|division:divide|state
+ 13. State Machine - |uart_top|uart:uart_inst|fifo:rx_fifo|state
+ 14. State Machine - |uart_top|uart:uart_inst|fifo:tx_fifo|state
+ 15. State Machine - |uart_top|fall_edge_detector:reader|state
+ 16. State Machine - |uart_top|fall_edge_detector:writer|state
+ 17. Registers Removed During Synthesis
+ 18. Removed Registers Triggering Further Register Optimizations
+ 19. General Register Statistics
+ 20. Inverted Register Statistics
+ 21. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 22. Parameter Settings for User Entity Instance: Top-level Entity: |uart_top
+ 23. Parameter Settings for User Entity Instance: uart:uart_inst
+ 24. Parameter Settings for User Entity Instance: uart:uart_inst|rx_specific_counter:counter
+ 25. Parameter Settings for User Entity Instance: uart:uart_inst|fifo:tx_fifo
+ 26. Parameter Settings for User Entity Instance: uart:uart_inst|fifo:rx_fifo
+ 27. Parameter Settings for User Entity Instance: uart:uart_inst|uart_rx:rx_inst
+ 28. Parameter Settings for User Entity Instance: uart:uart_inst|uart_rx:rx_inst|division:divide
+ 29. Parameter Settings for User Entity Instance: uart:uart_inst|uart_tx:tx_inst
+ 30. Parameter Settings for User Entity Instance: bin2bcd:get_bcd
+ 31. Port Connectivity Checks: "bcd2sseg_active_low:get_sseg"
+ 32. Port Connectivity Checks: "bin2bcd:get_bcd"
+ 33. Port Connectivity Checks: "uart:uart_inst|uart_rx:rx_inst|division:divide"
+ 34. Port Connectivity Checks: "uart:uart_inst|rx_specific_counter:counter"
+ 35. Port Connectivity Checks: "uart:uart_inst"
+ 36. Post-Synthesis Netlist Statistics for Top Partition
+ 37. Elapsed Time Per Partition
+ 38. Analysis & Synthesis Messages
+ 39. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -38,22 +71,22 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Fri Apr 18 12:25:12 2025              ;
+; Analysis & Synthesis Status        ; Successful - Sun Apr 20 03:20:26 2025          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; UART                                           ;
 ; Top-level Entity Name              ; uart_top                                       ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; N/A until Partition Merge                      ;
-;     Total combinational functions  ; N/A until Partition Merge                      ;
-;     Dedicated logic registers      ; N/A until Partition Merge                      ;
-; Total registers                    ; N/A until Partition Merge                      ;
-; Total pins                         ; N/A until Partition Merge                      ;
-; Total virtual pins                 ; N/A until Partition Merge                      ;
-; Total memory bits                  ; N/A until Partition Merge                      ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                      ;
-; Total PLLs                         ; N/A until Partition Merge                      ;
-; UFM blocks                         ; N/A until Partition Merge                      ;
-; ADC blocks                         ; N/A until Partition Merge                      ;
+; Total logic elements               ; 721                                            ;
+;     Total combinational functions  ; 555                                            ;
+;     Dedicated logic registers      ; 454                                            ;
+; Total registers                    ; 454                                            ;
+; Total pins                         ; 31                                             ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 0                                              ;
+; Embedded Multiplier 9-bit elements ; 0                                              ;
+; Total PLLs                         ; 0                                              ;
+; UFM blocks                         ; 0                                              ;
+; ADC blocks                         ; 0                                              ;
 +------------------------------------+------------------------------------------------+
 
 
@@ -152,11 +185,500 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
 +----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                             ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                         ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
+; division.v                       ; yes             ; User Verilog HDL File        ; C:/Users/user1111/Documents/DigitalDesign/UART/division.v            ;         ;
+; uart_tx.v                        ; yes             ; User Verilog HDL File        ; C:/Users/user1111/Documents/DigitalDesign/UART/uart_tx.v             ;         ;
+; uart_top.v                       ; yes             ; User Verilog HDL File        ; C:/Users/user1111/Documents/DigitalDesign/UART/uart_top.v            ;         ;
+; uart_rx.v                        ; yes             ; User Verilog HDL File        ; C:/Users/user1111/Documents/DigitalDesign/UART/uart_rx.v             ;         ;
+; uart.v                           ; yes             ; User Verilog HDL File        ; C:/Users/user1111/Documents/DigitalDesign/UART/uart.v                ;         ;
+; m_counter.v                      ; yes             ; User Verilog HDL File        ; C:/Users/user1111/Documents/DigitalDesign/UART/m_counter.v           ;         ;
+; fifo.v                           ; yes             ; User Verilog HDL File        ; C:/Users/user1111/Documents/DigitalDesign/UART/fifo.v                ;         ;
+; fall_edge_detector.v             ; yes             ; User Verilog HDL File        ; C:/Users/user1111/Documents/DigitalDesign/UART/fall_edge_detector.v  ;         ;
+; bin2bcd.v                        ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/user1111/Documents/DigitalDesign/UART/bin2bcd.v             ;         ;
+; bcd2sseg_active_low.v            ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/user1111/Documents/DigitalDesign/UART/bcd2sseg_active_low.v ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 721       ;
+;                                             ;           ;
+; Total combinational functions               ; 555       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 329       ;
+;     -- 3 input functions                    ; 89        ;
+;     -- <=2 input functions                  ; 137       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 459       ;
+;     -- arithmetic mode                      ; 96        ;
+;                                             ;           ;
+; Total registers                             ; 454       ;
+;     -- Dedicated logic registers            ; 454       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 31        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 454       ;
+; Total fan-out                               ; 3508      ;
+; Average fan-out                             ; 3.28      ;
++---------------------------------------------+-----------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                      ;
++-------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                      ; Entity Name         ; Library Name ;
++-------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------+---------------------+--------------+
+; |uart_top                           ; 555 (5)             ; 454 (4)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 31   ; 0            ; 0          ; |uart_top                                                ; uart_top            ; work         ;
+;    |bcd2sseg_active_low:get_sseg|   ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |uart_top|bcd2sseg_active_low:get_sseg                   ; bcd2sseg_active_low ; work         ;
+;    |bin2bcd:get_bcd|                ; 41 (41)             ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |uart_top|bin2bcd:get_bcd                                ; bin2bcd             ; work         ;
+;    |fall_edge_detector:reader|      ; 1 (1)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |uart_top|fall_edge_detector:reader                      ; fall_edge_detector  ; work         ;
+;    |fall_edge_detector:writer|      ; 1 (1)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |uart_top|fall_edge_detector:writer                      ; fall_edge_detector  ; work         ;
+;    |uart:uart_inst|                 ; 500 (0)             ; 427 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |uart_top|uart:uart_inst                                 ; uart                ; work         ;
+;       |fifo:rx_fifo|                ; 67 (67)             ; 74 (74)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |uart_top|uart:uart_inst|fifo:rx_fifo                    ; fifo                ; work         ;
+;       |fifo:tx_fifo|                ; 60 (60)             ; 74 (74)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |uart_top|uart:uart_inst|fifo:tx_fifo                    ; fifo                ; work         ;
+;       |rx_specific_counter:counter| ; 36 (36)             ; 49 (49)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |uart_top|uart:uart_inst|rx_specific_counter:counter     ; rx_specific_counter ; work         ;
+;       |uart_rx:rx_inst|             ; 298 (138)           ; 208 (99)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |uart_top|uart:uart_inst|uart_rx:rx_inst                 ; uart_rx             ; work         ;
+;          |division:divide|          ; 160 (160)           ; 109 (109)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |uart_top|uart:uart_inst|uart_rx:rx_inst|division:divide ; division            ; work         ;
+;       |uart_tx:tx_inst|             ; 39 (39)             ; 22 (22)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |uart_top|uart:uart_inst|uart_tx:tx_inst                 ; uart_tx             ; work         ;
++-------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------+
+; State Machine - |uart_top|bin2bcd:get_bcd|state                  ;
++--------------+------------+--------------+------------+----------+
+; Name         ; state.LAST ; state.FINISH ; state.PROC ; state.00 ;
++--------------+------------+--------------+------------+----------+
+; state.00     ; 0          ; 0            ; 0          ; 0        ;
+; state.PROC   ; 0          ; 0            ; 1          ; 1        ;
+; state.FINISH ; 0          ; 1            ; 0          ; 1        ;
+; state.LAST   ; 1          ; 0            ; 0          ; 1        ;
++--------------+------------+--------------+------------+----------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------+
+; State Machine - |uart_top|uart:uart_inst|uart_tx:tx_inst|state ;
++-------------+------------+------------+-------------+----------+
+; Name        ; state.STOP ; state.DATA ; state.START ; state.00 ;
++-------------+------------+------------+-------------+----------+
+; state.00    ; 0          ; 0          ; 0           ; 0        ;
+; state.START ; 0          ; 0          ; 1           ; 1        ;
+; state.DATA  ; 0          ; 1          ; 0           ; 1        ;
+; state.STOP  ; 1          ; 0          ; 0           ; 1        ;
++-------------+------------+------------+-------------+----------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------+
+; State Machine - |uart_top|uart:uart_inst|uart_rx:rx_inst|baund_detect_state                           ;
++-------------------------+-------------------------+-------------------------+-------------------------+
+; Name                    ; baund_detect_state.DATA ; baund_detect_state.IDLE ; baund_detect_state.STOP ;
++-------------------------+-------------------------+-------------------------+-------------------------+
+; baund_detect_state.IDLE ; 0                       ; 0                       ; 0                       ;
+; baund_detect_state.DATA ; 1                       ; 1                       ; 0                       ;
+; baund_detect_state.STOP ; 0                       ; 1                       ; 1                       ;
++-------------------------+-------------------------+-------------------------+-------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------+
+; State Machine - |uart_top|uart:uart_inst|uart_rx:rx_inst|operate_state                                   ;
++---------------------+--------------------+--------------------+---------------------+--------------------+
+; Name                ; operate_state.STOP ; operate_state.DATA ; operate_state.START ; operate_state.IDLE ;
++---------------------+--------------------+--------------------+---------------------+--------------------+
+; operate_state.IDLE  ; 0                  ; 0                  ; 0                   ; 0                  ;
+; operate_state.START ; 0                  ; 0                  ; 1                   ; 1                  ;
+; operate_state.DATA  ; 0                  ; 1                  ; 0                   ; 1                  ;
+; operate_state.STOP  ; 1                  ; 0                  ; 0                   ; 1                  ;
++---------------------+--------------------+--------------------+---------------------+--------------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------+
+; State Machine - |uart_top|uart:uart_inst|uart_rx:rx_inst|division:divide|state ;
++--------------+-------------+--------------+------------------------------------+
+; Name         ; state.READY ; state.FINISH ; state.PROC                         ;
++--------------+-------------+--------------+------------------------------------+
+; state.READY  ; 0           ; 0            ; 0                                  ;
+; state.PROC   ; 1           ; 0            ; 1                                  ;
+; state.FINISH ; 1           ; 1            ; 0                                  ;
++--------------+-------------+--------------+------------------------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------+
+; State Machine - |uart_top|uart:uart_inst|fifo:rx_fifo|state ;
++-------------+-------------+------------+--------------------+
+; Name        ; state.EMPTY ; state.FULL ; state.PROC         ;
++-------------+-------------+------------+--------------------+
+; state.EMPTY ; 0           ; 0          ; 0                  ;
+; state.PROC  ; 1           ; 0          ; 1                  ;
+; state.FULL  ; 1           ; 1          ; 0                  ;
++-------------+-------------+------------+--------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------+
+; State Machine - |uart_top|uart:uart_inst|fifo:tx_fifo|state ;
++-------------+-------------+------------+--------------------+
+; Name        ; state.EMPTY ; state.FULL ; state.PROC         ;
++-------------+-------------+------------+--------------------+
+; state.EMPTY ; 0           ; 0          ; 0                  ;
+; state.PROC  ; 1           ; 0          ; 1                  ;
+; state.FULL  ; 1           ; 1          ; 0                  ;
++-------------+-------------+------------+--------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------+
+; State Machine - |uart_top|fall_edge_detector:reader|state   ;
++------------+------------+------------+-----------+----------+
+; Name       ; state.HIGH ; state.TICK ; state.LOW ; state.00 ;
++------------+------------+------------+-----------+----------+
+; state.00   ; 0          ; 0          ; 0         ; 0        ;
+; state.LOW  ; 0          ; 0          ; 1         ; 1        ;
+; state.TICK ; 0          ; 1          ; 0         ; 1        ;
+; state.HIGH ; 1          ; 0          ; 0         ; 1        ;
++------------+------------+------------+-----------+----------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------+
+; State Machine - |uart_top|fall_edge_detector:writer|state   ;
++------------+------------+------------+-----------+----------+
+; Name       ; state.HIGH ; state.TICK ; state.LOW ; state.00 ;
++------------+------------+------------+-----------+----------+
+; state.00   ; 0          ; 0          ; 0         ; 0        ;
+; state.LOW  ; 0          ; 0          ; 1         ; 1        ;
+; state.TICK ; 0          ; 1          ; 0         ; 1        ;
+; state.HIGH ; 1          ; 0          ; 0         ; 1        ;
++------------+------------+------------+-----------+----------+
+
+
++-----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                      ;
++------------------------------------------------+----------------------------------------+
+; Register name                                  ; Reason for Removal                     ;
++------------------------------------------------+----------------------------------------+
+; uart:uart_inst|uart_tx:tx_inst|in_reg[8]       ; Stuck at GND due to stuck port data_in ;
+; bin2bcd:get_bcd|state~8                        ; Lost fanout                            ;
+; bin2bcd:get_bcd|state~9                        ; Lost fanout                            ;
+; uart:uart_inst|uart_tx:tx_inst|state~8         ; Lost fanout                            ;
+; uart:uart_inst|uart_tx:tx_inst|state~9         ; Lost fanout                            ;
+; uart:uart_inst|uart_rx:rx_inst|operate_state~7 ; Lost fanout                            ;
+; uart:uart_inst|uart_rx:rx_inst|operate_state~8 ; Lost fanout                            ;
+; fall_edge_detector:reader|state~7              ; Lost fanout                            ;
+; fall_edge_detector:reader|state~8              ; Lost fanout                            ;
+; fall_edge_detector:writer|state~7              ; Lost fanout                            ;
+; fall_edge_detector:writer|state~8              ; Lost fanout                            ;
+; fall_edge_detector:writer|state.LOW            ; Lost fanout                            ;
+; fall_edge_detector:writer|state.00             ; Lost fanout                            ;
+; fall_edge_detector:reader|state.LOW            ; Lost fanout                            ;
+; fall_edge_detector:reader|state.00             ; Lost fanout                            ;
+; uart:uart_inst|uart_tx:tx_inst|n[3]            ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 16         ;                                        ;
++------------------------------------------------+----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                      ;
++-----------------------------------+--------------------+-------------------------------------------------------------------------+
+; Register name                     ; Reason for Removal ; Registers Removed due to This Register                                  ;
++-----------------------------------+--------------------+-------------------------------------------------------------------------+
+; fall_edge_detector:reader|state~8 ; Lost Fanouts       ; fall_edge_detector:reader|state.LOW, fall_edge_detector:reader|state.00 ;
+; fall_edge_detector:writer|state~8 ; Lost Fanouts       ; fall_edge_detector:writer|state.LOW, fall_edge_detector:writer|state.00 ;
++-----------------------------------+--------------------+-------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 454   ;
+; Number of registers using Synchronous Clear  ; 27    ;
+; Number of registers using Synchronous Load   ; 7     ;
+; Number of registers using Asynchronous Clear ; 326   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 346   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------+
+; Inverted Register Statistics                               ;
++--------------------------------------------------+---------+
+; Inverted Register                                ; Fan out ;
++--------------------------------------------------+---------+
+; uart:uart_inst|uart_tx:tx_inst|tx                ; 2       ;
+; uart:uart_inst|fifo:rx_fifo|write_en             ; 9       ;
+; uart:uart_inst|rx_specific_counter:counter|_m[0] ; 1       ;
+; uart:uart_inst|rx_specific_counter:counter|_m[2] ; 1       ;
+; uart:uart_inst|rx_specific_counter:counter|_m[6] ; 1       ;
+; uart:uart_inst|rx_specific_counter:counter|_m[8] ; 1       ;
+; uart:uart_inst|fifo:tx_fifo|write_en             ; 9       ;
+; Total number of inverted registers = 7           ;         ;
++--------------------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |uart_top|uart:uart_inst|fifo:rx_fifo|read_addr[2]                   ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |uart_top|uart:uart_inst|fifo:tx_fifo|write_addr[2]                  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |uart_top|uart:uart_inst|fifo:tx_fifo|read_addr[0]                   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |uart_top|uart:uart_inst|uart_rx:rx_inst|cycle_per_byte[4]           ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |uart_top|uart:uart_inst|fifo:rx_fifo|write_addr[1]                  ;
+; 3:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; Yes        ; |uart_top|uart:uart_inst|uart_rx:rx_inst|division:divide|db_dvnd[28] ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |uart_top|uart:uart_inst|uart_tx:tx_inst|s_reg[4]                    ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |uart_top|uart:uart_inst|uart_tx:tx_inst|in_reg[3]                   ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |uart_top|bin2bcd:get_bcd|bcd0[3]                                    ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |uart_top|uart:uart_inst|uart_tx:tx_inst|n[3]                        ;
+; 9:1                ; 5 bits    ; 30 LEs        ; 5 LEs                ; 25 LEs                 ; Yes        ; |uart_top|uart:uart_inst|uart_rx:rx_inst|s_operate_reg[1]            ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |uart_top|bin2bcd:get_bcd|bin_reg[1]                                 ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |uart_top|fall_edge_detector:reader|Selector3                        ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |uart_top|fall_edge_detector:writer|Selector3                        ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |uart_top|uart:uart_inst|uart_rx:rx_inst|baund_detect_state          ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |uart_top|uart:uart_inst|fifo:rx_fifo|Selector5                      ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |uart_top|uart:uart_inst|fifo:tx_fifo|Selector5                      ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |uart_top|uart:uart_inst|uart_tx:tx_inst|Selector23                  ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |uart_top|uart:uart_inst|uart_tx:tx_inst|Selector22                  ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; No         ; |uart_top|uart:uart_inst|uart_rx:rx_inst|operate_state               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |uart_top ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; WIDTH          ; 8     ; Signed Integer                                  ;
+; SB             ; 1     ; Signed Integer                                  ;
+; S              ; 16    ; Signed Integer                                  ;
+; BAUND_RATE     ; 9600  ; Signed Integer                                  ;
+; FIFO_DEPTH     ; 8     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart:uart_inst ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; WIDTH          ; 8     ; Signed Integer                     ;
+; SB_TICK        ; 16    ; Signed Integer                     ;
+; S              ; 16    ; Signed Integer                     ;
+; BAUND_RATE     ; 9600  ; Signed Integer                     ;
+; FIFO_DEPTH     ; 8     ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart:uart_inst|rx_specific_counter:counter ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; INITIAL_M      ; 325   ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart:uart_inst|fifo:tx_fifo ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; N              ; 8     ; Signed Integer                                  ;
+; W              ; 8     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart:uart_inst|fifo:rx_fifo ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; N              ; 8     ; Signed Integer                                  ;
+; W              ; 8     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart:uart_inst|uart_rx:rx_inst ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; DBIT           ; 8     ; Signed Integer                                     ;
+; S              ; 16    ; Signed Integer                                     ;
+; SB_TICK        ; 16    ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart:uart_inst|uart_rx:rx_inst|division:divide ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; W              ; 32    ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart:uart_inst|uart_tx:tx_inst ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; DBIT           ; 8     ; Signed Integer                                     ;
+; SB_TICK        ; 16    ; Signed Integer                                     ;
+; S              ; 16    ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bin2bcd:get_bcd ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; WIDTH          ; 8     ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bcd2sseg_active_low:get_sseg"                                                                                                                 ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                                      ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; bcd5  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; bcd4  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; bcd3  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; bcd2  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; bcd1  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; sseg5 ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; sseg4 ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; sseg3 ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; sseg2 ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; sseg1 ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bin2bcd:get_bcd"                                                                                          ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; ready ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; bcd5  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; bcd4  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; bcd3  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; bcd2  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; bcd1  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uart:uart_inst|uart_rx:rx_inst|division:divide"                                                                 ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                  ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; dvsr[31..5] ; Input  ; Info     ; Stuck at GND                                                                                             ;
+; dvsr[3..0]  ; Input  ; Info     ; Stuck at GND                                                                                             ;
+; dvsr[4]     ; Input  ; Info     ; Stuck at VCC                                                                                             ;
+; rmd         ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; ready       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uart:uart_inst|rx_specific_counter:counter"                                                                 ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                  ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; counter ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uart:uart_inst"                                                                                              ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                  ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; rx_full  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; rx_empty ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; tx_full  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; tx_empty ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 31                          ;
+; cycloneiii_ff         ; 454                         ;
+;     CLR               ; 108                         ;
+;     ENA               ; 128                         ;
+;     ENA CLR           ; 184                         ;
+;     ENA CLR SCLR      ; 27                          ;
+;     ENA CLR SLD       ; 7                           ;
+; cycloneiii_lcell_comb ; 558                         ;
+;     arith             ; 96                          ;
+;         2 data inputs ; 96                          ;
+;     normal            ; 462                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 20                          ;
+;         2 data inputs ; 23                          ;
+;         3 data inputs ; 89                          ;
+;         4 data inputs ; 329                         ;
+;                       ;                             ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 3.09                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -165,52 +687,85 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Fri Apr 18 12:25:06 2025
+    Info: Processing started: Sun Apr 20 03:20:16 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off UART -c UART
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file division.v
+    Info (12023): Found entity 1: division File: C:/Users/user1111/Documents/DigitalDesign/UART/division.v Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file uart_tx.v
     Info (12023): Found entity 1: uart_tx File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_tx.v Line: 3
-Error (10170): Verilog HDL syntax error at uart_rx.v(21) near text: "reg";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_rx.v Line: 21
-Error (10170): Verilog HDL syntax error at uart_rx.v(93) near text: "end";  expecting "endcase". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_rx.v Line: 93
-Error (10170): Verilog HDL syntax error at fifo.v(11) near text: "input";  expecting ":", or ",". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/user1111/Documents/DigitalDesign/UART/fifo.v Line: 11
-Error (10170): Verilog HDL syntax error at fifo.v(13) near text: ")";  expecting ":", or ",". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/user1111/Documents/DigitalDesign/UART/fifo.v Line: 13
-Error (10112): Ignored design unit "uart_rx" at uart_rx.v(3) due to previous errors File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_rx.v Line: 3
-Error (10112): Ignored design unit "uart" at uart.v(7) due to previous errors File: C:/Users/user1111/Documents/DigitalDesign/UART/uart.v Line: 7
-Error (10112): Ignored design unit "fall_edge_detector" at fall_edge_detector.v(3) due to previous errors File: C:/Users/user1111/Documents/DigitalDesign/UART/fall_edge_detector.v Line: 3
-Error (10112): Ignored design unit "bin2bcd" at bin2bcd.v(3) due to previous errors File: C:/Users/user1111/Documents/DigitalDesign/UART/bin2bcd.v Line: 3
-Error (10112): Ignored design unit "bcd2sseg_active_low" at bcd2sseg_active_low.v(3) due to previous errors File: C:/Users/user1111/Documents/DigitalDesign/UART/bcd2sseg_active_low.v Line: 3
-Error (10112): Ignored design unit "uart_top" at uart_top.v(7) due to previous errors File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_top.v Line: 7
-Info (12021): Found 0 design units, including 0 entities, in source file uart_top.v
-Error (10170): Verilog HDL syntax error at uart_rx.v(21) near text: "reg";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_rx.v Line: 21
-Error (10170): Verilog HDL syntax error at uart_rx.v(93) near text: "end";  expecting "endcase". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_rx.v Line: 93
+Info (12021): Found 8 design units, including 8 entities, in source file uart_top.v
+    Info (12023): Found entity 1: uart_rx File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_rx.v Line: 4
+    Info (12023): Found entity 2: rx_specific_counter File: C:/Users/user1111/Documents/DigitalDesign/UART/m_counter.v Line: 3
+    Info (12023): Found entity 3: fifo File: C:/Users/user1111/Documents/DigitalDesign/UART/fifo.v Line: 4
+    Info (12023): Found entity 4: uart File: C:/Users/user1111/Documents/DigitalDesign/UART/uart.v Line: 7
+    Info (12023): Found entity 5: fall_edge_detector File: C:/Users/user1111/Documents/DigitalDesign/UART/fall_edge_detector.v Line: 3
+    Info (12023): Found entity 6: bin2bcd File: C:/Users/user1111/Documents/DigitalDesign/UART/bin2bcd.v Line: 3
+    Info (12023): Found entity 7: bcd2sseg_active_low File: C:/Users/user1111/Documents/DigitalDesign/UART/bcd2sseg_active_low.v Line: 3
+    Info (12023): Found entity 8: uart_top File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_top.v Line: 7
 Info (12021): Found 0 design units, including 0 entities, in source file uart_rx.v
-Error (10170): Verilog HDL syntax error at uart_rx.v(21) near text: "reg";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_rx.v Line: 21
-Error (10170): Verilog HDL syntax error at uart_rx.v(93) near text: "end";  expecting "endcase". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_rx.v Line: 93
-Error (10170): Verilog HDL syntax error at fifo.v(11) near text: "input";  expecting ":", or ",". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/user1111/Documents/DigitalDesign/UART/fifo.v Line: 11
-Error (10170): Verilog HDL syntax error at fifo.v(13) near text: ")";  expecting ":", or ",". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/user1111/Documents/DigitalDesign/UART/fifo.v Line: 13
-Error (10112): Ignored design unit "uart_rx" at uart_rx.v(3) due to previous errors File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_rx.v Line: 3
-Error (10112): Ignored design unit "uart_reg" at uart_reg.v(7) due to previous errors File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_reg.v Line: 7
 Info (12021): Found 0 design units, including 0 entities, in source file uart_reg.v
-Error (10170): Verilog HDL syntax error at uart_rx.v(21) near text: "reg";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_rx.v Line: 21
-Error (10170): Verilog HDL syntax error at uart_rx.v(93) near text: "end";  expecting "endcase". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_rx.v Line: 93
-Error (10170): Verilog HDL syntax error at fifo.v(11) near text: "input";  expecting ":", or ",". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/user1111/Documents/DigitalDesign/UART/fifo.v Line: 11
-Error (10170): Verilog HDL syntax error at fifo.v(13) near text: ")";  expecting ":", or ",". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/user1111/Documents/DigitalDesign/UART/fifo.v Line: 13
-Error (10112): Ignored design unit "uart_rx" at uart_rx.v(3) due to previous errors File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_rx.v Line: 3
-Error (10112): Ignored design unit "uart" at uart.v(7) due to previous errors File: C:/Users/user1111/Documents/DigitalDesign/UART/uart.v Line: 7
 Info (12021): Found 0 design units, including 0 entities, in source file uart.v
-Info (12021): Found 1 design units, including 1 entities, in source file m_counter.v
-    Info (12023): Found entity 1: m_counter File: C:/Users/user1111/Documents/DigitalDesign/UART/m_counter.v Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file fifo.v
-    Info (12023): Found entity 1: fifo File: C:/Users/user1111/Documents/DigitalDesign/UART/fifo.v Line: 4
-Info (12021): Found 1 design units, including 1 entities, in source file fall_edge_detector.v
-    Info (12023): Found entity 1: fall_edge_detector File: C:/Users/user1111/Documents/DigitalDesign/UART/fall_edge_detector.v Line: 3
+Info (12021): Found 0 design units, including 0 entities, in source file m_counter.v
+Info (12021): Found 0 design units, including 0 entities, in source file fifo.v
+Info (12021): Found 0 design units, including 0 entities, in source file fall_edge_detector.v
+Info (12127): Elaborating entity "uart_top" for the top level hierarchy
+Info (12128): Elaborating entity "fall_edge_detector" for hierarchy "fall_edge_detector:writer" File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_top.v Line: 36
+Info (12128): Elaborating entity "uart" for hierarchy "uart:uart_inst" File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_top.v Line: 64
+Info (12128): Elaborating entity "rx_specific_counter" for hierarchy "uart:uart_inst|rx_specific_counter:counter" File: C:/Users/user1111/Documents/DigitalDesign/UART/uart.v Line: 43
+Warning (10230): Verilog HDL assignment warning at m_counter.v(25): truncated value with size 32 to match size of target (16) File: C:/Users/user1111/Documents/DigitalDesign/UART/m_counter.v Line: 25
+Info (12128): Elaborating entity "fifo" for hierarchy "uart:uart_inst|fifo:tx_fifo" File: C:/Users/user1111/Documents/DigitalDesign/UART/uart.v Line: 54
+Info (12128): Elaborating entity "uart_rx" for hierarchy "uart:uart_inst|uart_rx:rx_inst" File: C:/Users/user1111/Documents/DigitalDesign/UART/uart.v Line: 77
+Warning (10230): Verilog HDL assignment warning at uart_rx.v(56): truncated value with size 32 to match size of target (1) File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_rx.v Line: 56
+Warning (10230): Verilog HDL assignment warning at uart_rx.v(81): truncated value with size 32 to match size of target (8) File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_rx.v Line: 81
+Warning (10230): Verilog HDL assignment warning at uart_rx.v(84): truncated value with size 32 to match size of target (8) File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_rx.v Line: 84
+Warning (10230): Verilog HDL assignment warning at uart_rx.v(93): truncated value with size 32 to match size of target (1) File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_rx.v Line: 93
+Warning (10230): Verilog HDL assignment warning at uart_rx.v(114): truncated value with size 32 to match size of target (5) File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_rx.v Line: 114
+Warning (10230): Verilog HDL assignment warning at uart_rx.v(124): truncated value with size 32 to match size of target (4) File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_rx.v Line: 124
+Warning (10230): Verilog HDL assignment warning at uart_rx.v(126): truncated value with size 32 to match size of target (5) File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_rx.v Line: 126
+Warning (10230): Verilog HDL assignment warning at uart_rx.v(135): truncated value with size 32 to match size of target (5) File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_rx.v Line: 135
+Info (12128): Elaborating entity "division" for hierarchy "uart:uart_inst|uart_rx:rx_inst|division:divide" File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_rx.v Line: 35
+Warning (10230): Verilog HDL assignment warning at division.v(58): truncated value with size 32 to match size of target (10) File: C:/Users/user1111/Documents/DigitalDesign/UART/division.v Line: 58
+Info (12128): Elaborating entity "uart_tx" for hierarchy "uart:uart_inst|uart_tx:tx_inst" File: C:/Users/user1111/Documents/DigitalDesign/UART/uart.v Line: 87
+Warning (10230): Verilog HDL assignment warning at uart_tx.v(53): truncated value with size 32 to match size of target (5) File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_tx.v Line: 53
+Warning (10230): Verilog HDL assignment warning at uart_tx.v(65): truncated value with size 32 to match size of target (4) File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_tx.v Line: 65
+Warning (10230): Verilog HDL assignment warning at uart_tx.v(69): truncated value with size 32 to match size of target (5) File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_tx.v Line: 69
+Warning (10230): Verilog HDL assignment warning at uart_tx.v(80): truncated value with size 32 to match size of target (5) File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_tx.v Line: 80
+Info (12128): Elaborating entity "bin2bcd" for hierarchy "bin2bcd:get_bcd" File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_top.v Line: 84
+Warning (10230): Verilog HDL assignment warning at bin2bcd.v(49): truncated value with size 32 to match size of target (3) File: C:/Users/user1111/Documents/DigitalDesign/UART/bin2bcd.v Line: 49
+Info (12128): Elaborating entity "bcd2sseg_active_low" for hierarchy "bcd2sseg_active_low:get_sseg" File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_top.v Line: 90
+Info (276014): Found 2 instances of uninferred RAM logic
+    Info (276004): RAM logic "uart:uart_inst|fifo:rx_fifo|mem" is uninferred due to inappropriate RAM size File: C:/Users/user1111/Documents/DigitalDesign/UART/fifo.v Line: 24
+    Info (276004): RAM logic "uart:uart_inst|fifo:tx_fifo|mem" is uninferred due to inappropriate RAM size File: C:/Users/user1111/Documents/DigitalDesign/UART/fifo.v Line: 24
+Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13000): Registers with preset signals will power-up high File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_tx.v Line: 9
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "bin2bcd:get_bcd|bin_reg[7]" is converted into an equivalent circuit using register "bin2bcd:get_bcd|bin_reg[7]~_emulated" and latch "bin2bcd:get_bcd|bin_reg[7]~1" File: C:/Users/user1111/Documents/DigitalDesign/UART/bin2bcd.v Line: 34
+    Warning (13310): Register "bin2bcd:get_bcd|bin_reg[6]" is converted into an equivalent circuit using register "bin2bcd:get_bcd|bin_reg[6]~_emulated" and latch "bin2bcd:get_bcd|bin_reg[6]~5" File: C:/Users/user1111/Documents/DigitalDesign/UART/bin2bcd.v Line: 34
+    Warning (13310): Register "bin2bcd:get_bcd|bin_reg[5]" is converted into an equivalent circuit using register "bin2bcd:get_bcd|bin_reg[5]~_emulated" and latch "bin2bcd:get_bcd|bin_reg[5]~9" File: C:/Users/user1111/Documents/DigitalDesign/UART/bin2bcd.v Line: 34
+    Warning (13310): Register "bin2bcd:get_bcd|bin_reg[4]" is converted into an equivalent circuit using register "bin2bcd:get_bcd|bin_reg[4]~_emulated" and latch "bin2bcd:get_bcd|bin_reg[4]~13" File: C:/Users/user1111/Documents/DigitalDesign/UART/bin2bcd.v Line: 34
+    Warning (13310): Register "bin2bcd:get_bcd|bin_reg[3]" is converted into an equivalent circuit using register "bin2bcd:get_bcd|bin_reg[3]~_emulated" and latch "bin2bcd:get_bcd|bin_reg[3]~17" File: C:/Users/user1111/Documents/DigitalDesign/UART/bin2bcd.v Line: 34
+    Warning (13310): Register "bin2bcd:get_bcd|bin_reg[2]" is converted into an equivalent circuit using register "bin2bcd:get_bcd|bin_reg[2]~_emulated" and latch "bin2bcd:get_bcd|bin_reg[2]~21" File: C:/Users/user1111/Documents/DigitalDesign/UART/bin2bcd.v Line: 34
+    Warning (13310): Register "bin2bcd:get_bcd|bin_reg[1]" is converted into an equivalent circuit using register "bin2bcd:get_bcd|bin_reg[1]~_emulated" and latch "bin2bcd:get_bcd|bin_reg[1]~25" File: C:/Users/user1111/Documents/DigitalDesign/UART/bin2bcd.v Line: 34
+    Warning (13310): Register "bin2bcd:get_bcd|bin_reg[0]" is converted into an equivalent circuit using register "bin2bcd:get_bcd|bin_reg[0]~_emulated" and latch "bin2bcd:get_bcd|bin_reg[0]~29" File: C:/Users/user1111/Documents/DigitalDesign/UART/bin2bcd.v Line: 34
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "sseg[7]" is stuck at VCC File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_top.v Line: 20
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 14 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/user1111/Documents/DigitalDesign/UART/output_files/UART.map.smsg
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 24 errors, 1 warning
-    Error: Peak virtual memory: 4707 megabytes
-    Error: Processing ended: Fri Apr 18 12:25:12 2025
-    Error: Elapsed time: 00:00:06
-    Error: Total CPU time (on all processors): 00:00:14
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 789 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 18 output pins
+    Info (21061): Implemented 758 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 4796 megabytes
+    Info: Processing ended: Sun Apr 20 03:20:26 2025
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:23
 
 
 +------------------------------------------+

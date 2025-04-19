@@ -13,12 +13,24 @@ state.START 0 0 1 1
 state.DATA 0 1 0 1 
 state.STOP 1 0 0 1 
 
-State Machine - |uart_top|uart:uart_inst|uart_rx:rx_inst|state
-Name state.STOP state.DATA state.START state.00 
-state.00 0 0 0 0 
-state.START 0 0 1 1 
-state.DATA 0 1 0 1 
-state.STOP 1 0 0 1 
+State Machine - |uart_top|uart:uart_inst|uart_rx:rx_inst|baund_detect_state
+Name baund_detect_state.DATA baund_detect_state.IDLE baund_detect_state.STOP 
+baund_detect_state.IDLE 0 0 0 
+baund_detect_state.DATA 1 1 0 
+baund_detect_state.STOP 0 1 1 
+
+State Machine - |uart_top|uart:uart_inst|uart_rx:rx_inst|operate_state
+Name operate_state.STOP operate_state.DATA operate_state.START operate_state.IDLE 
+operate_state.IDLE 0 0 0 0 
+operate_state.START 0 0 1 1 
+operate_state.DATA 0 1 0 1 
+operate_state.STOP 1 0 0 1 
+
+State Machine - |uart_top|uart:uart_inst|uart_rx:rx_inst|division:divide|state
+Name state.READY state.FINISH state.PROC 
+state.READY 0 0 0 
+state.PROC 1 0 1 
+state.FINISH 1 1 0 
 
 State Machine - |uart_top|uart:uart_inst|fifo:rx_fifo|state
 Name state.EMPTY state.FULL state.PROC 

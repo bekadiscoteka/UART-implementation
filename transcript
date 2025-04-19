@@ -1,48 +1,122 @@
 # do work.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 07:24:44 on Apr 17,2025
-# vlog -reportprogress 300 -work work uart_func_tb.v 
+# Start time: 20:53:00 on Apr 19,2025
+# vlog -reportprogress 300 -work work uart_tb.v 
+# -- Compiling module division
+# ** Error: ** while parsing file included at uart_tb.v(1)
+# ** while parsing file included at uart_top.v(3)
+# ** while parsing file included at uart.v(1)
+# ** while parsing file included at uart_rx.v(3)
+# ** at division.v(6): (vlog-2730) Undefined variable: 'W'.
+# ** Error (suppressible): ** while parsing file included at uart_tb.v(1)
+# ** while parsing file included at uart_top.v(3)
+# ** while parsing file included at uart.v(1)
+# ** while parsing file included at uart_rx.v(3)
+# ** at division.v(6): (vlog-2388) 'quo' already declared in this scope (division).
+# ** Error (suppressible): ** while parsing file included at uart_tb.v(1)
+# ** while parsing file included at uart_top.v(3)
+# ** while parsing file included at uart.v(1)
+# ** while parsing file included at uart_rx.v(3)
+# ** at division.v(6): (vlog-2388) 'rmd' already declared in this scope (division).
+# ** Error: ** while parsing file included at uart_tb.v(1)
+# ** while parsing file included at uart_top.v(3)
+# ** while parsing file included at uart.v(1)
+# ** while parsing file included at uart_rx.v(3)
+# ** at division.v(11): 'W' already declared in this scope.
+# ** Error (suppressible): ** while parsing file included at uart_tb.v(1)
+# ** while parsing file included at uart_top.v(3)
+# ** while parsing file included at uart.v(1)
+# ** while parsing file included at uart_rx.v(3)
+# ** at division.v(18): (vlog-2388) 'rmd' already declared in this scope (division).
+# ** Error (suppressible): ** while parsing file included at uart_tb.v(1)
+# ** while parsing file included at uart_top.v(3)
+# ** while parsing file included at uart.v(1)
+# ** while parsing file included at uart_rx.v(3)
+# ** at division.v(19): (vlog-2388) 'quo' already declared in this scope (division).
+# ** Error: ** while parsing file included at uart_tb.v(1)
+# ** while parsing file included at uart_top.v(3)
+# ** while parsing file included at uart.v(1)
+# ** while parsing file included at uart_rx.v(3)
+# ** at division.v(31): (vlog-2730) Undefined variable: 'nxt_counter'.
+# ** Error: ** while parsing file included at uart_tb.v(1)
+# ** while parsing file included at uart_top.v(3)
+# ** while parsing file included at uart.v(1)
+# ** while parsing file included at uart_rx.v(3)
+# ** at division.v(32): (vlog-2730) Undefined variable: 'nxt_db_dvnd'.
+# ** Error: ** while parsing file included at uart_tb.v(1)
+# ** while parsing file included at uart_top.v(3)
+# ** while parsing file included at uart.v(1)
+# ** while parsing file included at uart_rx.v(3)
+# ** at division.v(33): (vlog-2730) Undefined variable: 'nxt_state'.
+# ** Error: ** while parsing file included at uart_tb.v(1)
+# ** while parsing file included at uart_top.v(3)
+# ** while parsing file included at uart.v(1)
+# ** while parsing file included at uart_rx.v(3)
+# ** at division.v(34): (vlog-2730) Undefined variable: 'nxt_rmd'.
+# ** Error: ** while parsing file included at uart_tb.v(1)
+# ** while parsing file included at uart_top.v(3)
+# ** while parsing file included at uart.v(1)
+# ** while parsing file included at uart_rx.v(3)
+# ** at division.v(35): (vlog-2730) Undefined variable: 'nxt_quo'.
+# ** Error (suppressible): ** while parsing file included at uart_tb.v(1)
+# ** while parsing file included at uart_top.v(3)
+# ** while parsing file included at uart.v(1)
+# ** while parsing file included at uart_rx.v(3)
+# ** at division.v(39): (vlog-2388) 'nxt_db_dvnd' already declared in this scope (division).
+# ** Error (suppressible): ** while parsing file included at uart_tb.v(1)
+# ** while parsing file included at uart_top.v(3)
+# ** while parsing file included at uart.v(1)
+# ** while parsing file included at uart_rx.v(3)
+# ** at division.v(40): (vlog-2388) 'nxt_state' already declared in this scope (division).
+# ** Error (suppressible): ** while parsing file included at uart_tb.v(1)
+# ** while parsing file included at uart_top.v(3)
+# ** while parsing file included at uart.v(1)
+# ** while parsing file included at uart_rx.v(3)
+# ** at division.v(41): (vlog-2388) 'nxt_rmd' already declared in this scope (division).
+# ** Error (suppressible): ** while parsing file included at uart_tb.v(1)
+# ** while parsing file included at uart_top.v(3)
+# ** while parsing file included at uart.v(1)
+# ** while parsing file included at uart_rx.v(3)
+# ** at division.v(42): (vlog-2388) 'nxt_quo' already declared in this scope (division).
+# ** Error (suppressible): ** while parsing file included at uart_tb.v(1)
+# ** while parsing file included at uart_top.v(3)
+# ** while parsing file included at uart.v(1)
+# ** while parsing file included at uart_rx.v(3)
+# ** at division.v(43): (vlog-2388) 'nxt_counter' already declared in this scope (division).
+# ** Error: ** while parsing file included at uart_tb.v(1)
+# ** while parsing file included at uart_top.v(3)
+# ** while parsing file included at uart.v(1)
+# ** while parsing file included at uart_rx.v(3)
+# ** at division.v(6): Identifier must be declared with a port mode: quo.
+# ** Error: ** while parsing file included at uart_tb.v(1)
+# ** while parsing file included at uart_top.v(3)
+# ** while parsing file included at uart.v(1)
+# ** while parsing file included at uart_rx.v(3)
+# ** at division.v(6): Identifier must be declared with a port mode: rmd.
 # -- Compiling module uart_rx
+# ** Error (suppressible): ** while parsing file included at uart_tb.v(1)
+# ** while parsing file included at uart_top.v(3)
+# ** while parsing file included at uart.v(1)
+# ** at uart_rx.v(38): (vlog-2388) 'cycle_per_byte' already declared in this scope (uart_rx).
+# ** Error (suppressible): ** while parsing file included at uart_tb.v(1)
+# ** while parsing file included at uart_top.v(3)
+# ** while parsing file included at uart.v(1)
+# ** at uart_rx.v(40): (vlog-2388) 'div_start' already declared in this scope (uart_rx).
 # -- Compiling module uart_tx
-# -- Compiling module m_counter
+# -- Compiling module rx_specific_counter
 # -- Compiling module fifo
 # -- Compiling module uart
 # -- Compiling module fall_edge_detector
+# -- Compiling module bin2bcd
+# -- Compiling module bcd2sseg_active_low
 # -- Compiling module uart_top
+# -- Compiling module clk_generate
 # -- Compiling module stimulus
-# 
-# Top level modules:
-# 	uart_top
-# 	stimulus
-# End time: 07:24:44 on Apr 17,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim work.stimulus 
-# Start time: 07:24:44 on Apr 17,2025
-# Loading work.stimulus
-# Loading work.uart
-# Loading work.m_counter
-# Loading work.fifo
-# Loading work.uart_rx
-# Loading work.uart_tx
-# ** Warning: (vsim-3017) uart_func_tb.v(12): [TFMPC] - Too few port connections. Expected 12, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/ut File: uart.v
-# ** Warning: (vsim-3722) uart_func_tb.v(12): [TFMPC] - Missing connection for port 'tx_full'.
-# ** Warning: (vsim-3722) uart_func_tb.v(12): [TFMPC] - Missing connection for port 'rx_full'.
-# ** Warning: (vsim-3017) uart.v(29): [TFMPC] - Too few port connections. Expected 4, found 3.
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/ut/m File: m_counter.v
-# ** Warning: (vsim-3722) uart.v(29): [TFMPC] - Missing connection for port 'counter'.
-# write:   3
-# write:   4
-# write:   5
-# read:   3
-# read:   3
-# read:   4
-# read:   5
-# last:   0
-# ** Note: $finish    : uart_func_tb.v(45)
-#    Time: 1564865 ps  Iteration: 1  Instance: /stimulus
-# 1
-# Break in Module stimulus at uart_func_tb.v line 45
-# End time: 07:29:22 on Apr 17,2025, Elapsed time: 0:04:38
-# Errors: 0, Warnings: 5
+# End time: 20:53:00 on Apr 19,2025, Elapsed time: 0:00:00
+# Errors: 20, Warnings: 0
+# ** Error: C:/intelFPGA/18.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./work.do line 2
+# C:/intelFPGA/18.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -work work uart_tb.v"

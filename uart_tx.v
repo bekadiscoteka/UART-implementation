@@ -18,9 +18,9 @@
 					STOP=3;
 		
 		reg [1:0] state;	
-		reg [log(S+1)-1:0] s_reg;	 
-		reg [log(DBIT+1)-1:0] n;
-		reg [DBIT-1:0] in_reg; 
+		reg [log(S):0] s_reg;	 
+		reg [log(DBIT):0] n;
+		reg [DBIT:0] in_reg; 
 		always @(posedge clk, posedge reset) begin
 			if (reset) begin
 				tx <= 1'b1;

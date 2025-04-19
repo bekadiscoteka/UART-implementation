@@ -8,192 +8,255 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/user1111/Documents/DigitalDesign/UART
+vbcd2sseg_active_low
+Z1 !s110 1745074380
+!i10b 1
+!s100 ^?Sdc>Zm`PoO=F5A3`nNi0
+Ig<[g?[HclTDBbeC59kB[93
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1744914986
+8bcd2sseg_active_low.v
+Fbcd2sseg_active_low.v
+L0 3
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1745074380.000000
+Z6 !s107 bcd2sseg_active_low.v|bin2bcd.v|fall_edge_detector.v|fifo.v|m_counter.v|uart_tx.v|division.v|uart_rx.v|uart.v|uart_top.v|uart_tb.v|
+Z7 !s90 -reportprogress|300|-work|work|uart_tb.v|
+!i113 1
+Z8 o-work work
+Z9 tCvgOpt 0
+vbin2bcd
+R1
+!i10b 1
+!s100 oc4bGfJlH1k8;3SIKJQIa2
+IL3mb[DM8WzW4FI5:mOQ:T1
+R2
+R0
+R3
+8bin2bcd.v
+Fbin2bcd.v
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+R8
+R9
 vclk_generate
-!s110 1744851345
+R1
 !i10b 1
 !s100 ?WYV`=Q@UU4BnI?EMJb5Q3
 I0;PWI0B=6gm`Ff1Mb[IQm3
-Z1 VDg1SIo80bB@j0V0VzS_@n1
+R2
 R0
-w1744851303
-8uart_tb.v
-Fuart_tb.v
+Z10 w1745074366
+Z11 8uart_tb.v
+Z12 Fuart_tb.v
 L0 3
-Z2 OV;L;10.5b;63
+R4
 r1
 !s85 0
 31
-!s108 1744851345.000000
-!s107 fall_edge_detector.v|fifo.v|m_counter.v|uart_tx.v|uart_rx.v|uart.v|uart_top.v|uart_tb.v|
-!s90 -reportprogress|300|-work|work|uart_tb.v|
+R5
+R6
+R7
 !i113 1
-Z3 o-work work
-Z4 tCvgOpt 0
+R8
+R9
 vfall_edge_detector
-Z5 !s110 1744853084
+R1
 !i10b 1
 !s100 d:?:CBaHg6mXQdn1@Gfa[0
 InMLbKFCEVGaRe93iHl=CM3
-R1
+R2
 R0
-Z6 w1744847381
+w1744847381
 8fall_edge_detector.v
 Ffall_edge_detector.v
 L0 3
-R2
+R4
 r1
 !s85 0
 31
-Z7 !s108 1744853084.000000
-Z8 !s107 fall_edge_detector.v|fifo.v|m_counter.v|uart_tx.v|uart_rx.v|uart.v|uart_top.v|uart_func_tb.v|
-Z9 !s90 -reportprogress|300|-work|work|uart_func_tb.v|
-!i113 1
-R3
-R4
-vfifo
 R5
-!i10b 1
-!s100 liRUn8l>1i:zbVbE5]jL>0
-I>2FRz[:97KAi>JWa>LP^z0
-R1
-R0
 R6
+R7
+!i113 1
+R8
+R9
+vfifo
+R1
+!i10b 1
+!s100 YPSCUCk6k?R_gLfAiMX;T1
+I84Q>8`cDQ@96<5OiWLM>E2
+R2
+R0
+R3
 8fifo.v
 Ffifo.v
 L0 4
-R2
+R4
 r1
 !s85 0
 31
+R5
+R6
 R7
+!i113 1
 R8
 R9
-!i113 1
-R3
-R4
 vm_counter
-R5
+Z13 !s110 1744990402
 !i10b 1
-!s100 RnDYYh`XDfV`BIKS@6EOR1
-I91AeXbL5mhMRJUaL@ZF:50
-R1
-R0
-w1744852450
-8m_counter.v
-Fm_counter.v
-L0 3
+!s100 l9M[mcC>QLKM<Z`7D09jd1
+IllIK[Oo5ahh8;gU;mW;5m0
 R2
+R0
+w1744985103
+Z14 8m_counter.v
+Z15 Fm_counter.v
+L0 3
+R4
 r1
 !s85 0
 31
+Z16 !s108 1744990402.000000
+Z17 !s107 bcd2sseg_active_low.v|bin2bcd.v|fall_edge_detector.v|fifo.v|m_counter.v|uart_tx.v|uart_rx.v|uart.v|uart_top.v|uart_tb.v|
 R7
+!i113 1
 R8
 R9
-!i113 1
-R3
+vrx_specific_counter
+R1
+!i10b 1
+!s100 ad9OLZ`Q?AJjkW32875TL0
+IeGb>JO^<4SR_>hWfKRgBX1
+R2
+R0
+w1745074261
+R14
+R15
+L0 3
 R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+R8
+R9
 vstimulus
-R5
-!i10b 1
-!s100 NH[bH:K_OL`=T0XZQhXdD2
-Id_k721F:fJd98UFPOBY?c3
 R1
-R0
-w1744852441
-8uart_func_tb.v
-Fuart_func_tb.v
-L0 3
+!i10b 1
+!s100 iOihUQibXg^_7:ESY>J<]3
+IESaXUDg>FWU5HWAUR><F93
 R2
+R0
+R10
+R11
+R12
+L0 10
+R4
 r1
 !s85 0
 31
+R5
+R6
 R7
+!i113 1
 R8
 R9
-!i113 1
-R3
-R4
 vuart
-R5
-!i10b 1
-!s100 Z[[TiL;oX0fY1HhcbC;>a2
-INo1;7D`45X1mdN<JQ^4H`2
 R1
+!i10b 1
+!s100 m^1OCadjFIDf747dJE_:k0
+IS8I^QPoA0JJZ^dlO`F3061
+R2
 R0
-w1744851330
+w1745074210
 8uart.v
 Fuart.v
 L0 7
-R2
+R4
 r1
 !s85 0
 31
+R5
+R6
 R7
+!i113 1
 R8
 R9
-!i113 1
-R3
-R4
 vuart_rx
-R5
+R13
 !i10b 1
-!s100 leo85B7mN`:7DGjJ=^2fX2
-IP?cRD8S=oln>VURHE<K6l1
-R1
+!s100 0jn:>0EX6kl32@=c_M4?J3
+IOSha7hYico0LfFn`=Z>b@3
+R2
 R0
-R6
+w1744990321
 8uart_rx.v
 Fuart_rx.v
 L0 3
-R2
+R4
 r1
 !s85 0
 31
+R16
+R17
 R7
+!i113 1
 R8
 R9
-!i113 1
-R3
-R4
 vuart_top
-R5
-!i10b 1
-!s100 fJz9f6?CPGmZ]loh??e>L1
-IM7XjdKPPZhFBjZLBz7TX;3
 R1
+!i10b 1
+!s100 P1FF?JL?iDFN<E90KkfQM0
+IfAXOfc67dgja2?[F[TUj33
+R2
 R0
-w1744850294
+w1745071882
 8uart_top.v
 Fuart_top.v
-L0 5
-R2
+L0 7
+R4
 r1
 !s85 0
 31
+R5
+R6
 R7
+!i113 1
 R8
 R9
-!i113 1
-R3
-R4
 vuart_tx
-R5
-!i10b 1
-!s100 kD?^ad6XTPSohN<^X=Z0M1
-Id8lZU7Uc[_hQhDTK@]j070
 R1
+!i10b 1
+!s100 ?EF`CINQPTk7QjG134VRO3
+Iba7XjMW>9UZPZQQDXC9ok0
+R2
 R0
-R6
+w1745070366
 8uart_tx.v
 Fuart_tx.v
 L0 3
-R2
+R4
 r1
 !s85 0
 31
+R5
+R6
 R7
+!i113 1
 R8
 R9
-!i113 1
-R3
-R4

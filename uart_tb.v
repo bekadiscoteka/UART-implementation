@@ -12,11 +12,12 @@ module stimulus;
 	reg [7:0] sw;
 	wire rx, tx;
 	wire [7:0] leds;
-	wire clk;	
+	wire clk;
+	wire [20:0] baund_rate;	
 
 	clk_generate clk_gen(clk);
 		
-	uart_top ut(
+	uart_top #(.S(16), .BAUND_RATE(500)) ut(
 		.clk(clk),
 		.reset(reset),
 		.write(write),
@@ -24,7 +25,7 @@ module stimulus;
 		.rx(rx),
 		.tx(tx),
 		.sw(sw),
-		.read_value(read_value)
+		.read_value(leds)
 	);
 
 	assign rx = tx;
@@ -36,7 +37,7 @@ module stimulus;
 		reset=0;
 		#5;
 		$display("reset over");
-		for (sw=1; sw<3; sw = sw+1) begin
+		for (sw=1; sw<5; sw = sw+1) begin
 			write=0;
 			#5;
 			write=1;
@@ -52,6 +53,7 @@ module stimulus;
 			#5;
 			$display(leds);
 		end	
+		$display(ut.uart_inst.counter._m);
 		$finish;	
 	end
 endmodule

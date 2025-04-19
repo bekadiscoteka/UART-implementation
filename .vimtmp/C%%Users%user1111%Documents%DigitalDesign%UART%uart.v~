@@ -9,27 +9,37 @@
 			parameter WIDTH=8,
 					SB_TICK=16,
 					
-					SAMP=16,
+					S=16,
 					BAUND_RATE=9600,
 
 					FIFO_DEPTH=8
 		)
 		(
 			output [WIDTH-1:0] data_out,
-			output tx_full, tx_empty, tx, 
-						rx_full, rx_empty,
+			output 	tx_full, tx_empty, tx, 
+					rx_full, rx_empty,
+					ready,
 			input [WIDTH-1:0] data_in,
 			input wr_data, rd_data, rx, clk, reset
 	);
+		localparam SB = SB_TICK / S; 
 		wire rx_done_tick,
 			 tx_done_tick,
+			 rx_ready,
 			 s_tick;
+		assign ready = rx_ready;
 		wire [WIDTH-1:0] tx_data, rx_data;	
+
+		wire detect_done_tick;
+		wire [31:0] m;
 		
-		m_counter #(.M(compute_m(BAUND_RATE, SAMP))) m(
+		rx_specific_counter #(.INITIAL_M(compute_m(BAUND_RATE, S))) 
+		counter(
 			.tick(s_tick),
 			.clk(clk),
-			.reset(reset)
+			.reset(reset),
+			.m(m),
+			.set_m(detect_done_tick)
 		);	
 			
 		fifo #(.W(WIDTH), .N(FIFO_DEPTH)) tx_fifo(
@@ -54,16 +64,19 @@
 			.empty(rx_empty)
 		);
 
-		uart_rx #(.DBIT(WIDTH), .SB_TICK(SB_TICK), .S(SAMP)) rx_inst(
+		uart_rx #(.DBIT(WIDTH), .SB_TICK(SB_TICK), .S(S)) rx_inst(
 			.clk(clk),
 			.reset(reset),
 			.d_out(rx_data),
 			.rx(rx),
 			.s_tick(s_tick),	
-			.done_tick(rx_done_tick)
+			.done_tick(rx_done_tick),
+			.detect_done_tick(detect_done_tick),
+			.m_out(m),
+			.ready(rx_ready)
 		);
 
-		uart_tx #(.DBIT(WIDTH), .SB_TICK(SB_TICK), .S(SAMP)) tx_inst(
+		uart_tx #(.DBIT(WIDTH), .SB_TICK(SB_TICK), .S(S)) tx_inst(
 			.clk(clk),
 			.reset(reset),
 			.d_in(tx_data), 
@@ -72,6 +85,7 @@
 			.s_tick(s_tick),
 			.done_tick(tx_done_tick)
 		);
+
 	function integer compute_m(input [31:0] baund_r, sample);
 		begin
 			compute_m = 32'd50_000_000 / (baund_r * sample);
