@@ -25,7 +25,8 @@ module stimulus;
 		.rx(rx),
 		.tx(tx),
 		.sw(sw),
-		.read_value(leds)
+		.read_value(leds),
+		.ready(ready)
 	);
 
 	assign rx = tx;
@@ -42,6 +43,7 @@ module stimulus;
 			#5;
 			write=1;
 			#5;
+			if (sw==1) wait(ready);
 			$display("sent value: %d", sw);
 		end
 		$display("end sending");	

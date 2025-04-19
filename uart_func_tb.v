@@ -19,7 +19,8 @@ module stimulus;
 		.data_in(sw),
 		.data_out(read_value),
 		.rx_empty(rx_empty),
-		.tx_empty(tx_empty)
+		.tx_empty(tx_empty),
+		.ready(ready)
 	);
 
 	assign rx = tx;
@@ -30,6 +31,8 @@ module stimulus;
 		reset=0;
 		sw=0;
 		write=1;
+		sw=8;
+		wait(ready);
 		for (sw=48; sw<6; sw=sw+1) begin
 			@(posedge clk);
 			$display("write: %d", sw);				

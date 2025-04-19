@@ -1,5 +1,5 @@
 Analysis & Synthesis report for UART
-Sun Apr 20 03:20:26 2025
+Sun Apr 20 05:10:20 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -71,7 +71,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Apr 20 03:20:26 2025          ;
+; Analysis & Synthesis Status        ; Successful - Sun Apr 20 05:10:20 2025          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; UART                                           ;
 ; Top-level Entity Name              ; uart_top                                       ;
@@ -190,7 +190,7 @@ https://fpgasoftware.intel.com/eula.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.1%      ;
-;     Processor 3            ;   0.0%      ;
+;     Processor 3            ;   0.1%      ;
 ;     Processor 4            ;   0.0%      ;
 ;     Processor 5            ;   0.0%      ;
 ;     Processor 6            ;   0.0%      ;
@@ -677,7 +677,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -687,7 +687,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Sun Apr 20 03:20:16 2025
+    Info: Processing started: Sun Apr 20 05:10:13 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off UART -c UART
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -726,7 +726,7 @@ Warning (10230): Verilog HDL assignment warning at uart_rx.v(124): truncated val
 Warning (10230): Verilog HDL assignment warning at uart_rx.v(126): truncated value with size 32 to match size of target (5) File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_rx.v Line: 126
 Warning (10230): Verilog HDL assignment warning at uart_rx.v(135): truncated value with size 32 to match size of target (5) File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_rx.v Line: 135
 Info (12128): Elaborating entity "division" for hierarchy "uart:uart_inst|uart_rx:rx_inst|division:divide" File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_rx.v Line: 35
-Warning (10230): Verilog HDL assignment warning at division.v(58): truncated value with size 32 to match size of target (10) File: C:/Users/user1111/Documents/DigitalDesign/UART/division.v Line: 58
+Warning (10230): Verilog HDL assignment warning at division.v(57): truncated value with size 32 to match size of target (10) File: C:/Users/user1111/Documents/DigitalDesign/UART/division.v Line: 57
 Info (12128): Elaborating entity "uart_tx" for hierarchy "uart:uart_inst|uart_tx:tx_inst" File: C:/Users/user1111/Documents/DigitalDesign/UART/uart.v Line: 87
 Warning (10230): Verilog HDL assignment warning at uart_tx.v(53): truncated value with size 32 to match size of target (5) File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_tx.v Line: 53
 Warning (10230): Verilog HDL assignment warning at uart_tx.v(65): truncated value with size 32 to match size of target (4) File: C:/Users/user1111/Documents/DigitalDesign/UART/uart_tx.v Line: 65
@@ -762,10 +762,10 @@ Info (21057): Implemented 789 device resources after synthesis - the final resou
     Info (21059): Implemented 18 output pins
     Info (21061): Implemented 758 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
-    Info: Peak virtual memory: 4796 megabytes
-    Info: Processing ended: Sun Apr 20 03:20:26 2025
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Peak virtual memory: 4801 megabytes
+    Info: Processing ended: Sun Apr 20 05:10:20 2025
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:15
 
 
 +------------------------------------------+

@@ -63,13 +63,13 @@
 						case (baund_detect_state) 
 							IDLE: if (!rx) baund_detect_state <= DATA;
 							DATA: begin
-								if (cycle == 7) begin
+								if (cycle == 8) begin
 									cycle <= 0;
 									if (!rx) cycle_per_byte <= temp_cycle_per_byte + 1;
 									temp_cycle_per_byte <= 
 										temp_cycle_per_byte + 1;	
 									if (temp_cycle_per_byte == 
-										(50_000_000/(300 * S)) * 9) begin //((1/300 * 16) / (1/50_000_000))) begin 
+										(50_000_000 / 200)) begin //((1/300 * 16) / (1/50_000_000))) begin 
 										//slowest baund can be 300 baund 
 									   	baund_detect_state <= STOP;
 										cycle <= 0;

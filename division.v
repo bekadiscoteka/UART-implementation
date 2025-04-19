@@ -4,13 +4,12 @@
 `ifndef DIVISION
 `define DIVISION
 
-module division(
+module division #(parameter W=8) (
 	output reg [W-1:0] quo, rmd,
 	output ready, done_tick,
 	input [W-1:0] dvnd, dvsr,
 	input clk, reset, start
 );
-	parameter W=8;
 	localparam [1:0]  
 		READY=0,
 		PROC=1,
