@@ -50,21 +50,7 @@ Watch it in action:
 - Auto-detecting terminals or microcontrollers
 - Dynamic communication interfaces in embedded systems
 
----
 
-## 📂 **Directory Structure**
-
-```
-├── src/
-│   └── auto_baud_detector.v
-├── README.md
-├── constraints/
-│   └── (your .xdc/.ucf files here)
-└── sim/
-    └── testbench.v
-```
-
----
 
 ## 🚀 **Getting Started**
 
